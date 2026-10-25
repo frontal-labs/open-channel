@@ -10,7 +10,7 @@
   "dependencies": {
     "@ai-sdk/openai": "^4.0.99",
     "ai": "^7.0.148",
-    "openchannel": "^2.0.0"
+    "ocp-sdk": "^2.0.0"
   },
   "devDependencies": {
     "tsx": "^4.23.15"

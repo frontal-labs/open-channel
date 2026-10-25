@@ -6,6 +6,6 @@
   "type": "module",
   "dependencies": {
     "@bufbuild/protobuf": "^2.2.5",
-    "openchannel": "^2.0.0"
+    "ocp-sdk": "^2.0.0"
   }
 }
