@@ -4,7 +4,7 @@ import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 
 // Publishes every public TypeScript workspace package to GitHub Packages (the npm registry for
-// the frontal-labs scope). GitHub Packages does not host crates or PyPI distributions, so Rust and
+// the @openchannel scope). GitHub Packages does not host crates or PyPI distributions, so Rust and
 // Python stay on crates.io and PyPI. A version that already exists on GitHub Packages is skipped,
 // which makes re-runs safe.
 
