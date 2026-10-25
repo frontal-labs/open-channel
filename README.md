@@ -81,34 +81,6 @@ message.received
 └── ultracite.json        Shared Biome formatting and lint configuration
 ```
 
-```text
-proto/ocp/api/       The single EventEnvelope protobuf definition
-proto/ocp/types/     Shared domain protobuf definitions
-proto/gen/           Generated TypeScript, Python, and Rust bindings
-packages/protocol/   Generated types, builders, and serialization helpers
-packages/runtime/    Event routing and approval lifecycle
-packages/policy/     Rule-based policy reference implementation
-packages/adapter/    Provider-neutral adapter contract
-packages/core/       Shared event bus and identifier primitives
-packages/testing/    Shared fixtures and helpers for TypeScript tests
-cli/                 `ocp` validation and inspection CLI
-sdks/typescript/     TypeScript app facade, agent host, and developer API
-sdks/python/         Python app facade, agent host, and developer API
-sdks/rust/           Rust app builder, agent host, and developer API
-packages/demo/       Runnable end-to-end example
-examples/            Native SDK and optional agent-harness integrations
-skills/              OCP-specific instructions for agents and contributors
-tests/               Cross-package Vitest conformance tests
-skills.sh.json       skills.sh grouping and discovery metadata
-docs/SPEC.md         Normative behavior and compatibility rules
-docs/DEVELOPMENT.md  Local development and agent SDK guide
-proto/README.md      Schema and generated-code workflow
-turbo.json           Root Turborepo task graph
-renovate.json        Dependency-update policy for code and examples
-biome.json           Canonical Biome entrypoint and Ultracite presets
-ultracite.json       Shared Biome formatting and lint configuration
-```
-
 ## Protocol model
 
 Every OCP event is an `EventEnvelope` with:
