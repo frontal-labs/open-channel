@@ -79,6 +79,8 @@ message.received
 ├── renovate.json         Dependency-update policy for code and examples
 ├── biome.json            Canonical Biome entrypoint and Ultracite presets
 └── ultracite.json        Shared Biome formatting and lint configuration
+```
+
 ```text
 proto/ocp/api/       The single EventEnvelope protobuf definition
 proto/ocp/types/     Shared domain protobuf definitions
