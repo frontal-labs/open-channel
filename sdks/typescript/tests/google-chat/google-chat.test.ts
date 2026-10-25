@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { googleChatSource } from "../../src/google-chat/index.js";
 
-describe("openchannel/google-chat", () => {
+describe("ocp-sdk/google-chat", () => {
   it("normalizes a Google Chat message", async () => {
     const source = googleChatSource();
     const event = await source.normalize({

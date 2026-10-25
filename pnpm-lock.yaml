@@ -63,7 +63,7 @@ importers:
       lint-staged:
         specifier: ^16.2.7
         version: 16.4.0
-      openchannel:
+      ocp-sdk:
         specifier: workspace:*
         version: link:sdks/typescript
       tsx:
@@ -128,7 +128,7 @@ importers:
       '@openchannel/testing':
         specifier: workspace:*
         version: link:../testing
-      openchannel:
+      ocp-sdk:
         specifier: workspace:*
         version: link:../../sdks/typescript
     devDependencies:

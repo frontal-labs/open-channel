@@ -20,7 +20,7 @@ function recordingClient() {
   };
 }
 
-describe("openchannel/postgres migration", () => {
+describe("ocp-sdk/postgres migration", () => {
   it("creates the table the store writes to when a custom table name is configured", async () => {
     const { client, statements } = recordingClient();
     await migratePostgresStore(client, { tableName: "orders_events" });

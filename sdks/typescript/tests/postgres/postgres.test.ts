@@ -2,7 +2,7 @@ import { createTestEvent } from "@openchannel/testing";
 import { describe, expect, it } from "vitest";
 import { postgresStore } from "../../src/postgres/index.js";
 
-describe("openchannel/postgres", () => {
+describe("ocp-sdk/postgres", () => {
   it("uses appendIfAbsent for runtime idempotency", async () => {
     let inserted = false;
     const store = postgresStore({

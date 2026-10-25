@@ -11,7 +11,7 @@ const approval = (from: Record<string, unknown> | undefined, value: Record<strin
   value: { action: "approve", approvalId: "approval-1", ...value },
 });
 
-describe("openchannel/teams approval attribution", () => {
+describe("ocp-sdk/teams approval attribution", () => {
   it("attributes the decision to the activity sender, not a spoofed actorId in the card", async () => {
     const event = (await normalizeTeamsEvent(
       approval(

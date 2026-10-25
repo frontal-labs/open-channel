@@ -5,5 +5,5 @@ edition = "2021"
 publish = false
 
 [dependencies]
-openchannel = { path = "../../sdks/rust" }
+ocp-sdk = { path = "../../sdks/rust" }
 serde_json = "1.0"

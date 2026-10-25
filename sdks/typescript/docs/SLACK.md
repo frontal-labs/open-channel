@@ -1,4 +1,4 @@
-# openchannel/slack
+# ocp-sdk/slack
 
 Slack source and sink for the OpenChannel Protocol (OCP). Slack Events API messages become OCP
 `message.received` events for the harness, and the harness's `message.sent` events are posted back
@@ -13,23 +13,23 @@ Slack Events API -> verifySlackWebhook -> app.receive("slack") -> message.receiv
 ## Install
 
 ```sh
-pnpm add openchannel @slack/web-api @bufbuild/protobuf
+pnpm add ocp-sdk @slack/web-api @bufbuild/protobuf
 ```
 
-The quickstart uses `openchannel/postgres` for the event store and `@slack/web-api`
+The quickstart uses `ocp-sdk/postgres` for the event store and `@slack/web-api`
 for the transport; any `EventStore` and any Slack Web API client work.
 
 ## Quickstart
 
 ```ts
 import { create } from "@bufbuild/protobuf";
-import { postgresStore } from "openchannel/postgres";
-import { slackChannel, verifySlackWebhook } from "openchannel/slack";
-import { RuleBasedPolicyEngine } from "openchannel";
+import { postgresStore } from "ocp-sdk/postgres";
+import { slackChannel, verifySlackWebhook } from "ocp-sdk/slack";
+import { RuleBasedPolicyEngine } from "ocp-sdk";
 import { createTestEventStore } from "@openchannel/testing";
-import { ActorRefSchema, ActorType } from "openchannel";
+import { ActorRefSchema, ActorType } from "ocp-sdk";
 import { WebClient } from "@slack/web-api";
-import { openChannel } from "openchannel";
+import { openChannel } from "ocp-sdk";
 
 const slack = new WebClient(process.env.SLACK_BOT_TOKEN);
 const helper = create(ActorRefSchema, { id: "agent:slack-helper", type: ActorType.AGENT });
@@ -100,5 +100,5 @@ The extension reads no environment variables. The application supplies:
 ## Tests
 
 ```sh
-pnpm --filter openchannel test
+pnpm --filter ocp-sdk test
 ```

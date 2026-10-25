@@ -15,7 +15,7 @@ async function settle(outcome: unknown): Promise<unknown> {
 
 const context = { actor: {} as never, request: {} as never, runtime: {} as never };
 
-describe("openchannel/mcp", () => {
+describe("ocp-sdk/mcp", () => {
   it("creates a policy-controlled MCP action", async () => {
     const calls: string[] = [];
     const [action] = mcpActions({

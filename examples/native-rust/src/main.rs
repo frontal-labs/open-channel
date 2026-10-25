@@ -1,6 +1,4 @@
-//! Native Rust OCP example.
-//!
-//! Runs a deterministic OCP application with the local `openchannel` Rust SDK and no model
+//! Runs a deterministic OCP application with the local `ocp_sdk` Rust SDK and no model
 //! provider or credentials. An agent replies to a `message.received` event and requests a refund
 //! action, which the policy holds until the designated approver grants it. The output is identical
 //! on every run.
@@ -11,7 +9,7 @@
 use std::error::Error;
 use std::sync::Arc;
 
-use openchannel::{
+use ocp_sdk::{
     message_received, ActionDefinition, ActionInvocation, ActionPolicy, ActionResult, ActorRef,
     ActorType, AgentCard, AgentDefinition, AgentError, ChannelDefinition, ChannelRef, ChannelSink,
     ConversationRef, DeliveryReceipt, EventEnvelope, EventPayload, HandleResult, Hooks,

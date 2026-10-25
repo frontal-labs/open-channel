@@ -3,7 +3,7 @@ import { eventType } from "@openchannel/protocol";
 import { describe, expect, it } from "vitest";
 import { a2aSource } from "../../src/a2a/index.js";
 
-describe("openchannel/a2a", () => {
+describe("ocp-sdk/a2a", () => {
   it("normalizes A2A parts and preserves task context", async () => {
     const source = a2aSource();
     const event = await source.normalize({

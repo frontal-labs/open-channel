@@ -381,7 +381,7 @@ class OpenChannelApp implements OpenChannel {
       target: options.target ?? `action:${type}`,
       type,
     });
-    if (!(await this.runtime.claimAction(actionId, "openchannel"))) {
+    if (!(await this.runtime.claimAction(actionId, "ocp-sdk"))) {
       const duplicate: ActionResult<unknown> = {
         actionId,
         error: new ActionError(`OCP action ${actionId} has already been claimed`, {

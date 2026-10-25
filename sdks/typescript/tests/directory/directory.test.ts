@@ -12,7 +12,7 @@ function createTransport(overrides: Partial<DirectoryTransport> = {}): Directory
   };
 }
 
-describe("openchannel/directory", () => {
+describe("ocp-sdk/directory", () => {
   it("caches directory identity lookups", async () => {
     let calls = 0;
     const provider = googleDirectory({

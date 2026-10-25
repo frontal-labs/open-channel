@@ -39,7 +39,6 @@ const packageJsonFiles = [
   "cli/package.json",
   "packages/adapter/package.json",
   "packages/core/package.json",
-  "packages/demo/package.json",
   "packages/policy/package.json",
   "packages/protocol/package.json",
   "packages/runtime/package.json",

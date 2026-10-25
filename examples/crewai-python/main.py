@@ -26,7 +26,7 @@ from collections.abc import Awaitable, Callable
 from typing import Any
 
 from crewai import Agent, Crew, Task
-from openchannel import (
+from ocp_sdk import (
     ActorRef,
     AgentDefinition,
     ChannelDefinition,

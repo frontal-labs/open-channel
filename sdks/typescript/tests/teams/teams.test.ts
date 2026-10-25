@@ -3,7 +3,7 @@ import { eventType } from "@openchannel/protocol";
 import { describe, expect, it } from "vitest";
 import { teamsSource } from "../../src/teams/index.js";
 
-describe("openchannel/teams", () => {
+describe("ocp-sdk/teams", () => {
   it("normalizes a Teams message", async () => {
     const source = teamsSource();
     const event = await source.normalize({

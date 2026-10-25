@@ -29,7 +29,7 @@ function createClient(overrides: Partial<CalendarClient> = {}): CalendarClient {
   };
 }
 
-describe("openchannel/calendar", () => {
+describe("ocp-sdk/calendar", () => {
   it("creates SDK action definitions with Zod validation", () => {
     const actions = calendarActions({
       cancel: async () => ({ cancelled: true }),

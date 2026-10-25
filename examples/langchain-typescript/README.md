@@ -1,6 +1,6 @@
 # LangChain TypeScript + OCP
 
-A LangChain v1 `createAgent` agent behind the OCP TypeScript SDK (`openchannel`).
+A LangChain v1 `createAgent` agent behind the OCP TypeScript SDK (`ocp-sdk`).
 An inbound `message.received` envelope goes through `openChannel()`, the agent
 runs, and its final text is dispatched as an OCP `message.sent`.
 
@@ -14,10 +14,10 @@ Code layout:
 - Node.js 22.18 or later.
 - An OpenAI API key for live mode. Create one at
   <https://platform.openai.com/api-keys>. Not needed for deterministic mode.
-- The `openchannel` SDK. **It is not on the npm registry yet**, so `npm install`
+- The `ocp-sdk` SDK. **It is not on the npm registry yet**, so `npm install`
   does not install it. The SDK also depends on other workspace packages, so it
   cannot be installed from `sdks/typescript` by npm alone. To run this example
-  you must make `openchannel` resolvable (for example, from a local build of
+  you must make `ocp-sdk` resolvable (for example, from a local build of
   `sdks/typescript`). The bridge typechecks against the SDK source; a
   standalone one-command install is not verified.
 

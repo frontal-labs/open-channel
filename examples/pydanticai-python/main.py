@@ -26,7 +26,7 @@ import os
 from collections.abc import Awaitable, Callable
 from typing import Any
 
-from openchannel import (
+from ocp_sdk import (
     ActorRef,
     AgentDefinition,
     ChannelDefinition,

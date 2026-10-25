@@ -27,7 +27,7 @@ from typing import Any
 
 from langchain.agents import create_agent
 from langchain_openai import ChatOpenAI
-from openchannel import (
+from ocp_sdk import (
     ActorRef,
     AgentDefinition,
     ChannelDefinition,

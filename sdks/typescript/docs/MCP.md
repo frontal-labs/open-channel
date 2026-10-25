@@ -1,4 +1,4 @@
-# openchannel/mcp
+# ocp-sdk/mcp
 
 Policy-controlled MCP tool calls for OCP agents. The package exposes one SDK action,
 `mcp.tool_call`, that forwards a tool name and arguments to an MCP client. Agents request it with
@@ -12,7 +12,7 @@ extension is the executor that calls the MCP tool and returns an action result e
 ## Install
 
 ```sh
-pnpm add openchannel
+pnpm add ocp-sdk
 ```
 
 `@openchannel/core` is pulled in as a dependency. Use the official MCP SDK
@@ -22,9 +22,9 @@ depend on it.
 ## Quickstart
 
 ```ts
-import { mcpActions, type McpToolClient } from "openchannel/mcp";
-import { RuleBasedPolicyEngine } from "openchannel";
-import { openChannel, type OpenChannelOptions } from "openchannel";
+import { mcpActions, type McpToolClient } from "ocp-sdk/mcp";
+import { RuleBasedPolicyEngine } from "ocp-sdk";
+import { openChannel, type OpenChannelOptions } from "ocp-sdk";
 
 // Injected by the application: a port over your MCP client connection.
 declare const mcpClient: McpToolClient;
@@ -92,5 +92,5 @@ environment in application code.
 ## Tests
 
 ```sh
-pnpm --filter openchannel test
+pnpm --filter ocp-sdk test
 ```

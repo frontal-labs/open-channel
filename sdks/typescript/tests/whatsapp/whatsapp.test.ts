@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { whatsappSource } from "../../src/whatsapp/index.js";
 
-describe("openchannel/whatsapp", () => {
+describe("ocp-sdk/whatsapp", () => {
   it("normalizes a WhatsApp Business message", async () => {
     const source = whatsappSource();
     const event = await source.normalize({

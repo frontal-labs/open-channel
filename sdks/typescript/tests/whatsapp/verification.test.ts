@@ -2,7 +2,7 @@ import { ValidationError } from "@openchannel/core";
 import { describe, expect, it } from "vitest";
 import { verifyWhatsAppChallenge } from "../../src/whatsapp/index.js";
 
-describe("openchannel/whatsapp challenge verification", () => {
+describe("ocp-sdk/whatsapp challenge verification", () => {
   it("returns the challenge when mode and verify token match", () => {
     expect(verifyWhatsAppChallenge("subscribe", "verify-me", "123", "verify-me")).toBe("123");
   });

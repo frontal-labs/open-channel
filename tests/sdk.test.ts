@@ -9,7 +9,7 @@ import {
   createTestEventStore,
   createTestHuman,
 } from "@openchannel/testing";
-import { AgentHost, eventType } from "openchannel";
+import { AgentHost, eventType } from "ocp-sdk";
 import { describe, expect, it } from "vitest";
 
 describe("OCP agent SDK", () => {

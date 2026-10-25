@@ -4,10 +4,10 @@
  * OCP concept: the event store is where `openChannel()` persists every event
  * envelope and action record. This file is NOT production code. It loses all
  * state when the process exits. For durable storage, pass a store such as
- * `openchannel/postgres` to `openChannel()` instead.
+ * `ocp-sdk/postgres` to `openChannel()` instead.
  */
-import type { EventEnvelope, OpenChannelOptions } from "openchannel";
-import { eventType } from "openchannel";
+import type { EventEnvelope, OpenChannelOptions } from "ocp-sdk";
+import { eventType } from "ocp-sdk";
 
 /** The store contract that `openChannel()` expects. */
 type EventStore = OpenChannelOptions["store"];

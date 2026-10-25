@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { emailSource } from "../../src/email/index.js";
 
-describe("openchannel/email", () => {
+describe("ocp-sdk/email", () => {
   it("normalizes an email and preserves threading metadata", async () => {
     const source = emailSource({ mailbox: "agent@example.com" });
     const event = await source.normalize({

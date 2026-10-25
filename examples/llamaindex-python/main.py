@@ -26,7 +26,7 @@ from typing import Any
 
 from llama_index.core.agent.workflow import FunctionAgent
 from llama_index.llms.openai import OpenAI
-from openchannel import (
+from ocp_sdk import (
     ActorRef,
     AgentDefinition,
     ChannelDefinition,

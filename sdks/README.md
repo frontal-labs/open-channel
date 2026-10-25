@@ -1,14 +1,14 @@
 # OCP SDKs
 
 The TypeScript, Python, and Rust distributions all use the package name
-`openchannel` in their respective registries. Their import identifier is also
-`openchannel`:
+`ocp-sdk` in their respective registries. Their import identifier is also
+`ocp-sdk`:
 
 | SDK                            | Distribution                     | Import/module                | Primary API                       |
 | ------------------------------ | -------------------------------- | ---------------------------- | --------------------------------- |
-| [`typescript/`](./typescript/) | npm `openchannel` | `openchannel` | `openChannel`, `AgentHost`        |
-| [`python/`](./python/)         | PyPI `openchannel`              | `openchannel`               | `OpenChannel`, `AgentHost`        |
-| [`rust/`](./rust/)             | crates.io `openchannel`         | `openchannel`               | `OpenChannelOptions`, `OpenChannel` |
+| [`typescript/`](./typescript/) | npm `ocp-sdk` | `ocp-sdk` | `openChannel`, `AgentHost`        |
+| [`python/`](./python/)         | PyPI `ocp-sdk`              | `ocp-sdk`               | `OpenChannel`, `AgentHost`        |
+| [`rust/`](./rust/)             | crates.io `ocp-sdk`         | `ocp-sdk`               | `OpenChannelOptions`, `OpenChannel` |
 
 All SDKs expose one event API for both wire versions: `2.0` is the canonical
 envelope in `proto/ocp`. There is one envelope and one protocol version, `2.0`.
@@ -20,7 +20,7 @@ opt-in examples.
 Install the SDK for the language you use:
 
 ```bash
-pnpm add openchannel
-python -m pip install openchannel
-cargo add openchannel
+pnpm add ocp-sdk
+python -m pip install ocp-sdk
+cargo add ocp-sdk
 ```

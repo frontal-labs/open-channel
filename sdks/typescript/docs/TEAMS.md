@@ -1,4 +1,4 @@
-# openchannel/teams
+# ocp-sdk/teams
 
 A Microsoft Teams channel for OCP. Bot Framework activities become OCP `message.received` events, and
 approval-card submissions become `approval.decided` events. Outbound `message.sent` events post
@@ -15,7 +15,7 @@ Teams activity (HTTP) -> verify bearer token -> normalize
 ## Install
 
 ```sh
-pnpm add openchannel
+pnpm add ocp-sdk
 ```
 
 ## Quickstart
@@ -25,10 +25,10 @@ import {
   teamsChannel,
   teamsTokenVerifier,
   verifyTeamsWebhook,
-} from "openchannel/teams";
-import { RuleBasedPolicyEngine } from "openchannel";
+} from "ocp-sdk/teams";
+import { RuleBasedPolicyEngine } from "ocp-sdk";
 import { createTestEventStore } from "@openchannel/testing";
-import { openChannel } from "openchannel";
+import { openChannel } from "ocp-sdk";
 
 const verifyToken = teamsTokenVerifier({ appId: process.env.MICROSOFT_APP_ID ?? "" });
 
@@ -95,7 +95,7 @@ still policy inputs, not commands.
 ## Tests
 
 ```sh
-pnpm --filter openchannel test
+pnpm --filter ocp-sdk test
 ```
 
 The tests use a generated test key pair and a fake JWKS. They need no network access.

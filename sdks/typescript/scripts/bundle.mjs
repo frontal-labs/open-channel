@@ -40,6 +40,7 @@ for (const entry of entryPoints) {
     mkdirSync(outDirForFile, { recursive: true });
   }
   console.log(`bundling ${entry} -> ${outPath}`);
+  // biome-ignore lint/performance/noAwaitInLoops: esbuild builds must run sequentially
   await build({
     ...baseConfig,
     entryPoints: [join(srcDir, entry)],

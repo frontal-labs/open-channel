@@ -1,18 +1,18 @@
-# openchannel
+# ocp-sdk
 
-The PyPI distribution is `openchannel`, imported as `openchannel`. It provides the OCP
+The PyPI distribution is `ocp-sdk`, imported as `ocp-sdk`. It provides the OCP
 event model (one envelope, protocol version `2.0`), typed event builders, an application
 factory with agents, actions, channels, policy, and approvals, and transport-independent
 source/sink contracts. The codec is stdlib-only: no protobuf runtime is required.
 
 ```bash
-python -m pip install openchannel
+python -m pip install ocp-sdk
 ```
 
 ## Usage
 
 ```python
-from openchannel import (
+from ocp_sdk import (
     ActorRef,
     AgentDefinition,
     ChannelDefinition,
@@ -53,7 +53,7 @@ await app.stop()
 ## Events
 
 ```python
-from openchannel import (
+from ocp_sdk import (
     event_type,
     from_binary,
     from_json,

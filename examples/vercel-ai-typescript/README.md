@@ -1,6 +1,6 @@
 # Vercel AI SDK + OCP
 
-AI SDK Core's `generateText` behind the OCP TypeScript SDK (`openchannel`). An
+AI SDK Core's `generateText` behind the OCP TypeScript SDK (`ocp-sdk`). An
 inbound `message.received` envelope goes through `openChannel()`,
 `generateText` produces the answer, and the text is dispatched as an OCP
 `message.sent`.
@@ -20,10 +20,10 @@ event mapping.
 - An OpenAI API key. Create one at <https://platform.openai.com/api-keys>.
   This example has no offline mode, because a scripted model would skip the
   `generateText` call it exists to show.
-- The `openchannel` SDK. **It is not on the npm registry yet**, so `npm install`
+- The `ocp-sdk` SDK. **It is not on the npm registry yet**, so `npm install`
   does not install it. The SDK also depends on other workspace packages, so it
   cannot be installed from `sdks/typescript` by npm alone. To run this example
-  you must make `openchannel` resolvable (for example, from a local build of
+  you must make `ocp-sdk` resolvable (for example, from a local build of
   `sdks/typescript`). The bridge typechecks against the SDK source; a
   standalone one-command install is not verified.
 

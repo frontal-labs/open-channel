@@ -4,7 +4,7 @@ import { createTestEvent } from "@openchannel/testing";
 import { describe, expect, it } from "vitest";
 import { slackSink, slackSource } from "../../src/slack/index.js";
 
-describe("openchannel/slack", () => {
+describe("ocp-sdk/slack", () => {
   it("normalizes a Slack message through the ChannelSource contract", async () => {
     const source = slackSource();
     const normalized = await source.normalize({

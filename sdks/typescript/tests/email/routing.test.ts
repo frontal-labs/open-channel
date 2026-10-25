@@ -3,7 +3,7 @@ import { ActorRefSchema, ActorType } from "@openchannel/protocol";
 import { describe, expect, it } from "vitest";
 import { emailSource } from "../../src/email/index.js";
 
-describe("openchannel/email routing", () => {
+describe("ocp-sdk/email routing", () => {
   it("sets the configured recipient so AgentHost can route the message", async () => {
     const route = create(ActorRefSchema, { id: "agent:email-helper", type: ActorType.AGENT });
     const source = emailSource({ mailbox: "agent@example.com", recipient: route });

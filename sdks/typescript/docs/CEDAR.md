@@ -1,4 +1,4 @@
-# openchannel/cedar
+# ocp-sdk/cedar
 
 A Cedar policy engine for OCP. It adapts a Cedar evaluator you provide to the `PolicyEngine`
 contract, so every action an agent requests is decided by your Cedar policy set before it runs.
@@ -16,7 +16,7 @@ action never executes.
 ## Install
 
 ```sh
-pnpm add openchannel
+pnpm add ocp-sdk
 ```
 
 ## Quickstart
@@ -25,9 +25,9 @@ The adapter does not embed Cedar. Wrap the Cedar engine you use (for example `@c
 in an object with an `evaluate` method. The stub below always denies, to show the shape.
 
 ```ts
-import { cedarPolicy } from "openchannel/cedar";
+import { cedarPolicy } from "ocp-sdk/cedar";
 import { createTestEventStore } from "@openchannel/testing";
-import { openChannel } from "openchannel";
+import { openChannel } from "ocp-sdk";
 
 const policy = cedarPolicy({
   evaluator: {
@@ -74,7 +74,7 @@ None. Policy files and schemas are passed in code or loaded by your application.
 ## Tests
 
 ```sh
-pnpm --filter openchannel test
+pnpm --filter ocp-sdk test
 ```
 
 The tests use a fake evaluator and need no Cedar runtime.

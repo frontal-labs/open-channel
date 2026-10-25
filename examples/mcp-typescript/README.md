@@ -14,10 +14,10 @@ Code layout:
 
 - Node.js 22.18 or later, with `npx` on the PATH. The default server is fetched
   from npm on first run, so the first run needs network access.
-- The `openchannel` SDK. **It is not on the npm registry yet**, so `npm install`
+- The `ocp-sdk` SDK. **It is not on the npm registry yet**, so `npm install`
   does not install it. The SDK also depends on other workspace packages, so it
   cannot be installed from `sdks/typescript` by npm alone. To run this example
-  you must make `openchannel` resolvable (for example, from a local build of
+  you must make `ocp-sdk` resolvable (for example, from a local build of
   `sdks/typescript`). The bridge typechecks against the SDK source; a
   standalone one-command install is not verified.
 

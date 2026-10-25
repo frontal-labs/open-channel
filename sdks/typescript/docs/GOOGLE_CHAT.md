@@ -1,4 +1,4 @@
-# openchannel/google-chat
+# ocp-sdk/google-chat
 
 A Google Chat channel for OCP. Chat app events become OCP `message.received` events, and outbound
 `message.sent` events post messages back to the space through a transport you supply. Bearer tokens
@@ -14,7 +14,7 @@ Google Chat event (HTTP) -> verify bearer token -> normalize -> OCP message.rece
 ## Install
 
 ```sh
-pnpm add openchannel
+pnpm add ocp-sdk
 ```
 
 ## Quickstart
@@ -24,10 +24,10 @@ import {
   googleChatChannel,
   googleChatTokenVerifier,
   verifyGoogleChatWebhook,
-} from "openchannel/google-chat";
-import { RuleBasedPolicyEngine } from "openchannel";
+} from "ocp-sdk/google-chat";
+import { RuleBasedPolicyEngine } from "ocp-sdk";
 import { createTestEventStore } from "@openchannel/testing";
-import { openChannel } from "openchannel";
+import { openChannel } from "ocp-sdk";
 
 const verifyToken = googleChatTokenVerifier({
   projectNumber: process.env.GOOGLE_CLOUD_PROJECT_NUMBER ?? "",
@@ -94,7 +94,7 @@ agent may do in response to a verified message.
 ## Tests
 
 ```sh
-pnpm --filter openchannel test
+pnpm --filter ocp-sdk test
 ```
 
 The tests use a generated test key pair and fake certificates. They need no network access.

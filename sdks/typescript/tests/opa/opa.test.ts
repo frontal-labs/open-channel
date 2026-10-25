@@ -4,7 +4,7 @@ import { opaPolicy } from "../../src/opa/index.js";
 
 const context = { actionType: "test", actor: {} as never };
 
-describe("openchannel/opa", () => {
+describe("ocp-sdk/opa", () => {
   it("maps a local OPA decision into PolicyEngine", () => {
     const engine = opaPolicy({
       transport: { evaluate: () => ({ allowed: true, policyId: "opa:test" }) },

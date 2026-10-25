@@ -39,11 +39,6 @@
       "cache": false,
       "outputs": []
     },
-    "demo": {
-      "dependsOn": ["^build"],
-      "cache": false,
-      "outputs": []
-    },
     "cli": {
       "dependsOn": ["^build"],
       "cache": false,

@@ -1,6 +1,6 @@
 # Native Rust OCP
 
-This example uses the local Rust SDK crate (`openchannel`) to run a complete,
+This example uses the local Rust SDK crate (`ocp-sdk`) to run a complete,
 deterministic OCP application: an agent receives a `message.received` event,
 replies with a `message.sent` event, and requests a refund action that is held
 for human approval until the designated approver grants it.

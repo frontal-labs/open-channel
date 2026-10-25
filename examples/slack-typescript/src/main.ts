@@ -17,8 +17,8 @@ import { createHmac } from "node:crypto";
 import { createServer, type IncomingMessage, type ServerResponse } from "node:http";
 import type { AddressInfo } from "node:net";
 import { create } from "@bufbuild/protobuf";
-import { ActorRefSchema, ActorType, openChannel, RuleBasedPolicyEngine } from "openchannel";
-import { type SlackTransport, slackChannel, verifySlackWebhook } from "openchannel/slack";
+import { ActorRefSchema, ActorType, openChannel, RuleBasedPolicyEngine } from "ocp-sdk";
+import { type SlackTransport, slackChannel, verifySlackWebhook } from "ocp-sdk/slack";
 
 import { createDemoEventStore } from "./demo-store.js";
 
@@ -146,7 +146,7 @@ export function createSlackApp(options: { botUserId?: string; transport: SlackTr
     ],
     policy: new RuleBasedPolicyEngine({ rules: [] }),
     // Demo-only in-memory store. Production deployments use a durable store such as
-    // openchannel/postgres.
+    // ocp-sdk/postgres.
     store: createDemoEventStore(),
   });
 }

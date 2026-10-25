@@ -1,9 +1,12 @@
 {
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
-    "rootDir": "src",
+    "rootDir": "..",
     "outDir": "dist",
-    "paths": {},
+    "paths": {
+      "@openchannel/protocol": ["packages/protocol/src/index.ts"],
+      "@openchannel/testing": ["packages/testing/src/index.ts"]
+    },
     "types": ["node"],
     "declaration": true,
     "declarationMap": true,

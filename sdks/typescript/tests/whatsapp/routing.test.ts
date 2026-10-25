@@ -3,7 +3,7 @@ import { ActorRefSchema, ActorType } from "@openchannel/protocol";
 import { describe, expect, it } from "vitest";
 import { whatsappSource } from "../../src/whatsapp/index.js";
 
-describe("openchannel/whatsapp routing", () => {
+describe("ocp-sdk/whatsapp routing", () => {
   it("sets the configured recipient so AgentHost can route the message", async () => {
     const route = create(ActorRefSchema, { id: "agent:whatsapp-helper", type: ActorType.AGENT });
     const source = whatsappSource({ recipient: route });

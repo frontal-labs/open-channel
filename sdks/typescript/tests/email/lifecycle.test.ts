@@ -35,7 +35,7 @@ function textOf(event: EventEnvelope): string | undefined {
   return event.payload.case === "messageReceived" ? event.payload.value.text : undefined;
 }
 
-describe("openchannel/email lifecycle", () => {
+describe("ocp-sdk/email lifecycle", () => {
   it("emits polled messages in order and skips messages with no body", async () => {
     const poller = new FixturePoller([
       { from: "a@example.com", text: "first", to: ["agent@example.com"] },

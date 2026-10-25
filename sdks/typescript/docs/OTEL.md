@@ -1,4 +1,4 @@
-# openchannel/otel
+# ocp-sdk/otel
 
 OpenTelemetry instrumentation for OCP apps. Passing the hooks from this package to `openChannel()`
 emits a span and, where configured, a counter increment for accepted events, processed events,
@@ -15,7 +15,7 @@ provider input -> OCP message.received (span + counter) -> harness
 ## Install
 
 ```sh
-pnpm add openchannel
+pnpm add ocp-sdk
 ```
 
 ## Quickstart
@@ -24,10 +24,10 @@ The package takes structural ports, so any OpenTelemetry tracer or counter works
 shows the shape; in production pass the tracer from `@opentelemetry/api`.
 
 ```ts
-import { otelHooks } from "openchannel/otel";
-import { RuleBasedPolicyEngine } from "openchannel";
+import { otelHooks } from "ocp-sdk/otel";
+import { RuleBasedPolicyEngine } from "ocp-sdk";
 import { createTestEventStore } from "@openchannel/testing";
-import { openChannel } from "openchannel";
+import { openChannel } from "ocp-sdk";
 
 const hooks = otelHooks({
   tracer: {
@@ -86,7 +86,7 @@ None. Exporters, endpoints, and sampling are configured in your OpenTelemetry SD
 ## Tests
 
 ```sh
-pnpm --filter openchannel test
+pnpm --filter ocp-sdk test
 ```
 
 The tests use recording fakes for the tracer and counters and need no collector.

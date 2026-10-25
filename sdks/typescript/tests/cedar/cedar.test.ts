@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { cedarPolicy } from "../../src/cedar/index.js";
 
-describe("openchannel/cedar", () => {
+describe("ocp-sdk/cedar", () => {
   it("adapts a Cedar decision to PolicyEngine", () => {
     const engine = cedarPolicy({
       evaluator: {

@@ -21,7 +21,7 @@ import {
   messageReceived,
   openChannel,
   RuleBasedPolicyEngine,
-} from "openchannel";
+} from "ocp-sdk";
 
 import { createDemoEventStore } from "./demo-store.js";
 

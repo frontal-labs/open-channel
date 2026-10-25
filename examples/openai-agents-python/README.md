@@ -2,7 +2,7 @@
 
 Runs one OpenAI Agents SDK `Runner.run` execution behind the Python SDK's `open_channel()`
 app and maps the result to an OCP `message.sent` reply. The bridge is self-contained in
-`main.py`: it imports only the public `openchannel` API and the `agents` package.
+`main.py`: it imports only the public `ocp-sdk` API and the `agents` package.
 
 The bridge does not auto-approve SDK interruptions. An interruption must become an explicit
 OCP approval, and the run is resumed only through that approval path.

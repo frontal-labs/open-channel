@@ -5,7 +5,7 @@ import { verifyWhatsAppWebhook } from "../../src/whatsapp/index.js";
 const appSecret = "app-secret";
 const body = '{"object":"whatsapp_business_account"}';
 
-describe("openchannel/whatsapp webhook signature", () => {
+describe("ocp-sdk/whatsapp webhook signature", () => {
   it("accepts a sha256 signature computed over the raw body", () => {
     const signature = `sha256=${createHmac("sha256", appSecret).update(body).digest("hex")}`;
     expect(() =>

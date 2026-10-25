@@ -1,16 +1,16 @@
-# openchannel
+# ocp-sdk
 
-The npm package `openchannel` for building OCP agents, hosts, policy-controlled
+The npm package `ocp-sdk` for building OCP agents, hosts, policy-controlled
 actions, and channel integrations. Providers and capabilities ship as subpaths, such as
-`openchannel/slack` and `openchannel/postgres`. See [docs/SUBPATHS.md](docs/SUBPATHS.md).
+`ocp-sdk/slack` and `ocp-sdk/postgres`. See [docs/SUBPATHS.md](docs/SUBPATHS.md).
 
 ```bash
-pnpm add openchannel
+pnpm add ocp-sdk
 ```
 
 ```ts
-import { openChannel, RuleBasedPolicyEngine } from "openchannel";
-import { postgresStore } from "openchannel/postgres";
+import { openChannel, RuleBasedPolicyEngine } from "ocp-sdk";
+import { postgresStore } from "ocp-sdk/postgres";
 
 const app = openChannel({
   policy: new RuleBasedPolicyEngine({ rules: [] }), // no actions granted yet
@@ -37,9 +37,9 @@ the typed event builders through `@openchannel/protocol`. There is one envelope,
 ## Development
 
 ```bash
-pnpm --filter openchannel build
-pnpm --filter openchannel typecheck
-pnpm --filter openchannel test
+pnpm --filter ocp-sdk build
+pnpm --filter ocp-sdk typecheck
+pnpm --filter ocp-sdk test
 ```
 
 ## Recovery, audit, and logging

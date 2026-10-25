@@ -5,10 +5,10 @@ const root = fileURLToPath(new URL(".", import.meta.url));
 
 export default defineConfig({
   resolve: {
-    // Order matters: subpath imports (`openchannel/slack`) must resolve before the bare `openchannel`.
+    // Order matters: subpath imports (`ocp-sdk/slack`) must resolve before the bare `ocp-sdk`.
     alias: [
-      { find: /^openchannel\/(.+)$/, replacement: `${root}sdks/typescript/src/$1/index.ts` },
-      { find: /^openchannel$/, replacement: `${root}sdks/typescript/src/index.ts` },
+      { find: /^ocp-sdk\/(.+)$/, replacement: `${root}sdks/typescript/src/$1/index.ts` },
+      { find: /^ocp-sdk$/, replacement: `${root}sdks/typescript/src/index.ts` },
       { find: "@openchannel/adapter", replacement: `${root}packages/adapter/src/index.ts` },
       { find: "@openchannel/cli", replacement: `${root}cli/src/index.ts` },
       { find: "@openchannel/core", replacement: `${root}packages/core/src/index.ts` },

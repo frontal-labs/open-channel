@@ -44,7 +44,7 @@ function createSlowEventStore(): TestEventStore {
   };
 }
 
-describe("openchannel", () => {
+describe("ocp-sdk", () => {
   it("routes a message to an agent and dispatches its reply", async () => {
     const adapter = createTestChannelAdapter();
     const runtime = new OpenChannelRuntime({

@@ -72,7 +72,7 @@ card shape changes, and test duplicate registration as a conflict.
 Relevant commands:
 
 ```bash
-pnpm --filter openchannel test
-pnpm --filter openchannel typecheck
+pnpm --filter ocp-sdk test
+pnpm --filter ocp-sdk typecheck
 pnpm test
 ```

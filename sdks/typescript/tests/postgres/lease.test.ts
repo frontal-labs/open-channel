@@ -15,7 +15,7 @@ function recordingClient() {
   };
 }
 
-describe("openchannel/postgres action leases", () => {
+describe("ocp-sdk/postgres action leases", () => {
   it("claims through one atomic upsert that takes over only expired, still-claimed actions", async () => {
     const { calls, client } = recordingClient();
     const store = postgresStore({ client, leaseMs: 60_000 });

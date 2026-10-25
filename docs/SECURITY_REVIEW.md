@@ -59,7 +59,7 @@ deployed environment, live provider accounts, or secrets management on a target 
 - **No rate limiting on webhook endpoints.** The Slack example has a size limit but no per-client
   limit. Put the endpoint behind a gateway that rate-limits.
 - **Example stores and channels are in memory.** The in-memory store in each example
-  (for instance `examples/native-typescript`) loses state on restart. Production uses `openchannel/postgres`.
+  (for instance `examples/native-typescript`) loses state on restart. Production uses `ocp-sdk/postgres`.
 - **Empty policy in examples.** The examples can only reply. Any action needs explicit rules.
 - **Dependency advisories that remain** (`pnpm audit`, after the vitest upgrade):
   - `braces` (high) and `sprintf-js` (moderate): transitive through `@changesets/cli`, a release
