@@ -7,7 +7,7 @@ import {
   createTestEventStore,
 } from "../src/index.js";
 
-describe("@openchannel/testing state helpers", () => {
+describe("ocp-testing state helpers", () => {
   it("creates an event bus fixture", async () => {
     const bus = createTestEventBus<string>();
     const values: string[] = [];

@@ -1,7 +1,7 @@
 import { randomUUID } from "node:crypto";
 import { create } from "@bufbuild/protobuf";
 import { type Timestamp, timestampFromDate, timestampNow } from "@bufbuild/protobuf/wkt";
-import { ValidationError } from "@openchannel/core";
+import { ValidationError } from "ocp-core";
 
 import { type EventType, PROTOCOL_VERSION } from "./constants.js";
 import {

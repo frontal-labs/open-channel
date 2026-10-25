@@ -1,5 +1,5 @@
 import { create } from "@bufbuild/protobuf";
-import { ValidationError } from "@openchannel/core";
+import { ValidationError } from "ocp-core";
 import {
   fromBinary,
   fromJson,
@@ -7,8 +7,8 @@ import {
   newEvent,
   toBinary,
   toJson,
-} from "@openchannel/protocol";
-import { createTestEvent, createTestHuman } from "@openchannel/testing";
+} from "ocp-protocol";
+import { createTestEvent, createTestHuman } from "ocp-testing";
 import { describe, expect, it } from "vitest";
 
 describe("OCP event envelope", () => {

@@ -1,4 +1,4 @@
-import { TransportError, ValidationError } from "@openchannel/core";
+import { TransportError, ValidationError } from "ocp-core";
 import { describe, expect, it } from "vitest";
 import { opaPolicy } from "../../src/opa/index.js";
 

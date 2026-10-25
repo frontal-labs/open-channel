@@ -1,5 +1,5 @@
 {
-  "name": "@openchannel/cli",
+  "name": "ocp-cli",
   "version": "2.0.0",
   "private": true,
   "description": "Command-line tools for validating and inspecting OpenChannel Protocol messages",
@@ -48,10 +48,10 @@
   },
   "dependencies": {
     "@bufbuild/protobuf": "^2.2.5",
-    "@openchannel/protocol": "workspace:*"
+    "ocp-protocol": "workspace:*"
   },
   "devDependencies": {
-    "@openchannel/testing": "workspace:*",
+    "ocp-testing": "workspace:*",
     "vitest": "^4.1.12"
   },
   "engines": {

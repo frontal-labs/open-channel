@@ -1,5 +1,5 @@
 {
-  "name": "@openchannel/example-native-typescript",
+  "name": "ocp-example-native-typescript",
   "version": "2.0.0",
   "private": true,
   "description": "Native TypeScript OCP agent and approval examples",

@@ -7,7 +7,7 @@ import type {
   EventInput,
   EventPayload,
   EventType,
-} from "@openchannel/protocol";
+} from "ocp-protocol";
 import {
   ActionExecutedSchema,
   ActionFailedSchema,
@@ -31,7 +31,7 @@ import {
   PolicyEvaluatedSchema,
   TaskAssignedSchema,
   TaskCreatedSchema,
-} from "@openchannel/protocol";
+} from "ocp-protocol";
 
 /** Creates a deterministic human fixture for OCP tests. */
 export function createTestHuman(

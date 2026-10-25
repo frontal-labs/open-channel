@@ -26,5 +26,5 @@ JSON, an invalid envelope, or an event/payload mismatch.
 
 ```bash
 pnpm cli -- version
-pnpm --filter @openchannel/cli build
+pnpm --filter ocp-cli build
 ```

@@ -1,4 +1,4 @@
-import { ActionError } from "@openchannel/core";
+import { ActionError } from "ocp-core";
 import { z } from "zod";
 import type { ActionDefinition } from "../types.js";
 import { action } from "../types.js";

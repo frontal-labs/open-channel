@@ -1,4 +1,4 @@
-# @openchannel/core
+# ocp-core
 
 Small provider-neutral primitives shared by OCP runtimes and integrations.
 
@@ -13,6 +13,6 @@ The core package intentionally does not own provider transport, persistence, pol
 ## Development
 
 ```bash
-pnpm --filter @openchannel/core build
-pnpm --filter @openchannel/core typecheck
+pnpm --filter ocp-core build
+pnpm --filter ocp-core typecheck
 ```

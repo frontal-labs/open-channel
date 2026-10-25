@@ -1,6 +1,6 @@
-import { RuleBasedPolicyEngine } from "@openchannel/policy";
-import { ActorType } from "@openchannel/protocol";
-import { createTestAgent, createTestHuman } from "@openchannel/testing";
+import { RuleBasedPolicyEngine } from "ocp-policy";
+import { ActorType } from "ocp-protocol";
+import { createTestAgent, createTestHuman } from "ocp-testing";
 import { describe, expect, it } from "vitest";
 
 describe("OCP policy engine", () => {

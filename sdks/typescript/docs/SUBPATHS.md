@@ -52,7 +52,7 @@ pnpm add zod
 
 ## Renames from the earlier packages
 
-The earlier `@openchannel/<name>` packages are replaced by the subpaths above. Exports drop the `create` prefix:
+The earlier per-package imports are replaced by the subpaths above. Exports drop the `create` prefix:
 
 | Before | After |
 | --- | --- |

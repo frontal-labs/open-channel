@@ -26,7 +26,7 @@ in an object with an `evaluate` method. The stub below always denies, to show th
 
 ```ts
 import { cedarPolicy } from "ocp-sdk/cedar";
-import { createTestEventStore } from "@openchannel/testing";
+import { createTestEventStore } from "ocp-testing";
 import { openChannel } from "ocp-sdk";
 
 const policy = cedarPolicy({

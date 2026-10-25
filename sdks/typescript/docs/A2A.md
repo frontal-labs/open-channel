@@ -22,7 +22,7 @@ pnpm add ocp-sdk
 ```ts
 import { a2aChannel } from "ocp-sdk/a2a";
 import { RuleBasedPolicyEngine } from "ocp-sdk";
-import { createTestEventStore } from "@openchannel/testing";
+import { createTestEventStore } from "ocp-testing";
 import { openChannel } from "ocp-sdk";
 
 const app = openChannel({

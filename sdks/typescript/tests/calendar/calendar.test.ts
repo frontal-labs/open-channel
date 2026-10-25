@@ -1,4 +1,4 @@
-import { ActionError } from "@openchannel/core";
+import { ActionError } from "ocp-core";
 import { describe, expect, it } from "vitest";
 import type { CalendarClient } from "../../src/calendar/index.js";
 import { calendarActions } from "../../src/calendar/index.js";

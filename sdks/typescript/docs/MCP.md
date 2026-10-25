@@ -15,7 +15,7 @@ extension is the executor that calls the MCP tool and returns an action result e
 pnpm add ocp-sdk
 ```
 
-`@openchannel/core` is pulled in as a dependency. Use the official MCP SDK
+`ocp-core` is pulled in as a dependency. Use the official MCP SDK
 (`@modelcontextprotocol/sdk`) in your application to create the client. This package does not
 depend on it.
 

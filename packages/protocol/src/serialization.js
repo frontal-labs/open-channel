@@ -4,7 +4,7 @@ import {
   toBinary as encodeBinary,
   toJson as encodeJson,
 } from "@bufbuild/protobuf";
-import { ValidationError } from "@openchannel/core";
+import { ValidationError } from "ocp-core";
 import { validateEvent } from "./events.js";
 import { EventEnvelopeSchema } from "./generated.js";
 /** Serializes a validated envelope to ProtoJSON. */

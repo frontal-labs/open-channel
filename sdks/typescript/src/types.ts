@@ -1,11 +1,6 @@
-import type {
-  ChannelSink,
-  ChannelSource,
-  DeliveryReceipt,
-  ReceiveMetadata,
-} from "@openchannel/adapter";
-import type { ActionError, OpenChannelError } from "@openchannel/core";
-import type { PolicyEngine } from "@openchannel/policy";
+import type { ChannelSink, ChannelSource, DeliveryReceipt, ReceiveMetadata } from "ocp-adapter";
+import type { ActionError, OpenChannelError } from "ocp-core";
+import type { PolicyEngine } from "ocp-policy";
 import type {
   ActionRequest,
   ActorRef,
@@ -14,7 +9,7 @@ import type {
   EventEnvelope,
   EventType,
   MessageReceived,
-} from "@openchannel/protocol";
+} from "ocp-protocol";
 import type {
   ChannelGateway,
   Clock,
@@ -22,7 +17,7 @@ import type {
   OpenChannelRuntime,
   RuntimeResult,
   SubmitActionInput,
-} from "@openchannel/runtime";
+} from "ocp-runtime";
 
 /** A discoverable skill an agent advertises. */
 export interface AgentSkill {

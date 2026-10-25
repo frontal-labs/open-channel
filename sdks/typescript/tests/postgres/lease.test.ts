@@ -1,4 +1,4 @@
-import { ValidationError } from "@openchannel/core";
+import { ValidationError } from "ocp-core";
 import { describe, expect, it } from "vitest";
 import { postgresEventStoreMigration, postgresStore } from "../../src/postgres/index.js";
 

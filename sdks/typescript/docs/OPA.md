@@ -25,7 +25,7 @@ response to show the shape.
 
 ```ts
 import { opaPolicy } from "ocp-sdk/opa";
-import { createTestEventStore } from "@openchannel/testing";
+import { createTestEventStore } from "ocp-testing";
 import { openChannel } from "ocp-sdk";
 
 const policy = opaPolicy({

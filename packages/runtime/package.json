@@ -1,5 +1,5 @@
 {
-  "name": "@openchannel/runtime",
+  "name": "ocp-runtime",
   "version": "2.0.1",
   "private": true,
   "description": "Event processing, approvals, expiry, escalation, and event-store boundary for OpenChannel Protocol",
@@ -45,13 +45,13 @@
   },
   "dependencies": {
     "@bufbuild/protobuf": "^2.2.5",
-    "@openchannel/adapter": "workspace:*",
-    "@openchannel/core": "workspace:*",
-    "@openchannel/policy": "workspace:*",
-    "@openchannel/protocol": "workspace:*"
+    "ocp-adapter": "workspace:*",
+    "ocp-core": "workspace:*",
+    "ocp-policy": "workspace:*",
+    "ocp-protocol": "workspace:*"
   },
   "devDependencies": {
-    "@openchannel/testing": "workspace:*",
+    "ocp-testing": "workspace:*",
     "vitest": "^4.1.12"
   },
   "engines": {

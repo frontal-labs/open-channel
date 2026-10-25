@@ -1,7 +1,7 @@
 import { create } from "@bufbuild/protobuf";
 import { timestampFromDate } from "@bufbuild/protobuf/wkt";
-import { AuthorizationError } from "@openchannel/core";
-import { RuleBasedPolicyEngine } from "@openchannel/policy";
+import { AuthorizationError } from "ocp-core";
+import { RuleBasedPolicyEngine } from "ocp-policy";
 import {
   ActionRequestSchema,
   ActorRefSchema,
@@ -12,7 +12,7 @@ import {
   ApprovalRequestedSchema,
   type EventEnvelope,
   newEvent,
-} from "@openchannel/protocol";
+} from "ocp-protocol";
 import { describe, expect, it } from "vitest";
 import { createTestEventStore } from "../../testing/src/index.js";
 import { OpenChannelRuntime } from "../src/index.js";

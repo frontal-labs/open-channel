@@ -1,6 +1,6 @@
 import { create } from "@bufbuild/protobuf";
-import type { DeliveryReceipt } from "@openchannel/adapter";
-import { ActionError, ConflictError, OpenChannelError } from "@openchannel/core";
+import type { DeliveryReceipt } from "ocp-adapter";
+import { ActionError, ConflictError, OpenChannelError } from "ocp-core";
 import {
   type ActorRef,
   ActorRefSchema,
@@ -9,8 +9,8 @@ import {
   type MessageReceived,
   MessageSentSchema,
   newEvent,
-} from "@openchannel/protocol";
-import type { ChannelGateway, OpenChannelRuntime } from "@openchannel/runtime";
+} from "ocp-protocol";
+import type { ChannelGateway, OpenChannelRuntime } from "ocp-runtime";
 
 import { consoleLogger } from "./logger.js";
 import type {

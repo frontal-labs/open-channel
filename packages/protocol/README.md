@@ -1,4 +1,4 @@
-# @openchannel/protocol
+# ocp-protocol
 
 Canonical OCP event model: the protobuf-generated types, typed event builders, validation, and JSON and binary serialization.
 
@@ -10,7 +10,7 @@ import {
   eventType,
   fromBinary,
   toBinary,
-} from "@openchannel/protocol";
+} from "ocp-protocol";
 
 const event = approvalRequested({
   /* agent, approver, requestedAction, deadline, ... */
@@ -27,13 +27,13 @@ fromBinary(toBinary(event)); // round-trips, no version argument
 | Inspect   | `eventType`, `validateEvent`, `EVENT_TYPES`, `PROTOCOL_VERSION`                                     |
 | Serialize | `toJson`, `fromJson`, `toBinary`, `fromBinary`                                                      |
 
-`fromJson` and `fromBinary` validate untrusted input and throw `ValidationError` from `@openchannel/core` when it is invalid.
+`fromJson` and `fromBinary` validate untrusted input and throw `ValidationError` from `ocp-core` when it is invalid.
 
 ## Development
 
 ```bash
 pnpm generate
-pnpm --filter @openchannel/protocol build
+pnpm --filter ocp-protocol build
 pnpm proto:lint
 ```
 

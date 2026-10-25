@@ -1,4 +1,4 @@
-import type { ActorRef } from "@openchannel/protocol";
+import type { ActorRef } from "ocp-protocol";
 import type { ChannelDefinition } from "../types.js";
 
 /** Outbound message accepted by a Slack transport implementation. */

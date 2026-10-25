@@ -16,7 +16,7 @@ extension is the executor that performs the calendar write and returns an action
 pnpm add ocp-sdk
 ```
 
-`@openchannel/core` is pulled in as a dependency. `@openchannel/policy`
+`ocp-core` is pulled in as a dependency. `ocp-policy`
 is needed for the reference `RuleBasedPolicyEngine` used below; any `PolicyEngine` works.
 
 ## Quickstart

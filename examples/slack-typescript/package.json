@@ -1,5 +1,5 @@
 {
-  "name": "@openchannel/example-slack-typescript",
+  "name": "ocp-example-slack-typescript",
   "version": "2.0.0",
   "private": true,
   "description": "Slack OCP agent: signed webhooks in, chat.postMessage out",

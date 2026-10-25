@@ -1,4 +1,4 @@
-import type { CoreEventHandler, EventBus } from "@openchannel/core";
+import type { CoreEventHandler, EventBus } from "ocp-core";
 
 /** Ordered publish/subscribe bus for tests. Handlers run sequentially in registration order. */
 class RecordingEventBus<TEvent> implements EventBus<TEvent> {

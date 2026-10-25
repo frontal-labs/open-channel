@@ -1,5 +1,5 @@
 {
-  "name": "@openchannel/example-langchain-typescript",
+  "name": "ocp-example-langchain-typescript",
   "version": "2.0.0",
   "private": true,
   "description": "LangChain TypeScript agent behind an OCP message boundary",

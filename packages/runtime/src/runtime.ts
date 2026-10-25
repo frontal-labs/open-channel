@@ -1,7 +1,7 @@
 import { create } from "@bufbuild/protobuf";
 import { timestampFromDate } from "@bufbuild/protobuf/wkt";
-import { AuthorizationError, ConflictError, NotFoundError } from "@openchannel/core";
-import type { PolicyContext } from "@openchannel/policy";
+import { AuthorizationError, ConflictError, NotFoundError } from "ocp-core";
+import type { PolicyContext } from "ocp-policy";
 import {
   ActionRequestSchema,
   type ActorRef,
@@ -14,7 +14,7 @@ import {
   eventType,
   newEvent,
   PolicyEvaluatedSchema,
-} from "@openchannel/protocol";
+} from "ocp-protocol";
 
 import { SYSTEM_ACTOR } from "./actors.js";
 import { SystemClock } from "./clock.js";

@@ -1,4 +1,4 @@
-import { ValidationError } from "@openchannel/core";
+import { ValidationError } from "ocp-core";
 
 /** A plain JSON object taken from an untrusted WhatsApp payload. */
 export type WhatsAppRecord = Record<string, unknown>;

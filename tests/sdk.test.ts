@@ -1,15 +1,15 @@
 import { create } from "@bufbuild/protobuf";
-import { RuleBasedPolicyEngine } from "@openchannel/policy";
-import { ChannelRefSchema } from "@openchannel/protocol";
-import { ChannelGateway, OpenChannelRuntime } from "@openchannel/runtime";
+import { RuleBasedPolicyEngine } from "ocp-policy";
+import { ChannelRefSchema } from "ocp-protocol";
+import { ChannelGateway, OpenChannelRuntime } from "ocp-runtime";
+import { AgentHost, eventType } from "ocp-sdk";
 import {
   createTestAgent,
   createTestChannelAdapter,
   createTestEvent,
   createTestEventStore,
   createTestHuman,
-} from "@openchannel/testing";
-import { AgentHost, eventType } from "ocp-sdk";
+} from "ocp-testing";
 import { describe, expect, it } from "vitest";
 
 describe("OCP agent SDK", () => {

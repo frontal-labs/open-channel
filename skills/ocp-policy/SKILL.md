@@ -17,7 +17,7 @@ handling, escalation, or the runtime action lifecycle. Read
   events, tracks pending approvals, and emits expiry/escalation events.
 - [`packages/adapter`](../../packages/adapter) is responsible for provider
   delivery, not authorization.
-- Shared failure types come from [`@openchannel/core`](../../packages/core), including
+- Shared failure types come from [`ocp-core`](../../packages/core), including
   `ValidationError`, `ProtocolError`, `ConflictError`, `NotFoundError`, and
   `TransportError`.
 
@@ -55,7 +55,7 @@ agent callback or adapter.
 
 Use `ManualClock` to advance approval deadlines without sleeping. Assert the
 event sequence and status, not private maps or timer implementation details.
-Use `@openchannel/testing` fixtures and selectors to inspect events. Cover at least:
+Use `ocp-testing` fixtures and selectors to inspect events. Cover at least:
 
 - deny: `policy.blocked`, no approval;
 - allow without approval: `policy.allowed`, authorized result;

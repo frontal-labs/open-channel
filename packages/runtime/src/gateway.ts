@@ -5,9 +5,9 @@ import type {
   DeliveryOptions,
   DeliveryReceipt,
   ReceiveMetadata,
-} from "@openchannel/adapter";
-import { OpenChannelError, TransportError, ValidationError } from "@openchannel/core";
-import type { EventEnvelope } from "@openchannel/protocol";
+} from "ocp-adapter";
+import { OpenChannelError, TransportError, ValidationError } from "ocp-core";
+import type { EventEnvelope } from "ocp-protocol";
 
 import type { OpenChannelRuntime } from "./runtime.js";
 import type { RuntimeResult } from "./types.js";

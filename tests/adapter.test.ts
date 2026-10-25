@@ -1,12 +1,12 @@
-import { RuleBasedPolicyEngine } from "@openchannel/policy";
-import { ChannelGateway, OpenChannelRuntime } from "@openchannel/runtime";
+import { RuleBasedPolicyEngine } from "ocp-policy";
+import { ChannelGateway, OpenChannelRuntime } from "ocp-runtime";
 import {
   createTestAgent,
   createTestChannel,
   createTestChannelAdapter,
   createTestEvent,
   createTestEventStore,
-} from "@openchannel/testing";
+} from "ocp-testing";
 import { describe, expect, it } from "vitest";
 
 describe("OCP channel gateway", () => {

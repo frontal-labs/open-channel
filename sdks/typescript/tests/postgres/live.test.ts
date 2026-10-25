@@ -1,6 +1,6 @@
 import { randomUUID } from "node:crypto";
-import { type EventEnvelope, eventType } from "@openchannel/protocol";
-import { createTestEvent } from "@openchannel/testing";
+import { type EventEnvelope, eventType } from "ocp-protocol";
+import { createTestEvent } from "ocp-testing";
 import pg from "pg";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import {

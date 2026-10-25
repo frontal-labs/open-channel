@@ -1,5 +1,5 @@
 {
-  "name": "@openchannel/policy",
+  "name": "ocp-policy",
   "version": "2.0.1",
   "private": true,
   "description": "Authorization, approval, and policy evaluation primitives for OpenChannel Protocol runtimes",
@@ -44,10 +44,10 @@
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@openchannel/protocol": "workspace:*"
+    "ocp-protocol": "workspace:*"
   },
   "devDependencies": {
-    "@openchannel/testing": "workspace:*",
+    "ocp-testing": "workspace:*",
     "vitest": "^4.1.12"
   },
   "engines": {

@@ -6,7 +6,7 @@ import {
   createActionId,
   OpenChannelError,
   ValidationError,
-} from "@openchannel/core";
+} from "ocp-core";
 import {
   ActionExecutedSchema,
   ActionFailedSchema,
@@ -18,13 +18,8 @@ import {
   type EventType,
   eventType,
   newEvent,
-} from "@openchannel/protocol";
-import {
-  ChannelGateway,
-  type EventStore,
-  OpenChannelRuntime,
-  SYSTEM_ACTOR,
-} from "@openchannel/runtime";
+} from "ocp-protocol";
+import { ChannelGateway, type EventStore, OpenChannelRuntime, SYSTEM_ACTOR } from "ocp-runtime";
 import { AgentHost } from "./agent-host.js";
 import type {
   ActionDefinition,

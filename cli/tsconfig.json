@@ -4,8 +4,8 @@
     "rootDir": "..",
     "outDir": "dist",
     "paths": {
-      "@openchannel/protocol": ["packages/protocol/src/index.ts"],
-      "@openchannel/testing": ["packages/testing/src/index.ts"]
+      "ocp-protocol": ["packages/protocol/src/index.ts"],
+      "ocp-testing": ["packages/testing/src/index.ts"]
     },
     "types": ["node"],
     "declaration": true,

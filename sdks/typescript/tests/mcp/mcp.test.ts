@@ -1,4 +1,4 @@
-import { ActionError } from "@openchannel/core";
+import { ActionError } from "ocp-core";
 import { describe, expect, it } from "vitest";
 import type { McpToolClient } from "../../src/mcp/index.js";
 import { closeMcpClient, mcpActions } from "../../src/mcp/index.js";

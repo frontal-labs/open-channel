@@ -1,4 +1,4 @@
-import type { EventEnvelope } from "@openchannel/protocol";
+import type { EventEnvelope } from "ocp-protocol";
 import { describe, expect, it } from "vitest";
 import { type EmailMessage, type EmailPoller, emailSource } from "../../src/email/index.js";
 

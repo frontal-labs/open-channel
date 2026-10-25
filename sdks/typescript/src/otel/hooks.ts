@@ -1,4 +1,4 @@
-import { type EventEnvelope, eventType } from "@openchannel/protocol";
+import { type EventEnvelope, eventType } from "ocp-protocol";
 import type { OpenChannelHooks } from "../types.js";
 
 import type { OpenChannelSpan, OpenChannelTracer, OpenTelemetryOptions } from "./types.js";
