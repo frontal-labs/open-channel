@@ -117,25 +117,6 @@ importers:
         specifier: ^4.1.12
         version: 4.1.12(@types/node@22.20.5)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
 
-  packages/demo:
-    dependencies:
-      '@openchannel/adapter':
-        specifier: workspace:*
-        version: link:../adapter
-      '@openchannel/policy':
-        specifier: workspace:*
-        version: link:../policy
-      '@openchannel/testing':
-        specifier: workspace:*
-        version: link:../testing
-      ocp-sdk:
-        specifier: workspace:*
-        version: link:../../sdks/typescript
-    devDependencies:
-      vitest:
-        specifier: ^4.1.12
-        version: 4.1.12(@types/node@22.20.5)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
-
   packages/policy:
     dependencies:
       '@openchannel/protocol':
@@ -208,6 +189,7 @@ importers:
       '@bufbuild/protobuf':
         specifier: ^2.2.5
         version: 2.16.0
+    devDependencies:
       '@openchannel/adapter':
         specifier: workspace:*
         version: link:../../packages/adapter
@@ -223,13 +205,15 @@ importers:
       '@openchannel/runtime':
         specifier: workspace:*
         version: link:../../packages/runtime
-    devDependencies:
       '@openchannel/testing':
         specifier: workspace:*
         version: link:../../packages/testing
       '@types/pg':
         specifier: ^8.23.1
         version: 8.23.1
+      esbuild:
+        specifier: ^0.28.2
+        version: 0.28.2
       pg:
         specifier: ^8.23.1
         version: 8.23.1
