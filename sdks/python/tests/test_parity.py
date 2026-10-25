@@ -4,7 +4,7 @@ import unittest
 from datetime import UTC, datetime
 from pathlib import Path
 
-from openchannel import (
+from ocp_sdk import (
     ActorRef,
     EventEnvelope,
     action_executed,

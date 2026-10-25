@@ -1,7 +1,7 @@
 import unittest
 from datetime import datetime
 
-from openchannel import (
+from ocp_sdk import (
     ActorRef,
     AgentDefinition,
     AuthorizationError,

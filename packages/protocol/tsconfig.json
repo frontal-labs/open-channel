@@ -3,7 +3,9 @@
   "compilerOptions": {
     "rootDir": "../..",
     "outDir": "dist",
-    "paths": {},
+    "paths": {
+      "@openchannel/core": ["packages/core/src/index.ts"]
+    },
     "types": ["node"],
     "declaration": true,
     "declarationMap": true,

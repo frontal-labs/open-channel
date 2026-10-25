@@ -7,22 +7,12 @@
     }
   ],
   "commit": false,
-  "fixed": [
-    [
-      "openchannel",
-      "@openchannel/adapter",
-      "@openchannel/cli",
-      "@openchannel/core",
-      "@openchannel/policy",
-      "@openchannel/protocol",
-      "@openchannel/runtime"
-    ]
-  ],
+  "fixed": [],
   "linked": [],
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": ["@openchannel/demo"],
+  "ignore": [],
   "privatePackages": {
     "version": true,
     "tag": false

@@ -1,13 +1,14 @@
 {
   "name": "@openchannel/protocol",
-  "version": "2.0.0",
-  "description": "Generated TypeScript protocol types and runtime schemas for the OpenChannel Protocol",
+  "version": "2.0.1",
+  "private": true,
+  "description": "Canonical OpenChannel Protocol wire contract, event identity, and serialization",
   "keywords": [
     "openchannel-protocol",
     "ocp",
-    "protobuf",
-    "protojson",
-    "events"
+    "protocol",
+    "events",
+    "protobuf"
   ],
   "homepage": "https://github.com/frontal-labs/open-channel#readme",
   "bugs": {
@@ -28,8 +29,8 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/packages/protocol/src/index.d.ts",
-      "import": "./dist/packages/protocol/src/index.js"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
     }
   },
   "files": [
@@ -43,8 +44,7 @@
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@bufbuild/protobuf": "^2.2.5",
-    "@openchannel/core": "workspace:*"
+    "@bufbuild/protobuf": "^2.2.5"
   },
   "devDependencies": {
     "vitest": "^4.1.12"

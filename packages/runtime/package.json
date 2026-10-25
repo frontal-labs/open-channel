@@ -1,14 +1,14 @@
 {
   "name": "@openchannel/runtime",
-  "version": "2.0.0",
-  "description": "OpenChannel Protocol runtime orchestration for requests, approvals, escalation, and audit events",
+  "version": "2.0.1",
+  "private": true,
+  "description": "Event processing, approvals, expiry, escalation, and event-store boundary for OpenChannel Protocol",
   "keywords": [
     "openchannel-protocol",
     "ocp",
     "runtime",
-    "approvals",
-    "escalation",
-    "audit"
+    "events",
+    "approvals"
   ],
   "homepage": "https://github.com/frontal-labs/open-channel#readme",
   "bugs": {

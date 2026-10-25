@@ -1,13 +1,14 @@
 {
   "name": "@openchannel/core",
-  "version": "2.0.0",
-  "description": "Core identifiers, events, and transport-neutral primitives for OpenChannel Protocol implementations",
+  "version": "2.0.1",
+  "private": true,
+  "description": "Shared primitives, identifiers, and failure types for OpenChannel Protocol",
   "keywords": [
     "openchannel-protocol",
     "ocp",
-    "events",
-    "event-bus",
-    "identifiers"
+    "core",
+    "identifiers",
+    "errors"
   ],
   "homepage": "https://github.com/frontal-labs/open-channel#readme",
   "bugs": {

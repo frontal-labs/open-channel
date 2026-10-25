@@ -3,8 +3,8 @@ requires = ["setuptools>=75"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "openchannel"
-version = "2.0.0"
+name = "ocp-sdk"
+version = "2.0.1"
 description = "Python SDK for the OpenChannel Protocol"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -15,7 +15,7 @@ authors = [
 maintainers = [
   { name = "Frontal Labs", email = "support@frontal.dev" },
 ]
-keywords = ["openchannel-protocol", "ocp", "agents", "ai", "automation"]
+keywords = ["ocp-protocol", "ocp", "agents", "ai", "automation"]
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Intended Audience :: Developers",

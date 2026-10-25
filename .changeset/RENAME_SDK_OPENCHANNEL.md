@@ -1,5 +1,5 @@
 ---
-"openchannel": minor
+"ocp-sdk": minor
 ---
 
-Rename the TypeScript SDK package from `@frontal-labs/open-channel` to `openchannel`. Install with `pnpm add openchannel` and import from `"openchannel"`. The Python package is now `openchannel` (imported as `openchannel`), and the Rust crate is now `openchannel`.
+Rename the TypeScript SDK package from `@frontal-labs/open-channel` to `ocp-sdk`. Install with `pnpm add ocp-sdk` and import from `"ocp-sdk"`. The Python package is now `ocp-sdk` (imported as `ocp-sdk`), and the Rust crate is now `ocp-sdk`.

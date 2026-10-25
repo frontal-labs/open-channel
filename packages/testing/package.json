@@ -1,6 +1,6 @@
 {
   "name": "@openchannel/testing",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "private": true,
   "description": "Testing fixtures and utilities for OpenChannel Protocol implementations",
   "keywords": [

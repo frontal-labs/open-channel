@@ -1,13 +1,14 @@
 {
   "name": "@openchannel/adapter",
-  "version": "2.0.0",
-  "description": "Adapter interfaces for connecting OpenChannel Protocol transports and channels",
+  "version": "2.0.1",
+  "private": true,
+  "description": "Channel transport contracts and provider adapters for OpenChannel Protocol",
   "keywords": [
     "openchannel-protocol",
     "ocp",
-    "adapters",
-    "channels",
-    "messaging"
+    "adapter",
+    "channel",
+    "transport"
   ],
   "homepage": "https://github.com/frontal-labs/open-channel#readme",
   "bugs": {

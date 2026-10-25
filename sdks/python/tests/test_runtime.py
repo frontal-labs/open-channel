@@ -3,7 +3,7 @@ import contextlib
 import io
 import unittest
 
-from openchannel import (
+from ocp_sdk import (
     ActorRef,
     AgentDefinition,
     ChannelDefinition,

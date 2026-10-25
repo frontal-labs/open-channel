@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from openchannel import EventEnvelope
+from ocp_sdk import EventEnvelope
 
 
 class InMemoryStore:
