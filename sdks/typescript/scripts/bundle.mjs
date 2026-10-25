@@ -1,8 +1,9 @@
 import { existsSync, mkdirSync, readdirSync, statSync } from "node:fs";
 import { dirname, join } from "node:path";
-import { build } from "/Volumes/Frontal Labs IP/repos/open-channel/node_modules/.pnpm/esbuild@0.28.2/node_modules/esbuild/lib/main.js";
+import { fileURLToPath } from "node:url";
+import { build } from "esbuild";
 
-const root = "/Volumes/Frontal Labs IP/repos/open-channel/sdks/typescript";
+const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const srcDir = join(root, "src");
 const outDir = join(root, "dist");
 
