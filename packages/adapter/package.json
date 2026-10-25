@@ -1,5 +1,5 @@
 {
-  "name": "@openchannel/adapter",
+  "name": "ocp-adapter",
   "version": "2.0.1",
   "private": true,
   "description": "Channel transport contracts and provider adapters for OpenChannel Protocol",
@@ -44,10 +44,10 @@
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@openchannel/protocol": "workspace:*"
+    "ocp-protocol": "workspace:*"
   },
   "devDependencies": {
-    "@openchannel/testing": "workspace:*",
+    "ocp-testing": "workspace:*",
     "vitest": "^4.1.12"
   },
   "engines": {

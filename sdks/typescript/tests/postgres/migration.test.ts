@@ -1,5 +1,5 @@
-import { ValidationError } from "@openchannel/core";
-import { createTestEvent } from "@openchannel/testing";
+import { ValidationError } from "ocp-core";
+import { createTestEvent } from "ocp-testing";
 import { describe, expect, it } from "vitest";
 import {
   migratePostgresStore,

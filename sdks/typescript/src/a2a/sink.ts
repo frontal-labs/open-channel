@@ -1,6 +1,6 @@
-import type { ChannelSink, DeliveryOptions, DeliveryReceipt } from "@openchannel/adapter";
-import { OpenChannelError, TransportError } from "@openchannel/core";
-import type { EventEnvelope } from "@openchannel/protocol";
+import type { ChannelSink, DeliveryOptions, DeliveryReceipt } from "ocp-adapter";
+import { OpenChannelError, TransportError } from "ocp-core";
+import type { EventEnvelope } from "ocp-protocol";
 import { deliveryReceipt } from "../delivery.js";
 
 import type { A2ATransport } from "./types.js";

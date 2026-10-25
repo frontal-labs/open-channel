@@ -1,4 +1,4 @@
-import { createTestHuman } from "@openchannel/testing";
+import { createTestHuman } from "ocp-testing";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import type { DirectoryTransport } from "../../src/directory/index.js";
 import { googleDirectory } from "../../src/directory/index.js";

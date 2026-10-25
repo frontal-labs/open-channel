@@ -26,7 +26,7 @@ import { create } from "@bufbuild/protobuf";
 import { postgresStore } from "ocp-sdk/postgres";
 import { slackChannel, verifySlackWebhook } from "ocp-sdk/slack";
 import { RuleBasedPolicyEngine } from "ocp-sdk";
-import { createTestEventStore } from "@openchannel/testing";
+import { createTestEventStore } from "ocp-testing";
 import { ActorRefSchema, ActorType } from "ocp-sdk";
 import { WebClient } from "@slack/web-api";
 import { openChannel } from "ocp-sdk";

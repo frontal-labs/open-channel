@@ -1,8 +1,8 @@
 import { create } from "@bufbuild/protobuf";
 import { timestampFromDate } from "@bufbuild/protobuf/wkt";
-import type { ChannelSource, ReceiveMetadata } from "@openchannel/adapter";
-import { OpenChannelError, ValidationError } from "@openchannel/core";
-import type { ActorRef, EventEnvelope } from "@openchannel/protocol";
+import type { ChannelSource, ReceiveMetadata } from "ocp-adapter";
+import { OpenChannelError, ValidationError } from "ocp-core";
+import type { ActorRef, EventEnvelope } from "ocp-protocol";
 import {
   ActorRefSchema,
   ActorType,
@@ -13,7 +13,7 @@ import {
   ConversationStatus,
   MessageReceivedSchema,
   newEvent,
-} from "@openchannel/protocol";
+} from "ocp-protocol";
 
 import { optionalRecord, optionalString, sourceRecord, type TeamsRecord } from "./records.js";
 import type { TeamsSourceOptions } from "./types.js";

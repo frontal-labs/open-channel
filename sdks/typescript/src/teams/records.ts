@@ -1,4 +1,4 @@
-import { ValidationError } from "@openchannel/core";
+import { ValidationError } from "ocp-core";
 
 /** A plain JSON object taken from an untrusted Teams payload. */
 export type TeamsRecord = Record<string, unknown>;

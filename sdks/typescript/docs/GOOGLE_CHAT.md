@@ -26,7 +26,7 @@ import {
   verifyGoogleChatWebhook,
 } from "ocp-sdk/google-chat";
 import { RuleBasedPolicyEngine } from "ocp-sdk";
-import { createTestEventStore } from "@openchannel/testing";
+import { createTestEventStore } from "ocp-testing";
 import { openChannel } from "ocp-sdk";
 
 const verifyToken = googleChatTokenVerifier({

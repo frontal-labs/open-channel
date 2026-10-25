@@ -1,6 +1,6 @@
 import { create } from "@bufbuild/protobuf";
-import type { OpenChannelError } from "@openchannel/core";
-import { ActorType, ChannelRefSchema, eventType } from "@openchannel/protocol";
+import type { OpenChannelError } from "ocp-core";
+import { ActorType, ChannelRefSchema, eventType } from "ocp-protocol";
 import {
   createTestAgent,
   createTestChannelAdapter,
@@ -9,7 +9,7 @@ import {
   createTestEventStore,
   createTestHuman,
   type TestEventStore,
-} from "@openchannel/testing";
+} from "ocp-testing";
 import { describe, expect, it } from "vitest";
 import { RuleBasedPolicyEngine } from "../../../packages/policy/src/index.js";
 import { ChannelGateway, OpenChannelRuntime } from "../../../packages/runtime/src/index.js";

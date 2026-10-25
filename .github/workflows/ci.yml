@@ -283,8 +283,6 @@ jobs:
       - run: python -m pip install --disable-pip-version-check --no-cache-dir "build>=1.2.2,<2"
       - run: pnpm generate
       - run: pnpm build
-      - name: Dry-run GitHub Packages publish
-        run: node scripts/publish-github-packages.mjs --dry-run
       - name: Dry-run crates.io and PyPI packaging
         run: pnpm release:publish:sdk -- --dry-run
         env:

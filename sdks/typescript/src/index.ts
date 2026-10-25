@@ -4,8 +4,8 @@ export type {
   PolicyEngine,
   PolicyRule,
   RuleBasedPolicyOptions,
-} from "@openchannel/policy";
-export { RuleBasedPolicyEngine } from "@openchannel/policy";
+} from "ocp-policy";
+export { RuleBasedPolicyEngine } from "ocp-policy";
 export type {
   ActionRequest,
   ActorRef,
@@ -14,7 +14,7 @@ export type {
   EventEnvelope,
   EventType,
   MessageReceived,
-} from "@openchannel/protocol";
+} from "ocp-protocol";
 export {
   ActorRefSchema,
   ActorType,
@@ -33,8 +33,8 @@ export {
   toBinary,
   toJson,
   validateEvent,
-} from "@openchannel/protocol";
-export { createActor } from "@openchannel/runtime";
+} from "ocp-protocol";
+export { createActor } from "ocp-runtime";
 export { AgentHost } from "./agent-host.js";
 export { openChannel } from "./app.js";
 export { deliveryReceipt } from "./delivery.js";

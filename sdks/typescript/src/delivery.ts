@@ -1,5 +1,5 @@
-import type { DeliveryReceipt } from "@openchannel/adapter";
-import type { EventEnvelope } from "@openchannel/protocol";
+import type { DeliveryReceipt } from "ocp-adapter";
+import type { EventEnvelope } from "ocp-protocol";
 
 /** Builds the delivery receipt a channel sink returns after a successful provider send. */
 export function deliveryReceipt(

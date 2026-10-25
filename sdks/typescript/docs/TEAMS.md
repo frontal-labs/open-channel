@@ -27,7 +27,7 @@ import {
   verifyTeamsWebhook,
 } from "ocp-sdk/teams";
 import { RuleBasedPolicyEngine } from "ocp-sdk";
-import { createTestEventStore } from "@openchannel/testing";
+import { createTestEventStore } from "ocp-testing";
 import { openChannel } from "ocp-sdk";
 
 const verifyToken = teamsTokenVerifier({ appId: process.env.MICROSOFT_APP_ID ?? "" });

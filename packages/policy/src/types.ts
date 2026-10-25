@@ -1,4 +1,4 @@
-import type { ActorRef, ActorType } from "@openchannel/protocol";
+import type { ActorRef, ActorType } from "ocp-protocol";
 
 /** Inputs used by a policy engine to authorize an action. */
 export interface PolicyContext {

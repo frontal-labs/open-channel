@@ -100,14 +100,14 @@
     "@bufbuild/protobuf": "^2.2.5"
   },
   "devDependencies": {
-    "@openchannel/adapter": "workspace:*",
-    "@openchannel/core": "workspace:*",
-    "@openchannel/policy": "workspace:*",
-    "@openchannel/protocol": "workspace:*",
-    "@openchannel/runtime": "workspace:*",
-    "@openchannel/testing": "workspace:*",
     "@types/pg": "^8.23.1",
     "esbuild": "^0.28.2",
+    "ocp-adapter": "workspace:*",
+    "ocp-core": "workspace:*",
+    "ocp-policy": "workspace:*",
+    "ocp-protocol": "workspace:*",
+    "ocp-runtime": "workspace:*",
+    "ocp-testing": "workspace:*",
     "pg": "^8.23.1",
     "vitest": "^4.1.12",
     "zod": "^4.6.7"

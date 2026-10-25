@@ -1,5 +1,5 @@
-import type { EventEnvelope } from "@openchannel/protocol";
-import { ApprovalOutcome } from "@openchannel/protocol";
+import type { EventEnvelope } from "ocp-protocol";
+import { ApprovalOutcome } from "ocp-protocol";
 import { describe, expect, it } from "vitest";
 import { normalizeTeamsEvent } from "../../src/teams/index.js";
 

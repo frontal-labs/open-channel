@@ -1,4 +1,4 @@
-# @openchannel/adapter
+# ocp-adapter
 
 Provider-neutral channel adapter contracts for OCP.
 
@@ -15,6 +15,6 @@ Adapters should translate provider-specific identifiers into `ChannelRef` and ke
 ## Development
 
 ```bash
-pnpm --filter @openchannel/adapter build
-pnpm --filter @openchannel/adapter typecheck
+pnpm --filter ocp-adapter build
+pnpm --filter ocp-adapter typecheck
 ```

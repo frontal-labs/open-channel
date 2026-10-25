@@ -1,5 +1,5 @@
-import { createActionId, createCorrelationId, ValidationError } from "@openchannel/core";
-import { createTestEvent, createTestEventBus } from "@openchannel/testing";
+import { createActionId, createCorrelationId, ValidationError } from "ocp-core";
+import { createTestEvent, createTestEventBus } from "ocp-testing";
 import { describe, expect, it } from "vitest";
 
 const ACTION_ID_PATTERN = /^action:[0-9a-f-]{36}$/;

@@ -1,5 +1,5 @@
 {
-  "name": "@openchannel/example-vercel-ai-typescript",
+  "name": "ocp-example-vercel-ai-typescript",
   "version": "2.0.0",
   "private": true,
   "description": "Vercel AI SDK text generation behind an OCP message boundary",

@@ -1,6 +1,6 @@
 import { create } from "@bufbuild/protobuf";
-import { ActorRefSchema, ActorType, eventType } from "@openchannel/protocol";
-import { createTestEvent } from "@openchannel/testing";
+import { ActorRefSchema, ActorType, eventType } from "ocp-protocol";
+import { createTestEvent } from "ocp-testing";
 import { describe, expect, it } from "vitest";
 import { slackSink, slackSource } from "../../src/slack/index.js";
 

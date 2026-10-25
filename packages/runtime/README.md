@@ -1,4 +1,4 @@
-# @openchannel/runtime
+# ocp-runtime
 
 Low-level OCP runtime for event processing, policy evaluation, approvals, escalation, audit storage, and channel dispatch. Application developers can use `openChannel()` from `ocp-sdk` as the lifecycle-managed facade.
 

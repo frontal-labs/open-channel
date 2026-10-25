@@ -33,27 +33,6 @@ importers:
       '@commitlint/config-conventional':
         specifier: ^21.2.0
         version: 21.2.4
-      '@openchannel/adapter':
-        specifier: workspace:*
-        version: link:packages/adapter
-      '@openchannel/cli':
-        specifier: workspace:*
-        version: link:cli
-      '@openchannel/core':
-        specifier: workspace:*
-        version: link:packages/core
-      '@openchannel/policy':
-        specifier: workspace:*
-        version: link:packages/policy
-      '@openchannel/protocol':
-        specifier: workspace:*
-        version: link:packages/protocol
-      '@openchannel/runtime':
-        specifier: workspace:*
-        version: link:packages/runtime
-      '@openchannel/testing':
-        specifier: workspace:*
-        version: link:packages/testing
       '@types/node':
         specifier: ^22.10.2
         version: 22.20.5
@@ -63,9 +42,30 @@ importers:
       lint-staged:
         specifier: ^16.2.7
         version: 16.4.0
+      ocp-adapter:
+        specifier: workspace:*
+        version: link:packages/adapter
+      ocp-cli:
+        specifier: workspace:*
+        version: link:cli
+      ocp-core:
+        specifier: workspace:*
+        version: link:packages/core
+      ocp-policy:
+        specifier: workspace:*
+        version: link:packages/policy
+      ocp-protocol:
+        specifier: workspace:*
+        version: link:packages/protocol
+      ocp-runtime:
+        specifier: workspace:*
+        version: link:packages/runtime
       ocp-sdk:
         specifier: workspace:*
         version: link:sdks/typescript
+      ocp-testing:
+        specifier: workspace:*
+        version: link:packages/testing
       tsx:
         specifier: ^4.19.2
         version: 4.23.15
@@ -87,11 +87,11 @@ importers:
       '@bufbuild/protobuf':
         specifier: ^2.2.5
         version: 2.16.0
-      '@openchannel/protocol':
+      ocp-protocol:
         specifier: workspace:*
         version: link:../packages/protocol
     devDependencies:
-      '@openchannel/testing':
+      ocp-testing:
         specifier: workspace:*
         version: link:../packages/testing
       vitest:
@@ -100,11 +100,11 @@ importers:
 
   packages/adapter:
     dependencies:
-      '@openchannel/protocol':
+      ocp-protocol:
         specifier: workspace:*
         version: link:../protocol
     devDependencies:
-      '@openchannel/testing':
+      ocp-testing:
         specifier: workspace:*
         version: link:../testing
       vitest:
@@ -119,11 +119,11 @@ importers:
 
   packages/policy:
     dependencies:
-      '@openchannel/protocol':
+      ocp-protocol:
         specifier: workspace:*
         version: link:../protocol
     devDependencies:
-      '@openchannel/testing':
+      ocp-testing:
         specifier: workspace:*
         version: link:../testing
       vitest:
@@ -135,7 +135,7 @@ importers:
       '@bufbuild/protobuf':
         specifier: ^2.2.5
         version: 2.16.0
-      '@openchannel/core':
+      ocp-core:
         specifier: workspace:*
         version: link:../core
     devDependencies:
@@ -148,20 +148,20 @@ importers:
       '@bufbuild/protobuf':
         specifier: ^2.2.5
         version: 2.16.0
-      '@openchannel/adapter':
+      ocp-adapter:
         specifier: workspace:*
         version: link:../adapter
-      '@openchannel/core':
+      ocp-core:
         specifier: workspace:*
         version: link:../core
-      '@openchannel/policy':
+      ocp-policy:
         specifier: workspace:*
         version: link:../policy
-      '@openchannel/protocol':
+      ocp-protocol:
         specifier: workspace:*
         version: link:../protocol
     devDependencies:
-      '@openchannel/testing':
+      ocp-testing:
         specifier: workspace:*
         version: link:../testing
       vitest:
@@ -173,10 +173,10 @@ importers:
       '@bufbuild/protobuf':
         specifier: ^2.2.5
         version: 2.16.0
-      '@openchannel/core':
+      ocp-core:
         specifier: workspace:*
         version: link:../core
-      '@openchannel/protocol':
+      ocp-protocol:
         specifier: workspace:*
         version: link:../protocol
     devDependencies:
@@ -190,30 +190,30 @@ importers:
         specifier: ^2.2.5
         version: 2.16.0
     devDependencies:
-      '@openchannel/adapter':
-        specifier: workspace:*
-        version: link:../../packages/adapter
-      '@openchannel/core':
-        specifier: workspace:*
-        version: link:../../packages/core
-      '@openchannel/policy':
-        specifier: workspace:*
-        version: link:../../packages/policy
-      '@openchannel/protocol':
-        specifier: workspace:*
-        version: link:../../packages/protocol
-      '@openchannel/runtime':
-        specifier: workspace:*
-        version: link:../../packages/runtime
-      '@openchannel/testing':
-        specifier: workspace:*
-        version: link:../../packages/testing
       '@types/pg':
         specifier: ^8.23.1
         version: 8.23.1
       esbuild:
         specifier: ^0.28.2
         version: 0.28.2
+      ocp-adapter:
+        specifier: workspace:*
+        version: link:../../packages/adapter
+      ocp-core:
+        specifier: workspace:*
+        version: link:../../packages/core
+      ocp-policy:
+        specifier: workspace:*
+        version: link:../../packages/policy
+      ocp-protocol:
+        specifier: workspace:*
+        version: link:../../packages/protocol
+      ocp-runtime:
+        specifier: workspace:*
+        version: link:../../packages/runtime
+      ocp-testing:
+        specifier: workspace:*
+        version: link:../../packages/testing
       pg:
         specifier: ^8.23.1
         version: 8.23.1

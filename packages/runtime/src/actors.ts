@@ -1,5 +1,5 @@
 import { create } from "@bufbuild/protobuf";
-import { type ActorRef, ActorRefSchema, ActorType } from "@openchannel/protocol";
+import { type ActorRef, ActorRefSchema, ActorType } from "ocp-protocol";
 
 /** Creates a typed actor reference for a human, agent, or system actor. */
 export function createActor(

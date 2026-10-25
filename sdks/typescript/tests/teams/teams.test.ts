@@ -1,5 +1,5 @@
-import type { EventEnvelope } from "@openchannel/protocol";
-import { eventType } from "@openchannel/protocol";
+import type { EventEnvelope } from "ocp-protocol";
+import { eventType } from "ocp-protocol";
 import { describe, expect, it } from "vitest";
 import { teamsSource } from "../../src/teams/index.js";
 

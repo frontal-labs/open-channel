@@ -4,7 +4,7 @@
     "rootDir": "../..",
     "outDir": "dist",
     "paths": {
-      "@openchannel/core": ["packages/core/src/index.ts"]
+      "ocp-core": ["packages/core/src/index.ts"]
     },
     "types": ["node"],
     "declaration": true,

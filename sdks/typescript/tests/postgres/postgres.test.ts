@@ -1,4 +1,4 @@
-import { createTestEvent } from "@openchannel/testing";
+import { createTestEvent } from "ocp-testing";
 import { describe, expect, it } from "vitest";
 import { postgresStore } from "../../src/postgres/index.js";
 

@@ -21,7 +21,7 @@ event flow, or validating changes across the pnpm/Turborepo workspace.
 
 ## Shared helpers
 
-Import from `@openchannel/testing` instead of recreating fixtures:
+Import from `ocp-testing` instead of recreating fixtures:
 
 - `createTestHuman`, `createTestAgent`, `createTestActor` for stable identities;
 - `createTestChannel`, `createTestConversation`, and `createTestEvent` for
@@ -31,7 +31,7 @@ Import from `@openchannel/testing` instead of recreating fixtures:
   assertions;
 - `createTestRecorder`, `createTestEventStore`, and `createTestEventBus` for
   observable state doubles;
-- `ManualClock` from `@openchannel/runtime` for deadlines and timers;
+- `ManualClock` from `ocp-runtime` for deadlines and timers;
 - `createDeferred`, `waitFor`, and buffered test I/O for coordination without
   real sleeps or terminal side effects.
 
@@ -42,8 +42,8 @@ the behavior requires them.
 
 ## Package dependency boundary
 
-`@openchannel/testing` is intended for downstream package and integration tests. Keep
-`@openchannel/core` and `@openchannel/protocol` as dependency roots to avoid a workspace
+`ocp-testing` is intended for downstream package and integration tests. Keep
+`ocp-core` and `ocp-protocol` as dependency roots to avoid a workspace
 cycle. Their low-level behavior belongs in their own focused tests or the root
 integration suite.
 

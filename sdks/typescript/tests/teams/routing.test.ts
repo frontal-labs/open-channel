@@ -1,5 +1,5 @@
 import { create } from "@bufbuild/protobuf";
-import { ActorRefSchema, ActorType } from "@openchannel/protocol";
+import { ActorRefSchema, ActorType } from "ocp-protocol";
 import { describe, expect, it } from "vitest";
 import { teamsSource } from "../../src/teams/index.js";
 

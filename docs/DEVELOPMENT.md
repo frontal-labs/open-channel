@@ -37,13 +37,13 @@ Biome is configured in `biome.json`; it extends the Ultracite presets and the sh
 
 `pnpm generate` produces all language bindings: Buf/protoc-gen-es writes TypeScript, `protoc` writes Python, and the Rust SDK's `prost-build` writes Rust modules. The canonical schema lives in `proto/ocp`, with the envelope in `proto/ocp/api` and shared domain messages in `proto/ocp/types`.
 
-The shared `@openchannel/testing` package provides deterministic OCP fixtures, event inspection, async coordination, buffered CLI I/O, and in-memory state doubles. Package-local tests and the root integration suite use the same Vitest configuration and aliases.
+The shared `ocp-testing` package provides deterministic OCP fixtures, event inspection, async coordination, buffered CLI I/O, and in-memory state doubles. Package-local tests and the root integration suite use the same Vitest configuration and aliases.
 
 The published SDK distributions are all named `ocp-sdk` in their registries:
 install with `pnpm add ocp-sdk`, `python -m pip install ocp-sdk`, or
 `cargo add ocp-sdk`. The Rust and Python import identifier is `ocp-sdk`.
 
-Public TypeScript entrypoints use explicit named exports, and shared failures are represented by `@openchannel/core` error classes. Validate untrusted event JSON with `fromJson()` or the exported Zod schemas before handing it to an agent or runtime.
+Public TypeScript entrypoints use explicit named exports, and shared failures are represented by `ocp-core` error classes. Validate untrusted event JSON with `fromJson()` or the exported Zod schemas before handing it to an agent or runtime.
 
 ## Adding an agent
 

@@ -1,6 +1,6 @@
-import { ValidationError } from "@openchannel/core";
-import { type EventEnvelope, eventType, fromJson, toJson } from "@openchannel/protocol";
-import type { ActionExecutionRecord, EventStore } from "@openchannel/runtime";
+import { ValidationError } from "ocp-core";
+import { type EventEnvelope, eventType, fromJson, toJson } from "ocp-protocol";
+import type { ActionExecutionRecord, EventStore } from "ocp-runtime";
 
 import type {
   PostgresClient,

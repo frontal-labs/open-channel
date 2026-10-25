@@ -1,4 +1,4 @@
-import type { ActorRef } from "@openchannel/protocol";
+import type { ActorRef } from "ocp-protocol";
 import type { DirectoryProvider, DirectoryProviderOptions, DirectoryTransport } from "./types.js";
 
 /** One cached lookup. The promise is stored so concurrent callers share a single request. */

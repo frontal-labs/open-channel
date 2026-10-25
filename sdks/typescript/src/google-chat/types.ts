@@ -1,4 +1,4 @@
-import type { ActorRef } from "@openchannel/protocol";
+import type { ActorRef } from "ocp-protocol";
 import type { ChannelDefinition } from "../types.js";
 
 /** Outbound Google Chat message accepted by a Chat API transport. */

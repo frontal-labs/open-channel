@@ -1,4 +1,4 @@
-import { ValidationError } from "@openchannel/core";
+import { ValidationError } from "ocp-core";
 import { describe, expect, it } from "vitest";
 import { verifyWhatsAppChallenge } from "../../src/whatsapp/index.js";
 
