@@ -4,7 +4,7 @@
 use std::fs;
 use std::path::PathBuf;
 
-use openchannel::{EventEnvelope, EventPayload};
+use ocp_sdk::{EventEnvelope, EventPayload};
 use serde_json::Value;
 
 const FIXTURE: &str = "../../packages/protocol/tests/fixtures/event-parity.json";
