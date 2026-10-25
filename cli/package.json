@@ -1,6 +1,6 @@
 {
   "name": "ocp-cli",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "private": true,
   "description": "Command-line tools for validating and inspecting OpenChannel Protocol messages",
   "keywords": [

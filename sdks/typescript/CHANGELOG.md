@@ -1,5 +1,15 @@
 # @frontal-labs/open-channel
 
+## 2.1.0
+
+### Minor Changes
+
+- [#23](https://github.com/frontal-labs/open-channel/pull/23) [`9f57ea5`](https://github.com/frontal-labs/open-channel/commit/9f57ea5025130cb78ef19a382a330fcf39bf75aa) Thanks [@gabrielvfonseca](https://github.com/gabrielvfonseca)! - Fold every channel and capability extension into the `ocp-sdk` SDK as subpath imports: `ocp-sdk/slack`, `ocp-sdk/teams`, `ocp-sdk/google-chat`, `ocp-sdk/email`, `ocp-sdk/whatsapp`, `ocp-sdk/a2a`, `ocp-sdk/calendar`, `ocp-sdk/mcp`, `ocp-sdk/directory`, `ocp-sdk/otel`, `ocp-sdk/opa`, `ocp-sdk/cedar`, and `ocp-sdk/postgres`.
+
+  Exports drop the `create` prefix: `createSlackChannel` is now `slackChannel`, `createPostgresEventStore` is now `postgresStore`, and so on. The SDK also re-exports `RuleBasedPolicyEngine`, `createActor`, `ActorType`, `ActorRefSchema`, and `ChannelRefSchema` so applications import from `ocp-sdk` alone. `zod` is an optional peer, required only by `ocp-sdk/calendar` and `ocp-sdk/mcp`.
+
+- [#20](https://github.com/frontal-labs/open-channel/pull/20) [`377b8bc`](https://github.com/frontal-labs/open-channel/commit/377b8bc5ef9d5de09f151ccb2db4ffb7a7a09e21) Thanks [@gabrielvfonseca](https://github.com/gabrielvfonseca)! - Rename the TypeScript SDK package to `ocp-sdk`. Install with `pnpm add ocp-sdk` and import from `"ocp-sdk"`. The Python package is now `ocp-sdk` (imported as `ocp-sdk`), and the Rust crate is now `ocp-sdk`.
+
 ## 1.0.0
 
 ### Minor Changes
