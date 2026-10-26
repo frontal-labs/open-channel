@@ -45,7 +45,7 @@ pnpm add zod
 | Subpath | Purpose | Exports | Guide |
 | --- | --- | --- | --- |
 | `ocp-sdk/postgres` | Durable `EventStore` (PostgreSQL) | `postgresStore`, `migratePostgresStore`, `PostgresEventStore`, `postgresEventStoreMigration` | [postgres.md](POSTGRES.md) |
-| `ocp-sdk/opa` | OPA decision adapter for the policy contract | `opaPolicy`, `OpaPolicyEngine` | [opa.md](OPA.md) |
+| `ocp-sdk/openchannel` | OPA decision adapter for the policy contract | `openchannelPolicy`, `OpenchannelPolicyEngine` | [openchannel.md](OPENCHANNEL.md) |
 | `ocp-sdk/cedar` | Cedar evaluator adapter for the policy contract | `cedarPolicy`, `CedarPolicyEngine` | [cedar.md](CEDAR.md) |
 | `ocp-sdk/directory` | Cached directory lookups for Google and Microsoft hosts | `googleDirectory`, `microsoftDirectory`, `CachedDirectoryProvider` | [directory.md](DIRECTORY.md) |
 | `ocp-sdk/otel` | Lifecycle hooks, spans, and counters | `otelHooks` | [otel.md](OTEL.md) |
@@ -63,7 +63,7 @@ The earlier per-package imports are replaced by the subpaths above. Exports drop
 | `createCalendarActions`, `createMcpActions` | `calendarActions`, `mcpActions` |
 | `createGoogleDirectoryProvider`, `createMicrosoftDirectoryProvider` | `googleDirectory`, `microsoftDirectory` |
 | `createOpenTelemetryHooks` | `otelHooks` |
-| `createOpaPolicyEngine`, `createCedarPolicyEngine` | `opaPolicy`, `cedarPolicy` |
+| `createOpenchannelPolicyEngine`, `createCedarPolicyEngine` | `openchannelPolicy`, `cedarPolicy` |
 | `createPostgresEventStore`, `migratePostgresEventStore` | `postgresStore`, `migratePostgresStore` |
 
 Each `*Source` and `*Sink` follows the same pattern: `slackSource`, `slackSink`, and so on. Type names such as `SlackTransport` and `SlackChannelOptions` are unchanged.

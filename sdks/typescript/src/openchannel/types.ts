@@ -5,7 +5,7 @@ import type { PolicyContext, PolicyDecision } from "ocp-policy";
  *
  * The transport returns the raw OPA response, which the adapter maps to a PolicyDecision.
  */
-export interface OpaTransport {
+export interface OpenchannelTransport {
   /**
    * Evaluates a policy input synchronously.
    *
@@ -18,13 +18,13 @@ export interface OpaTransport {
 }
 
 /** Options for the OPA-backed policy engine. */
-export interface OpaPolicyOptions {
+export interface OpenchannelPolicyOptions {
   /**
    * Decision used when the transport returns something other than an object. Defaults to a deny
-   * with policy ID `opa:default-deny`. Must deny: a default that allows throws `ValidationError`
+   * with policy ID `openchannel:default-deny`. Must deny: a default that allows throws `ValidationError`
    * when the engine is constructed.
    */
   defaultDecision?: PolicyDecision;
   /** Synchronous transport that performs the OPA evaluation. Required. */
-  transport: OpaTransport;
+  transport: OpenchannelTransport;
 }

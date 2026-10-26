@@ -59,9 +59,9 @@
       "types": "./dist/mcp/index.d.ts",
       "import": "./dist/mcp/index.js"
     },
-    "./opa": {
-      "types": "./dist/opa/index.d.ts",
-      "import": "./dist/opa/index.js"
+    "./openchannel": {
+      "types": "./dist/openchannel/index.d.ts",
+      "import": "./dist/openchannel/index.js"
     },
     "./otel": {
       "types": "./dist/otel/index.d.ts",
