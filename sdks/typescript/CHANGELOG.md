@@ -1,5 +1,11 @@
 # @frontal-labs/open-channel
 
+## 2.2.0
+
+### Minor Changes
+
+- [#33](https://github.com/frontal-labs/open-channel/pull/33) [`a3037af`](https://github.com/frontal-labs/open-channel/commit/a3037af2c5fb75c8de7a331e33c4fe47940b0867) Thanks [@gabrielvfonseca](https://github.com/gabrielvfonseca)! - Rename the OPA policy adapter subpath from `ocp-sdk/opa` to `ocp-sdk/openchannel`. Replace the `opaPolicy`, `OpaPolicyEngine`, and `OpaTransport` exports with `openchannelPolicy`, `OpenchannelPolicyEngine`, and `OpenchannelTransport`. Policy IDs change from `opa:*` to `openchannel:*`, and the provider name changes from `opa` to `openchannel`. Update imports and any code that matches on those IDs. The adapter still evaluates Open Policy Agent decisions through your transport.
+
 ## 2.1.0
 
 ### Minor Changes
