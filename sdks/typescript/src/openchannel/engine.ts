@@ -1,13 +1,13 @@
 import { TransportError, ValidationError } from "ocp-core";
 import type { PolicyContext, PolicyDecision, PolicyEngine } from "ocp-policy";
 
-import type { OpaPolicyOptions, OpaTransport } from "./types.js";
+import type { OpenchannelPolicyOptions, OpenchannelTransport } from "./types.js";
 
 /** Default decision: deny, used when no `defaultDecision` is configured. */
 const DEFAULT_DENY: PolicyDecision = {
   allowed: false,
   approvalRequired: false,
-  policyId: "opa:default-deny",
+  policyId: "openchannel:default-deny",
   reason: "OPA did not return an allow decision",
 };
 
@@ -35,22 +35,22 @@ function toDecision(response: unknown, fallback: PolicyDecision): PolicyDecision
  * A transport exception is rethrown as a retryable `TransportError` with stage `policy`. No
  * decision is returned in that case, so the runtime does not execute the action.
  */
-export class OpaPolicyEngine implements PolicyEngine {
+export class OpenchannelPolicyEngine implements PolicyEngine {
   private readonly fallback: PolicyDecision;
-  private readonly transport: OpaTransport;
+  private readonly transport: OpenchannelTransport;
 
   /**
    * @throws ValidationError when `defaultDecision` allows. A fail-open default would let any
    * malformed OPA response grant access, so the adapter refuses to start with one.
    */
-  constructor(options: OpaPolicyOptions) {
+  constructor(options: OpenchannelPolicyOptions) {
     this.transport = options.transport;
     this.fallback = options.defaultDecision ?? DEFAULT_DENY;
     if (this.fallback.allowed) {
       throw new ValidationError(
         "OPA defaultDecision must deny; fail-open defaults are not supported",
         {
-          provider: "opa",
+          provider: "openchannel",
           stage: "validation",
         },
       );
@@ -64,7 +64,7 @@ export class OpaPolicyEngine implements PolicyEngine {
     } catch (error) {
       throw new TransportError("OPA policy evaluation failed", {
         cause: error,
-        provider: "opa",
+        provider: "openchannel",
         retryable: true,
         stage: "policy",
       });
@@ -74,6 +74,6 @@ export class OpaPolicyEngine implements PolicyEngine {
 }
 
 /** Creates a PolicyEngine for a synchronous OPA transport. */
-export function opaPolicy(options: OpaPolicyOptions): PolicyEngine {
-  return new OpaPolicyEngine(options);
+export function openchannelPolicy(options: OpenchannelPolicyOptions): PolicyEngine {
+  return new OpenchannelPolicyEngine(options);
 }

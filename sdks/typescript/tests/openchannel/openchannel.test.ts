@@ -1,32 +1,32 @@
 import { TransportError, ValidationError } from "ocp-core";
 import { describe, expect, it } from "vitest";
-import { opaPolicy } from "../../src/opa/index.js";
+import { openchannelPolicy } from "../../src/openchannel/index.js";
 
 const context = { actionType: "test", actor: {} as never };
 
-describe("ocp-sdk/opa", () => {
+describe("ocp-sdk/openchannel", () => {
   it("maps a local OPA decision into PolicyEngine", () => {
-    const engine = opaPolicy({
-      transport: { evaluate: () => ({ allowed: true, policyId: "opa:test" }) },
+    const engine = openchannelPolicy({
+      transport: { evaluate: () => ({ allowed: true, policyId: "openchannel:test" }) },
     });
     expect(engine.evaluate(context)).toMatchObject({
       allowed: true,
-      policyId: "opa:test",
+      policyId: "openchannel:test",
     });
   });
 
   it("denies by default when the response is not an object", () => {
-    const engine = opaPolicy({ transport: { evaluate: () => undefined } });
+    const engine = openchannelPolicy({ transport: { evaluate: () => undefined } });
     expect(engine.evaluate(context)).toEqual({
       allowed: false,
       approvalRequired: false,
-      policyId: "opa:default-deny",
+      policyId: "openchannel:default-deny",
       reason: "OPA did not return an allow decision",
     });
   });
 
   it("denies when allowed is missing or not a literal true", () => {
-    const engine = opaPolicy({
+    const engine = openchannelPolicy({
       transport: { evaluate: () => ({ allowed: "true", approvalRequired: "yes" }) },
     });
     expect(engine.evaluate(context)).toMatchObject({ allowed: false, approvalRequired: false });
@@ -36,10 +36,10 @@ describe("ocp-sdk/opa", () => {
     const fallback = {
       allowed: false,
       approvalRequired: true,
-      policyId: "opa:manual-review",
+      policyId: "openchannel:manual-review",
       reason: "no decision",
     };
-    const engine = opaPolicy({
+    const engine = openchannelPolicy({
       defaultDecision: fallback,
       transport: { evaluate: () => null },
     });
@@ -48,7 +48,7 @@ describe("ocp-sdk/opa", () => {
 
   it("refuses to start with an allowing defaultDecision", () => {
     expect(() =>
-      opaPolicy({
+      openchannelPolicy({
         defaultDecision: { allowed: true, approvalRequired: false, policyId: "x", reason: "open" },
         transport: { evaluate: () => null },
       }),
@@ -57,7 +57,7 @@ describe("ocp-sdk/opa", () => {
 
   it("wraps transport failures in a retryable policy TransportError", () => {
     const cause = new Error("connection refused");
-    const engine = opaPolicy({
+    const engine = openchannelPolicy({
       transport: {
         evaluate: () => {
           throw cause;
@@ -71,6 +71,11 @@ describe("ocp-sdk/opa", () => {
       caught = error;
     }
     expect(caught).toBeInstanceOf(TransportError);
-    expect(caught).toMatchObject({ cause, provider: "opa", retryable: true, stage: "policy" });
+    expect(caught).toMatchObject({
+      cause,
+      provider: "openchannel",
+      retryable: true,
+      stage: "policy",
+    });
   });
 });
