@@ -1,5 +1,6 @@
 import { execFileSync } from "node:child_process";
 import {
+  copyFileSync,
   mkdirSync,
   mkdtempSync,
   readdirSync,
@@ -19,7 +20,11 @@ import { join, resolve } from "node:path";
 
 const packDir = join(tmpdir(), "ocp-pack");
 const tarballName = /^ocp-sdk-.*\.tgz$/;
-const [tarballArg, typescriptVersion = "5.9.3"] = process.argv.slice(2);
+const [tarballArg, typescriptVersion = "5.9.3", nodeTypesVersion = "22"] = process.argv.slice(2);
+// Self-contained examples that compile against the published SDK. Examples that need third-party
+// agent frameworks are not installed here, so they are not part of this check.
+const examples = ["native-typescript", "slack-typescript"];
+const root = resolve(import.meta.dirname, "..");
 const tarball = resolve(tarballArg ?? newestTarball(packDir));
 
 function newestTarball(dir) {
@@ -52,6 +57,7 @@ run("npm", [
   join(project, "empty.npmrc"),
   tarball,
   `typescript@${typescriptVersion}`,
+  `@types/node@${nodeTypesVersion}`,
 ]);
 
 const sdkDir = join(project, "node_modules", "ocp-sdk");
@@ -96,16 +102,26 @@ writeFileSync(
         skipLibCheck: false,
         strict: true,
         target: "ES2022",
-        types: [],
+        types: ["node"],
       },
-      include: ["src/**/*.ts"],
+      include: ["src/**/*.ts", "examples/*/src/**/*.ts"],
     },
     null,
     2,
   ),
 );
 
-console.log(`Type-checking ${specifiers.length} public specifiers in ${project}`);
+for (const name of examples) {
+  const dest = join(project, "examples", name, "src");
+  mkdirSync(dest, { recursive: true });
+  for (const file of readdirSync(join(root, "examples", name, "src"))) {
+    copyFileSync(join(root, "examples", name, "src", file), join(dest, file));
+  }
+}
+
+console.log(
+  `Type-checking ${specifiers.length} public specifiers and ${examples.length} examples in ${project}`,
+);
 run(join(project, "node_modules", ".bin", "tsc"), ["-p", "tsconfig.json"]);
 
 const importer = specifiers
