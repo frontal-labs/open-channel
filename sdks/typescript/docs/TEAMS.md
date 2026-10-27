@@ -27,7 +27,7 @@ import {
   verifyTeamsWebhook,
 } from "ocp-sdk/teams";
 import { RuleBasedPolicyEngine } from "ocp-sdk";
-import { createTestEventStore } from "ocp-testing";
+import { postgresStore } from "ocp-sdk/postgres";
 import { openChannel } from "ocp-sdk";
 
 const verifyToken = teamsTokenVerifier({ appId: process.env.MICROSOFT_APP_ID ?? "" });
@@ -43,7 +43,7 @@ const app = openChannel({
     }),
   ],
   policy: new RuleBasedPolicyEngine({ rules: [] }),
-  store: createTestEventStore(),
+  store: postgresStore({ client: pool }), // pool: your PostgresClient, see POSTGRES.md
 });
 
 await app.start();

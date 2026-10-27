@@ -26,7 +26,7 @@ shows the shape; in production pass the tracer from `@opentelemetry/api`.
 ```ts
 import { otelHooks } from "ocp-sdk/otel";
 import { RuleBasedPolicyEngine } from "ocp-sdk";
-import { createTestEventStore } from "ocp-testing";
+import { postgresStore } from "ocp-sdk/postgres";
 import { openChannel } from "ocp-sdk";
 
 const hooks = otelHooks({
@@ -49,7 +49,7 @@ const app = openChannel({
   channels: [],
   hooks,
   policy: new RuleBasedPolicyEngine({ rules: [] }),
-  store: createTestEventStore(),
+  store: postgresStore({ client: pool }), // pool: your PostgresClient, see POSTGRES.md
 });
 ```
 

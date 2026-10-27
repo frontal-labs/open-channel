@@ -1,26 +1,15 @@
-import { existsSync, mkdirSync, readdirSync, statSync } from "node:fs";
+import { existsSync, mkdirSync, rmSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { build } from "esbuild";
+import { findEntryPoints } from "./entry-points.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const srcDir = join(root, "src");
 const outDir = join(root, "dist");
 
-function findEntryPoints(dir, prefix = "") {
-  const entries = [];
-  for (const name of readdirSync(dir)) {
-    const full = join(dir, name);
-    const rel = prefix ? `${prefix}/${name}` : name;
-    const stat = statSync(full);
-    if (stat.isDirectory()) {
-      entries.push(...findEntryPoints(full, rel));
-    } else if (name === "index.ts") {
-      entries.push(rel);
-    }
-  }
-  return entries;
-}
+// Start from an empty dist so files from older builds (renamed or removed modules) never ship.
+rmSync(outDir, { force: true, recursive: true });
 
 const entryPoints = findEntryPoints(srcDir);
 
