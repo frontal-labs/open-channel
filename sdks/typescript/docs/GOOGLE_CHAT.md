@@ -26,7 +26,7 @@ import {
   verifyGoogleChatWebhook,
 } from "ocp-sdk/google-chat";
 import { RuleBasedPolicyEngine } from "ocp-sdk";
-import { createTestEventStore } from "ocp-testing";
+import { postgresStore } from "ocp-sdk/postgres";
 import { openChannel } from "ocp-sdk";
 
 const verifyToken = googleChatTokenVerifier({
@@ -43,7 +43,7 @@ const app = openChannel({
     }),
   ],
   policy: new RuleBasedPolicyEngine({ rules: [] }),
-  store: createTestEventStore(),
+  store: postgresStore({ client: pool }), // pool: your PostgresClient, see POSTGRES.md
 });
 
 await app.start();

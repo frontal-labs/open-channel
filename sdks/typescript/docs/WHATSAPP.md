@@ -26,7 +26,6 @@ import { create } from "@bufbuild/protobuf";
 import { postgresStore } from "ocp-sdk/postgres";
 import { whatsappChannel, verifyWhatsAppWebhook } from "ocp-sdk/whatsapp";
 import { RuleBasedPolicyEngine } from "ocp-sdk";
-import { createTestEventStore } from "ocp-testing";
 import { ActorRefSchema, ActorType } from "ocp-sdk";
 import { openChannel } from "ocp-sdk";
 
@@ -70,7 +69,7 @@ const app = openChannel({
     }),
   ],
   policy: new RuleBasedPolicyEngine({ rules: [] }),
-  store: createTestEventStore(), // production: postgresStore({ client: pool }) from the postgres extension
+  store: postgresStore({ client: pool }), // pool: your PostgresClient, see POSTGRES.md
 });
 
 await app.start();

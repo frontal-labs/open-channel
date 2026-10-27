@@ -25,7 +25,7 @@ response to show the shape.
 
 ```ts
 import { openchannelPolicy } from "ocp-sdk/openchannel";
-import { createTestEventStore } from "ocp-testing";
+import { postgresStore } from "ocp-sdk/postgres";
 import { openChannel } from "ocp-sdk";
 
 const policy = openchannelPolicy({
@@ -43,7 +43,7 @@ const policy = openchannelPolicy({
 const app = openChannel({
   channels: [],
   policy,
-  store: createTestEventStore(),
+  store: postgresStore({ client: pool }), // pool: your PostgresClient, see POSTGRES.md
 });
 ```
 

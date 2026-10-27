@@ -3,7 +3,7 @@
   "version": "2.2.0",
   "description": "TypeScript SDK for building OpenChannel Protocol agents and hosts",
   "keywords": [
-    "ocp-protocol",
+    "openchannel-protocol",
     "ocp",
     "agents",
     "agent-host",
@@ -90,7 +90,7 @@
   "scripts": {
     "build": "pnpm build:bundle && pnpm build:types",
     "build:bundle": "node scripts/bundle.mjs",
-    "build:types": "tsc -p tsconfig.json --noEmit --emitDeclarationOnly --declaration --outDir dist",
+    "build:types": "node scripts/bundle-types.mjs",
     "format": "ultracite fix src",
     "lint": "ultracite check src",
     "test": "vitest run --root ../.. sdks/typescript/tests",
@@ -102,23 +102,11 @@
   "devDependencies": {
     "@types/pg": "^8.23.1",
     "esbuild": "^0.28.2",
-    "ocp-adapter": "workspace:*",
-    "ocp-core": "workspace:*",
-    "ocp-policy": "workspace:*",
-    "ocp-protocol": "workspace:*",
-    "ocp-runtime": "workspace:*",
-    "ocp-testing": "workspace:*",
     "pg": "^8.23.1",
+    "rollup": "^4.65.1",
+    "rollup-plugin-dts": "^6.5.1",
     "vitest": "^4.1.12",
     "zod": "^4.6.7"
-  },
-  "peerDependencies": {
-    "zod": "^4.6.7"
-  },
-  "peerDependenciesMeta": {
-    "zod": {
-      "optional": true
-    }
   },
   "engines": {
     "node": ">=22.18.0"

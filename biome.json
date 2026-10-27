@@ -7,6 +7,16 @@
   ],
   "overrides": [
     {
+      "includes": ["sdks/typescript/src/**", "sdks/typescript/tests/**"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noUndeclaredDependencies": "off"
+          }
+        }
+      }
+    },
+    {
       "includes": [
         "sdks/typescript/src/app.ts",
         "sdks/typescript/tests/channels/a2a/a2a-provider.test.ts",

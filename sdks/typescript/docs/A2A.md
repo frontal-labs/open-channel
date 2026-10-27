@@ -22,7 +22,7 @@ pnpm add ocp-sdk
 ```ts
 import { a2aChannel } from "ocp-sdk/a2a";
 import { RuleBasedPolicyEngine } from "ocp-sdk";
-import { createTestEventStore } from "ocp-testing";
+import { postgresStore } from "ocp-sdk/postgres";
 import { openChannel } from "ocp-sdk";
 
 const app = openChannel({
@@ -36,7 +36,7 @@ const app = openChannel({
     }),
   ],
   policy: new RuleBasedPolicyEngine({ rules: [] }),
-  store: createTestEventStore(),
+  store: postgresStore({ client: pool }), // pool: your PostgresClient, see POSTGRES.md
 });
 
 await app.start();

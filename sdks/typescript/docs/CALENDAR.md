@@ -16,8 +16,7 @@ extension is the executor that performs the calendar write and returns an action
 pnpm add ocp-sdk
 ```
 
-`ocp-core` is pulled in as a dependency. `ocp-policy`
-is needed for the reference `RuleBasedPolicyEngine` used below; any `PolicyEngine` works.
+`RuleBasedPolicyEngine` is exported from `ocp-sdk`, and any `PolicyEngine` works.
 
 ## Quickstart
 

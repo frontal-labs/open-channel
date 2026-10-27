@@ -15,7 +15,7 @@ extension is the executor that calls the MCP tool and returns an action result e
 pnpm add ocp-sdk
 ```
 
-`ocp-core` is pulled in as a dependency. Use the official MCP SDK
+The SDK bundles its internal packages, so no other install is needed. Use the official MCP SDK
 (`@modelcontextprotocol/sdk`) in your application to create the client. This package does not
 depend on it.
 
