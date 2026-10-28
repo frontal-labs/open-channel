@@ -1,4 +1,4 @@
-import { createTestHuman } from "ocp-testing";
+import { createTestHuman } from "@openchannelprotocol/testing";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import type { DirectoryTransport } from "../../src/directory/index.js";
 import { googleDirectory } from "../../src/directory/index.js";
@@ -12,7 +12,7 @@ function createTransport(overrides: Partial<DirectoryTransport> = {}): Directory
   };
 }
 
-describe("ocp-sdk/directory", () => {
+describe("@openchannelprotocol/sdk/directory", () => {
   it("caches directory identity lookups", async () => {
     let calls = 0;
     const provider = googleDirectory({

@@ -33,6 +33,30 @@ importers:
       '@commitlint/config-conventional':
         specifier: ^21.2.0
         version: 21.2.4
+      '@openchannelprotocol/adapter':
+        specifier: workspace:*
+        version: link:packages/adapter
+      '@openchannelprotocol/cli':
+        specifier: workspace:*
+        version: link:cli
+      '@openchannelprotocol/core':
+        specifier: workspace:*
+        version: link:packages/core
+      '@openchannelprotocol/policy':
+        specifier: workspace:*
+        version: link:packages/policy
+      '@openchannelprotocol/protocol':
+        specifier: workspace:*
+        version: link:packages/protocol
+      '@openchannelprotocol/runtime':
+        specifier: workspace:*
+        version: link:packages/runtime
+      '@openchannelprotocol/sdk':
+        specifier: workspace:*
+        version: link:sdks/typescript
+      '@openchannelprotocol/testing':
+        specifier: workspace:*
+        version: link:packages/testing
       '@types/node':
         specifier: ^22.10.2
         version: 22.20.5
@@ -42,30 +66,6 @@ importers:
       lint-staged:
         specifier: ^16.2.7
         version: 16.4.0
-      ocp-adapter:
-        specifier: workspace:*
-        version: link:packages/adapter
-      ocp-cli:
-        specifier: workspace:*
-        version: link:cli
-      ocp-core:
-        specifier: workspace:*
-        version: link:packages/core
-      ocp-policy:
-        specifier: workspace:*
-        version: link:packages/policy
-      ocp-protocol:
-        specifier: workspace:*
-        version: link:packages/protocol
-      ocp-runtime:
-        specifier: workspace:*
-        version: link:packages/runtime
-      ocp-sdk:
-        specifier: workspace:*
-        version: link:sdks/typescript
-      ocp-testing:
-        specifier: workspace:*
-        version: link:packages/testing
       tsx:
         specifier: ^4.19.2
         version: 4.23.15
@@ -87,11 +87,11 @@ importers:
       '@bufbuild/protobuf':
         specifier: ^2.2.5
         version: 2.16.0
-      ocp-protocol:
+      '@openchannelprotocol/protocol':
         specifier: workspace:*
         version: link:../packages/protocol
     devDependencies:
-      ocp-testing:
+      '@openchannelprotocol/testing':
         specifier: workspace:*
         version: link:../packages/testing
       vitest:
@@ -100,11 +100,11 @@ importers:
 
   packages/adapter:
     dependencies:
-      ocp-protocol:
+      '@openchannelprotocol/protocol':
         specifier: workspace:*
         version: link:../protocol
     devDependencies:
-      ocp-testing:
+      '@openchannelprotocol/testing':
         specifier: workspace:*
         version: link:../testing
       vitest:
@@ -119,11 +119,11 @@ importers:
 
   packages/policy:
     dependencies:
-      ocp-protocol:
+      '@openchannelprotocol/protocol':
         specifier: workspace:*
         version: link:../protocol
     devDependencies:
-      ocp-testing:
+      '@openchannelprotocol/testing':
         specifier: workspace:*
         version: link:../testing
       vitest:
@@ -135,7 +135,7 @@ importers:
       '@bufbuild/protobuf':
         specifier: ^2.2.5
         version: 2.16.0
-      ocp-core:
+      '@openchannelprotocol/core':
         specifier: workspace:*
         version: link:../core
     devDependencies:
@@ -148,20 +148,20 @@ importers:
       '@bufbuild/protobuf':
         specifier: ^2.2.5
         version: 2.16.0
-      ocp-adapter:
+      '@openchannelprotocol/adapter':
         specifier: workspace:*
         version: link:../adapter
-      ocp-core:
+      '@openchannelprotocol/core':
         specifier: workspace:*
         version: link:../core
-      ocp-policy:
+      '@openchannelprotocol/policy':
         specifier: workspace:*
         version: link:../policy
-      ocp-protocol:
+      '@openchannelprotocol/protocol':
         specifier: workspace:*
         version: link:../protocol
     devDependencies:
-      ocp-testing:
+      '@openchannelprotocol/testing':
         specifier: workspace:*
         version: link:../testing
       vitest:
@@ -173,10 +173,10 @@ importers:
       '@bufbuild/protobuf':
         specifier: ^2.2.5
         version: 2.16.0
-      ocp-core:
+      '@openchannelprotocol/core':
         specifier: workspace:*
         version: link:../core
-      ocp-protocol:
+      '@openchannelprotocol/protocol':
         specifier: workspace:*
         version: link:../protocol
     devDependencies:

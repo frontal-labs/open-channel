@@ -1,4 +1,4 @@
-# ocp-sdk/postgres
+# @openchannelprotocol/sdk/postgres
 
 A durable PostgreSQL `EventStore` for OCP. It keeps every event in an append-only table, records
 action state for safe retries, and ships an idempotent migration. Use it wherever the in-memory test
@@ -14,7 +14,7 @@ OCP message.received / message.sent / action events -> PostgresEventStore (this 
 ## Install
 
 ```sh
-pnpm add ocp-sdk pg
+pnpm add @openchannelprotocol/sdk pg
 ```
 
 `pg` is not a dependency of this package. Pass your own client or pool, so you control the connection
@@ -27,7 +27,7 @@ settings and pool size.
 3. Pass the pool to the store.
 
 ```ts
-import { migratePostgresStore, postgresStore } from "ocp-sdk/postgres";
+import { migratePostgresStore, postgresStore } from "@openchannelprotocol/sdk/postgres";
 import { Pool } from "pg";
 
 const pool = new Pool({ connectionString: process.env.DATABASE_URL });
@@ -42,10 +42,10 @@ processes migrating at the same moment can race on the first `CREATE`.
 ## Quickstart
 
 ```ts
-import { postgresStore, migratePostgresStore } from "ocp-sdk/postgres";
-import { RuleBasedPolicyEngine } from "ocp-sdk";
+import { postgresStore, migratePostgresStore } from "@openchannelprotocol/sdk/postgres";
+import { RuleBasedPolicyEngine } from "@openchannelprotocol/sdk";
 import { Pool } from "pg";
-import { openChannel } from "ocp-sdk";
+import { openChannel } from "@openchannelprotocol/sdk";
 
 const pool = new Pool({ connectionString: process.env.DATABASE_URL });
 await migratePostgresStore(pool);
@@ -83,7 +83,7 @@ const app = openChannel({
 ## Tests
 
 ```sh
-pnpm --filter ocp-sdk test
+pnpm --filter @openchannelprotocol/sdk test
 ```
 
 Without `OCP_POSTGRES_URL`, the live tests are skipped and the unit tests still run. To run the live
@@ -91,5 +91,5 @@ tests:
 
 ```sh
 OCP_POSTGRES_URL=postgres://user:pass@localhost:5432/ocp_test \
-  pnpm --filter ocp-sdk test
+  pnpm --filter @openchannelprotocol/sdk test
 ```

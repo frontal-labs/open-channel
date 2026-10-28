@@ -1,4 +1,4 @@
-import { ActionError } from "ocp-core";
+import { ActionError } from "@openchannelprotocol/core";
 import { describe, expect, it } from "vitest";
 import type { CalendarClient } from "../../src/calendar/index.js";
 import { calendarActions } from "../../src/calendar/index.js";
@@ -29,7 +29,7 @@ function createClient(overrides: Partial<CalendarClient> = {}): CalendarClient {
   };
 }
 
-describe("ocp-sdk/calendar", () => {
+describe("@openchannelprotocol/sdk/calendar", () => {
   it("creates SDK action definitions with Zod validation", () => {
     const actions = calendarActions({
       cancel: async () => ({ cancelled: true }),

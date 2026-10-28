@@ -1,10 +1,10 @@
 import { create } from "@bufbuild/protobuf";
-import { ActorRefSchema, ActorType, eventType } from "ocp-protocol";
-import { createTestEvent } from "ocp-testing";
+import { ActorRefSchema, ActorType, eventType } from "@openchannelprotocol/protocol";
+import { createTestEvent } from "@openchannelprotocol/testing";
 import { describe, expect, it } from "vitest";
 import { slackSink, slackSource } from "../../src/slack/index.js";
 
-describe("ocp-sdk/slack", () => {
+describe("@openchannelprotocol/sdk/slack", () => {
   it("normalizes a Slack message through the ChannelSource contract", async () => {
     const source = slackSource();
     const normalized = await source.normalize({

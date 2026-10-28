@@ -95,5 +95,5 @@ None. Both examples are fully deterministic.
 ## Next steps
 
 - Replace `createDemoEventStore()` with a durable store such as
-  `ocp-sdk/postgres` before any real deployment.
+  `@openchannelprotocol/sdk/postgres` before any real deployment.
 - For a real channel, see [`slack-typescript`](../slack-typescript/README.md).

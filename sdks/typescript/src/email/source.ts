@@ -1,8 +1,8 @@
 import { create } from "@bufbuild/protobuf";
 import { timestampFromDate } from "@bufbuild/protobuf/wkt";
-import type { ChannelSource, ReceiveMetadata } from "ocp-adapter";
-import { OpenChannelError, ValidationError } from "ocp-core";
-import type { ActorRef, EventEnvelope } from "ocp-protocol";
+import type { ChannelSource, ReceiveMetadata } from "@openchannelprotocol/adapter";
+import { OpenChannelError, ValidationError } from "@openchannelprotocol/core";
+import type { ActorRef, EventEnvelope } from "@openchannelprotocol/protocol";
 import {
   ActorRefSchema,
   ActorType,
@@ -11,7 +11,7 @@ import {
   ConversationStatus,
   MessageReceivedSchema,
   newEvent,
-} from "ocp-protocol";
+} from "@openchannelprotocol/protocol";
 
 import { sourceRecord } from "./records.js";
 import type { EmailMessage, EmailPoller, EmailSourceOptions } from "./types.js";

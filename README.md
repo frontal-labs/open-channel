@@ -15,7 +15,7 @@ typed event builders, config-first TypeScript/Python/
 Rust application facades, policy-controlled actions, source/sink channel
 contracts, and at-least-once in-process processing.
 
-Project links: [repository](https://github.com/frontal-labs/open-channel), [issues](https://github.com/frontal-labs/open-channel/issues), and [release notes](./CHANGELOG.md).
+Project links: [repository](https://github.com/openchannelprotocol/open-channel), [issues](https://github.com/openchannelprotocol/open-channel/issues), and [release notes](./CHANGELOG.md).
 
 ## Quickstart
 
@@ -114,6 +114,6 @@ OCP uses compatible concepts such as actors, tasks, artifacts, correlation IDs, 
 
 ## Contributing
 
-The canonical schema lives under `proto/`. Run `pnpm generate` after changing it, then run `pnpm check`. New provider integrations should implement `ChannelSource` and/or `ChannelSink` and translate provider-native events into OCP envelopes without leaking provider-specific fields into the core payloads. Application code should prefer `openChannel()` from `ocp-sdk`.
+The canonical schema lives under `proto/`. Run `pnpm generate` after changing it, then run `pnpm check`. New provider integrations should implement `ChannelSource` and/or `ChannelSink` and translate provider-native events into OCP envelopes without leaking provider-specific fields into the core payloads. Application code should prefer `openChannel()` from `@openchannelprotocol/sdk`.
 
 Use `pnpm fix` for safe formatting and lint fixes. Package-level task configuration is inherited from the root `turbo.json`; each package also contains a local `turbo.json` so ownership and future task overrides stay close to the package.

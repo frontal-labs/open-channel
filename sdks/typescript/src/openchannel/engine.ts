@@ -1,5 +1,5 @@
-import { TransportError, ValidationError } from "ocp-core";
-import type { PolicyContext, PolicyDecision, PolicyEngine } from "ocp-policy";
+import { TransportError, ValidationError } from "@openchannelprotocol/core";
+import type { PolicyContext, PolicyDecision, PolicyEngine } from "@openchannelprotocol/policy";
 
 import type { OpenchannelPolicyOptions, OpenchannelTransport } from "./types.js";
 

@@ -1,9 +1,9 @@
 import { create } from "@bufbuild/protobuf";
-import { ActorRefSchema, ActorType } from "ocp-protocol";
+import { ActorRefSchema, ActorType } from "@openchannelprotocol/protocol";
 import { describe, expect, it } from "vitest";
 import { teamsSource } from "../../src/teams/index.js";
 
-describe("ocp-sdk/teams routing", () => {
+describe("@openchannelprotocol/sdk/teams routing", () => {
   it("sets the configured recipient so AgentHost can route the message", async () => {
     const route = create(ActorRefSchema, {
       id: "agent:microsoft-teams-helper",

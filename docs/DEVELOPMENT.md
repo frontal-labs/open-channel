@@ -39,9 +39,9 @@ Biome is configured in `biome.json`; it extends the Ultracite presets and the sh
 
 The shared `ocp-testing` package provides deterministic OCP fixtures, event inspection, async coordination, buffered CLI I/O, and in-memory state doubles. Package-local tests and the root integration suite use the same Vitest configuration and aliases.
 
-The published SDK distributions are all named `ocp-sdk` in their registries:
-install with `pnpm add ocp-sdk`, `python -m pip install ocp-sdk`, or
-`cargo add ocp-sdk`. The Rust and Python import identifier is `ocp-sdk`.
+The published SDK distributions are all named `@openchannelprotocol/sdk` in their registries:
+install with `pnpm add @openchannelprotocol/sdk`, `python -m pip install @openchannelprotocol/sdk`, or
+`cargo add @openchannelprotocol/sdk`. The Rust and Python import identifier is `@openchannelprotocol/sdk`.
 
 Public TypeScript entrypoints use explicit named exports, and shared failures are represented by `ocp-core` error classes. Validate untrusted event JSON with `fromJson()` or the exported Zod schemas before handing it to an agent or runtime.
 
@@ -50,7 +50,7 @@ Public TypeScript entrypoints use explicit named exports, and shared failures ar
 For new applications, use the config-first `openChannel` facade. It composes the runtime, agent host, channel source/sink registration, action registry, lifecycle, and hooks. Use `AgentHost` directly when you need lower-level composition. This keeps agent discovery and execution separate from channel transport, similar to the useful parts of A2A without importing an A2A transport requirement.
 
 ```ts
-import { openChannel } from "ocp-sdk";
+import { openChannel } from "@openchannelprotocol/sdk";
 
 const app = openChannel({
   policy,

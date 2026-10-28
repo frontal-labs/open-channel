@@ -1,6 +1,6 @@
-import type { EventEnvelope, EventType } from "ocp-protocol";
-import { eventType } from "ocp-protocol";
-import { createTestEvent, createTestEventStore } from "ocp-testing";
+import type { EventEnvelope, EventType } from "@openchannelprotocol/protocol";
+import { eventType } from "@openchannelprotocol/protocol";
+import { createTestEvent, createTestEventStore } from "@openchannelprotocol/testing";
 import { describe, expect, it } from "vitest";
 import { ManualClock } from "../src/index.js";
 

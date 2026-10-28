@@ -1,6 +1,6 @@
 # OCP API reference
 
-OCP 2.0 has one event envelope, one protocol version (`2.0`), and one package version (`2.0.0`) for every package, SDK, and example. This page is the canonical vocabulary. TypeScript uses camelCase; Python and Rust use snake_case. The names are otherwise identical.
+OCP 2.0 has one event envelope, one protocol version (`2.0`), and one package version (`0.1.0`) for every package, SDK, and example. This page is the canonical vocabulary. TypeScript uses camelCase; Python and Rust use snake_case. The names are otherwise identical.
 
 ## Events
 
@@ -25,7 +25,7 @@ Approval lifecycle events (`approval.requested`, `approval.granted`, `approval.d
 One function builds an OCP application.
 
 ```ts
-import { ocp } from "ocp-sdk";
+import { ocp } from "@openchannelprotocol/sdk";
 
 const app = ocp({
   policy,                 // required
@@ -123,5 +123,5 @@ Providers translate their native payloads into `message.received` events. Provid
 ## Versioning
 
 - Protocol version: `2.0` (`PROTOCOL_VERSION` in TypeScript, `PROTOCOL_VERSION` in Python, `PROTOCOL_VERSION` in Rust).
-- Package versions: `2.0.0` for every workspace package, SDK, and example.
+- Package versions: `0.1.0` for every workspace package, SDK, and example.
 - Protobuf: package `ocp.api` (envelope) and `ocp.types` (domain messages). Field numbers are stable. `event_type` (field 2) is reserved.

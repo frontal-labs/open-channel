@@ -16,7 +16,7 @@
  */
 import { Client } from "@modelcontextprotocol/client";
 import { StdioClientTransport } from "@modelcontextprotocol/client/stdio";
-import { action } from "ocp-sdk";
+import { action } from "@openchannelprotocol/sdk";
 
 import { allowOnlyTargets, runOpenChannelTextAgent } from "./ocp-bridge.js";
 

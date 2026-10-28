@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { a2aSource, normalizeA2AEvent } from "../../src/a2a/index.js";
 
-describe("ocp-sdk/a2a loop prevention", () => {
+describe("@openchannelprotocol/sdk/a2a loop prevention", () => {
   it("drops inbound messages sent by the configured local agent", () => {
     const event = normalizeA2AEvent(
       { message: { parts: [{ text: "echo" }], sender: { id: "agent:self" } } },

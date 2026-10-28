@@ -1,7 +1,7 @@
 version: v2
 modules:
   - path: proto
-    name: buf.build/frontal-labs/open-channel
+    name: buf.build/openchannelprotocol/open-channel
 lint:
   use:
     - STANDARD

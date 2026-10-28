@@ -655,7 +655,7 @@ def from_json(value: Mapping[str, object]) -> EventEnvelope:
 def to_binary(event: EventEnvelope) -> bytes:
     """Serialize a validated event as protobuf wire bytes (byte-compatible with the TypeScript SDK).
 
-    The encoding comes from the stdlib-only codec in `ocp-sdk._wire`; no protobuf runtime is
+    The encoding comes from the stdlib-only codec in `@openchannelprotocol/sdk._wire`; no protobuf runtime is
     required.
     """
 

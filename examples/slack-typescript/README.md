@@ -114,7 +114,7 @@ applies policy and approvals first.
 ## Production notes
 
 - **Store.** `src/main.ts` uses the demo-only in-memory store in
-  `src/demo-store.ts`. Use `ocp-sdk/postgres` in production.
+  `src/demo-store.ts`. Use `@openchannelprotocol/sdk/postgres` in production.
 - **Policy.** The policy is empty, so the agent can only reply. Add rules before
   granting it any action.
 - **Retries.** Slack retries unacknowledged deliveries. Events are deduplicated

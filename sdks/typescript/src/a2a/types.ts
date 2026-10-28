@@ -1,4 +1,4 @@
-import type { ActorRef } from "ocp-protocol";
+import type { ActorRef } from "@openchannelprotocol/protocol";
 import type { AgentCard, ChannelDefinition } from "../types.js";
 
 /** Outbound A2A message. `taskId` and `contextId` correlate follow-up turns with the peer. */

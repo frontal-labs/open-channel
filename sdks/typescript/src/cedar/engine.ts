@@ -1,4 +1,4 @@
-import type { PolicyContext, PolicyDecision, PolicyEngine } from "ocp-policy";
+import type { PolicyContext, PolicyDecision, PolicyEngine } from "@openchannelprotocol/policy";
 
 import type { CedarEvaluator, CedarPolicyOptions } from "./types.js";
 

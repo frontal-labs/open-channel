@@ -6,7 +6,7 @@ import {
   createActionId,
   OpenChannelError,
   ValidationError,
-} from "ocp-core";
+} from "@openchannelprotocol/core";
 import {
   ActionExecutedSchema,
   ActionFailedSchema,
@@ -18,8 +18,8 @@ import {
   type EventType,
   eventType,
   newEvent,
-} from "ocp-protocol";
-import { ChannelGateway, type EventStore, OpenChannelRuntime, SYSTEM_ACTOR } from "ocp-runtime";
+} from "@openchannelprotocol/protocol";
+import { ChannelGateway, type EventStore, OpenChannelRuntime, SYSTEM_ACTOR } from "@openchannelprotocol/runtime";
 import { AgentHost } from "./agent-host.js";
 import type {
   ActionDefinition,
@@ -376,7 +376,7 @@ class OpenChannelApp implements OpenChannel {
       target: options.target ?? `action:${type}`,
       type,
     });
-    if (!(await this.runtime.claimAction(actionId, "ocp-sdk"))) {
+    if (!(await this.runtime.claimAction(actionId, "@openchannelprotocol/sdk"))) {
       const duplicate: ActionResult<unknown> = {
         actionId,
         error: new ActionError(`OCP action ${actionId} has already been claimed`, {

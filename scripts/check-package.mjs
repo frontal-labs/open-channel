@@ -4,24 +4,24 @@ import { tmpdir } from "node:os";
 import { join, relative, resolve } from "node:path";
 
 // Packs a publishable package, unpacks the tarball, and fails if the published files or manifest
-// reference the internal workspace packages or the @frontal-labs scope. Consumers must be able to
+// reference the internal workspace packages or the @openchannelprotocol scope. Consumers must be able to
 // install the package without any registry scope configuration.
 //
 // Usage: node scripts/check-package.mjs [packageDir] [--pack-destination <dir>]
 // The tarball is left in the pack destination (default: <tmpdir>/ocp-pack) for smoke-consumer.mjs.
 
 const forbiddenText = [
-  "@frontal-labs/",
+  "@openchannelprotocol/",
   "@openchannel/",
-  "ocp-core",
-  "ocp-policy",
-  "ocp-adapter",
-  "ocp-runtime",
-  "ocp-testing",
-  "ocp-protocol",
+  "@openchannelprotocol/core",
+  "@openchannelprotocol/policy",
+  "@openchannelprotocol/adapter",
+  "@openchannelprotocol/runtime",
+  "@openchannelprotocol/testing",
+  "@openchannelprotocol/protocol",
 ];
 const forbiddenDependency =
-  /^(@frontal-labs\/|@openchannel\/|ocp-(core|policy|adapter|runtime|testing|protocol)$)/;
+  /^(@openchannelprotocol\/|@openchannel\/|ocp-(core|policy|adapter|runtime|testing|protocol)$)/;
 const dependencyFields = [
   "dependencies",
   "peerDependencies",

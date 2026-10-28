@@ -1,4 +1,4 @@
-# ocp-sdk/whatsapp
+# @openchannelprotocol/sdk/whatsapp
 
 WhatsApp Business Cloud source and sink for the OpenChannel Protocol (OCP). Inbound WhatsApp text
 messages become OCP `message.received` events for the harness, and the harness's `message.sent`
@@ -13,21 +13,21 @@ WhatsApp webhook -> verifyWhatsAppWebhook -> app.receive("whatsapp") -> message.
 ## Install
 
 ```sh
-pnpm add ocp-sdk @bufbuild/protobuf
+pnpm add @openchannelprotocol/sdk @bufbuild/protobuf
 ```
 
-The quickstart uses `ocp-sdk/postgres` for the event store; any `EventStore`
+The quickstart uses `@openchannelprotocol/sdk/postgres` for the event store; any `EventStore`
 works. The transport is yours to write: it calls the WhatsApp Cloud API `messages` endpoint.
 
 ## Quickstart
 
 ```ts
 import { create } from "@bufbuild/protobuf";
-import { postgresStore } from "ocp-sdk/postgres";
-import { whatsappChannel, verifyWhatsAppWebhook } from "ocp-sdk/whatsapp";
-import { RuleBasedPolicyEngine } from "ocp-sdk";
-import { ActorRefSchema, ActorType } from "ocp-sdk";
-import { openChannel } from "ocp-sdk";
+import { postgresStore } from "@openchannelprotocol/sdk/postgres";
+import { whatsappChannel, verifyWhatsAppWebhook } from "@openchannelprotocol/sdk/whatsapp";
+import { RuleBasedPolicyEngine } from "@openchannelprotocol/sdk";
+import { ActorRefSchema, ActorType } from "@openchannelprotocol/sdk";
+import { openChannel } from "@openchannelprotocol/sdk";
 
 const phoneNumberId = process.env.WHATSAPP_PHONE_NUMBER_ID ?? "";
 const helper = create(ActorRefSchema, { id: "agent:whatsapp-helper", type: ActorType.AGENT });
@@ -120,5 +120,5 @@ The extension reads no environment variables. The application supplies:
 ## Tests
 
 ```sh
-pnpm --filter ocp-sdk test
+pnpm --filter @openchannelprotocol/sdk test
 ```

@@ -1,8 +1,8 @@
-import { createTestEvent } from "ocp-testing";
+import { createTestEvent } from "@openchannelprotocol/testing";
 import { describe, expect, it } from "vitest";
 import { postgresStore } from "../../src/postgres/index.js";
 
-describe("ocp-sdk/postgres", () => {
+describe("@openchannelprotocol/sdk/postgres", () => {
   it("uses appendIfAbsent for runtime idempotency", async () => {
     let inserted = false;
     const store = postgresStore({

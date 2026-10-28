@@ -1,8 +1,8 @@
-import { messageReceived } from "ocp-sdk";
+import { messageReceived } from "@openchannelprotocol/sdk";
 import { describe, expect, it } from "vitest";
 import { otelHooks } from "../../src/otel/index.js";
 
-describe("ocp-sdk/otel", () => {
+describe("@openchannelprotocol/sdk/otel", () => {
   it("creates hooks compatible with OpenChannel", async () => {
     const spans: string[] = [];
     const hooks = otelHooks({

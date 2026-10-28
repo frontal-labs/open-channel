@@ -24,7 +24,7 @@ import {
   type OpenChannelOptions,
   openChannel,
   PROTOCOL_VERSION,
-} from "ocp-sdk";
+} from "@openchannelprotocol/sdk";
 
 /** Event store type accepted by `openChannel`. */
 type EventStore = OpenChannelOptions["store"];

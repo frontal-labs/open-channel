@@ -2,7 +2,7 @@
 
 Runs a PydanticAI `Agent.run` behind the Python SDK's `open_channel()` app and maps its typed
 `result.output` to an OCP `message.sent` event. The bridge is self-contained in `main.py`: it
-imports only the public `ocp-sdk` API and `pydantic_ai`.
+imports only the public `@openchannelprotocol/sdk` API and `pydantic_ai`.
 
 By default the run is deterministic. It uses PydanticAI's `TestModel`, makes no network call,
 and needs no credentials.

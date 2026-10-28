@@ -1,4 +1,4 @@
-import { type EventEnvelope, eventType as typeOf } from "ocp-protocol";
+import { type EventEnvelope, eventType as typeOf } from "@openchannelprotocol/protocol";
 
 /** Action bookkeeping record kept by a test event store. */
 export interface TestActionRecord {

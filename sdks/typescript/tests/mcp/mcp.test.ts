@@ -1,4 +1,4 @@
-import { ActionError } from "ocp-core";
+import { ActionError } from "@openchannelprotocol/core";
 import { describe, expect, it } from "vitest";
 import type { McpToolClient } from "../../src/mcp/index.js";
 import { closeMcpClient, mcpActions } from "../../src/mcp/index.js";
@@ -15,7 +15,7 @@ async function settle(outcome: unknown): Promise<unknown> {
 
 const context = { actor: {} as never, request: {} as never, runtime: {} as never };
 
-describe("ocp-sdk/mcp", () => {
+describe("@openchannelprotocol/sdk/mcp", () => {
   it("creates a policy-controlled MCP action", async () => {
     const calls: string[] = [];
     const [action] = mcpActions({

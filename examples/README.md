@@ -22,7 +22,7 @@ environment-variable guidance.
 
 | Example                                                    | Language   | Harness/tool                 | What it demonstrates                                                |
 | ---------------------------------------------------------- | ---------- | ---------------------------- | ------------------------------------------------------------------- |
-| [`native-typescript`](./native-typescript/README.md)       | TypeScript | `ocp-sdk` | Agent cards, message routing, channel dispatch, approval flow       |
+| [`native-typescript`](./native-typescript/README.md)       | TypeScript | `@openchannelprotocol/sdk` | Agent cards, message routing, channel dispatch, approval flow       |
 | [`native-python`](./native-python/README.md)               | Python     | OCP Python SDK               | Async agent host and ProtoJSON-shaped replies                       |
 | [`native-rust`](./native-rust/README.md)                   | Rust       | OCP Rust SDK                 | Typed agent host and reply envelopes                                |
 | [`slack-typescript`](./slack-typescript/README.md)         | TypeScript | Slack Events API and Web API | Real-channel quickstart: signed webhooks in, `chat.postMessage` out |

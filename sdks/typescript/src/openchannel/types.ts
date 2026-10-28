@@ -1,4 +1,4 @@
-import type { PolicyContext, PolicyDecision } from "ocp-policy";
+import type { PolicyContext, PolicyDecision } from "@openchannelprotocol/policy";
 
 /**
  * Synchronous OPA evaluation port used for OCP policy decisions.

@@ -1,13 +1,13 @@
-import { RuleBasedPolicyEngine } from "ocp-policy";
-import { ApprovalOutcome, eventType } from "ocp-protocol";
-import { ManualClock, OpenChannelRuntime } from "ocp-runtime";
+import { RuleBasedPolicyEngine } from "@openchannelprotocol/policy";
+import { ApprovalOutcome, eventType } from "@openchannelprotocol/protocol";
+import { ManualClock, OpenChannelRuntime } from "@openchannelprotocol/runtime";
 import {
   createTestAction,
   createTestAgent,
   createTestEvent,
   createTestEventStore,
   createTestHuman,
-} from "ocp-testing";
+} from "@openchannelprotocol/testing";
 import { describe, expect, it } from "vitest";
 
 function createRuntime() {

@@ -34,7 +34,7 @@ example fixes can usually go directly to a pull request.
 
 - Protocol and compatibility: `proto/ocp`, `packages/protocol`, and the spec.
 - Runtime and approvals: `packages/runtime` and `packages/policy`.
-- Provider transport: `packages/adapter` or `sdks/typescript/src/<provider>/` (shipped as `ocp-sdk/<provider>`).
+- Provider transport: `packages/adapter` or `sdks/typescript/src/<provider>/` (shipped as `@openchannelprotocol/sdk/<provider>`).
 - Agent hosts: the matching TypeScript, Python, or Rust SDK.
 - Framework integrations: `examples/<framework>-<language>/`.
 - Shared fixtures: `packages/testing` or root `tests/`.

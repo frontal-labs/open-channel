@@ -10,7 +10,7 @@ import {
   eventType,
   fromBinary,
   toBinary,
-} from "ocp-protocol";
+} from "@openchannelprotocol/protocol";
 
 const event = approvalRequested({
   /* agent, approver, requestedAction, deadline, ... */

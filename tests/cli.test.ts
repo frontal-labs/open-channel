@@ -1,6 +1,6 @@
-import { runCommand } from "ocp-cli";
-import { toJson } from "ocp-protocol";
-import { createBufferedTestIO, createTestEvent } from "ocp-testing";
+import { runCommand } from "@openchannelprotocol/cli";
+import { toJson } from "@openchannelprotocol/protocol";
+import { createBufferedTestIO, createTestEvent } from "@openchannelprotocol/testing";
 import { describe, expect, it } from "vitest";
 
 const INVALID_EVENT_PATTERN = /^invalid OCP event:/;

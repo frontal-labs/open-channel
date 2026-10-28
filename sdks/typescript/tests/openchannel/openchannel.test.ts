@@ -1,10 +1,10 @@
-import { TransportError, ValidationError } from "ocp-core";
+import { TransportError, ValidationError } from "@openchannelprotocol/core";
 import { describe, expect, it } from "vitest";
 import { openchannelPolicy } from "../../src/openchannel/index.js";
 
 const context = { actionType: "test", actor: {} as never };
 
-describe("ocp-sdk/openchannel", () => {
+describe("@openchannelprotocol/sdk/openchannel", () => {
   it("maps a local OPA decision into PolicyEngine", () => {
     const engine = openchannelPolicy({
       transport: { evaluate: () => ({ allowed: true, policyId: "openchannel:test" }) },

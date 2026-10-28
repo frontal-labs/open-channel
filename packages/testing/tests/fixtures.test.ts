@@ -1,4 +1,4 @@
-import { ActorType, eventType as typeOf } from "ocp-protocol";
+import { ActorType, eventType as typeOf } from "@openchannelprotocol/protocol";
 import { describe, expect, it } from "vitest";
 
 import {

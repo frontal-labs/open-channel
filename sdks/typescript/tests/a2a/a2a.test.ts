@@ -1,9 +1,9 @@
-import type { EventEnvelope } from "ocp-protocol";
-import { eventType } from "ocp-protocol";
+import type { EventEnvelope } from "@openchannelprotocol/protocol";
+import { eventType } from "@openchannelprotocol/protocol";
 import { describe, expect, it } from "vitest";
 import { a2aSource } from "../../src/a2a/index.js";
 
-describe("ocp-sdk/a2a", () => {
+describe("@openchannelprotocol/sdk/a2a", () => {
   it("normalizes A2A parts and preserves task context", async () => {
     const source = a2aSource();
     const event = await source.normalize({

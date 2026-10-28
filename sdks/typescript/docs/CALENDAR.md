@@ -1,4 +1,4 @@
-# ocp-sdk/calendar
+# @openchannelprotocol/sdk/calendar
 
 Policy-controlled calendar actions for OCP agents. The package turns a calendar backend (Google
 Calendar, Microsoft Graph, or CalDAV) into three SDK actions: `calendar.create`,
@@ -13,17 +13,17 @@ extension is the executor that performs the calendar write and returns an action
 ## Install
 
 ```sh
-pnpm add ocp-sdk
+pnpm add @openchannelprotocol/sdk
 ```
 
-`RuleBasedPolicyEngine` is exported from `ocp-sdk`, and any `PolicyEngine` works.
+`RuleBasedPolicyEngine` is exported from `@openchannelprotocol/sdk`, and any `PolicyEngine` works.
 
 ## Quickstart
 
 ```ts
-import { calendarActions, type CalendarClient } from "ocp-sdk/calendar";
-import { RuleBasedPolicyEngine } from "ocp-sdk";
-import { openChannel, type OpenChannelOptions } from "ocp-sdk";
+import { calendarActions, type CalendarClient } from "@openchannelprotocol/sdk/calendar";
+import { RuleBasedPolicyEngine } from "@openchannelprotocol/sdk";
+import { openChannel, type OpenChannelOptions } from "@openchannelprotocol/sdk";
 
 // Injected by the application: a client that wraps your calendar SDK and holds its credentials.
 declare const calendarClient: CalendarClient;
@@ -97,5 +97,5 @@ environment in application code, and keep them out of tracked files.
 ## Tests
 
 ```sh
-pnpm --filter ocp-sdk test
+pnpm --filter @openchannelprotocol/sdk test
 ```

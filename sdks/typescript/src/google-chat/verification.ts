@@ -1,4 +1,4 @@
-import { ValidationError } from "ocp-core";
+import { ValidationError } from "@openchannelprotocol/core";
 
 import type { GoogleChatWebhookRequest } from "./types.js";
 

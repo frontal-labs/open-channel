@@ -6,11 +6,11 @@
       "title": "OCP Protocol",
       "description": "Build and extend the OpenChannel Protocol and its provider-neutral wire contract.",
       "skills": [
-        "ocp-protocol",
+        "@openchannelprotocol/protocol",
         "ocp-agent",
-        "ocp-policy",
-        "ocp-adapter",
-        "ocp-testing",
+        "@openchannelprotocol/policy",
+        "@openchannelprotocol/adapter",
+        "@openchannelprotocol/testing",
         "ocp-examples",
         "ocp-governance"
       ]

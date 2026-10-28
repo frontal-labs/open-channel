@@ -1,5 +1,5 @@
-import { RuleBasedPolicyEngine } from "ocp-policy";
-import { ActorType, ApprovalOutcome } from "ocp-protocol";
+import { RuleBasedPolicyEngine } from "@openchannelprotocol/policy";
+import { ActorType, ApprovalOutcome } from "@openchannelprotocol/protocol";
 import {
   createTestAction,
   createTestAgent,
@@ -7,11 +7,11 @@ import {
   createTestEventStore,
   createTestHuman,
   eventTypes,
-} from "ocp-testing";
+} from "@openchannelprotocol/testing";
 import { describe, expect, it } from "vitest";
 import { ManualClock, OpenChannelRuntime } from "../src/index.js";
 
-describe("ocp-runtime", () => {
+describe("@openchannelprotocol/runtime", () => {
   it("expires approval requests and emits escalation", async () => {
     const clock = new ManualClock(new Date("2026-10-19T14:00:00.000Z"));
     const runtime = new OpenChannelRuntime({

@@ -1,6 +1,6 @@
 import { createHmac, timingSafeEqual } from "node:crypto";
 
-import { ValidationError } from "ocp-core";
+import { ValidationError } from "@openchannelprotocol/core";
 
 import type { WhatsAppWebhookRequest } from "./types.js";
 

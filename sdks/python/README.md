@@ -1,12 +1,12 @@
-# ocp-sdk
+# @openchannelprotocol/sdk
 
-The PyPI distribution is `ocp-sdk`, imported as `ocp-sdk`. It provides the OCP
+The PyPI distribution is `@openchannelprotocol/sdk`, imported as `@openchannelprotocol/sdk`. It provides the OCP
 event model (one envelope, protocol version `2.0`), typed event builders, an application
 factory with agents, actions, channels, policy, and approvals, and transport-independent
 source/sink contracts. The codec is stdlib-only: no protobuf runtime is required.
 
 ```bash
-python -m pip install ocp-sdk
+python -m pip install @openchannelprotocol/sdk
 ```
 
 ## Usage

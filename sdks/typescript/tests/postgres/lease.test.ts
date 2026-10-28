@@ -1,4 +1,4 @@
-import { ValidationError } from "ocp-core";
+import { ValidationError } from "@openchannelprotocol/core";
 import { describe, expect, it } from "vitest";
 import { postgresEventStoreMigration, postgresStore } from "../../src/postgres/index.js";
 
@@ -15,7 +15,7 @@ function recordingClient() {
   };
 }
 
-describe("ocp-sdk/postgres action leases", () => {
+describe("@openchannelprotocol/sdk/postgres action leases", () => {
   it("claims through one atomic upsert that takes over only expired, still-claimed actions", async () => {
     const { calls, client } = recordingClient();
     const store = postgresStore({ client, leaseMs: 60_000 });

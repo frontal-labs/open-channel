@@ -1,9 +1,9 @@
 import { create } from "@bufbuild/protobuf";
-import { ActorRefSchema, ActorType } from "ocp-protocol";
+import { ActorRefSchema, ActorType } from "@openchannelprotocol/protocol";
 import { describe, expect, it } from "vitest";
 import { a2aSource } from "../../src/a2a/index.js";
 
-describe("ocp-sdk/a2a routing", () => {
+describe("@openchannelprotocol/sdk/a2a routing", () => {
   it("sets the configured recipient so AgentHost can route the message", async () => {
     const route = create(ActorRefSchema, { id: "agent:a2a-helper", type: ActorType.AGENT });
     const source = a2aSource({ recipient: route });

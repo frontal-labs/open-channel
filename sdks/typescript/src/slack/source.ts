@@ -1,8 +1,8 @@
 import { create } from "@bufbuild/protobuf";
 import { timestampFromDate } from "@bufbuild/protobuf/wkt";
-import type { ChannelSource, ReceiveMetadata } from "ocp-adapter";
-import { OpenChannelError, ValidationError } from "ocp-core";
-import type { ActorRef } from "ocp-protocol";
+import type { ChannelSource, ReceiveMetadata } from "@openchannelprotocol/adapter";
+import { OpenChannelError, ValidationError } from "@openchannelprotocol/core";
+import type { ActorRef } from "@openchannelprotocol/protocol";
 import {
   ActorRefSchema,
   ActorType,
@@ -11,7 +11,7 @@ import {
   ConversationStatus,
   MessageReceivedSchema,
   newEvent,
-} from "ocp-protocol";
+} from "@openchannelprotocol/protocol";
 
 import { optionalRecord, optionalString, sourceRecord } from "./records.js";
 import type { SlackSourceOptions } from "./types.js";

@@ -1,17 +1,17 @@
-# ocp-sdk
+# @openchannelprotocol/sdk
 
-The Rust distribution of the OpenChannel Protocol (OCP) is published as `ocp-sdk` on crates.io.
-Rust imports use the identifier `ocp-sdk`. It provides one event envelope, one protocol version
+The Rust distribution of the OpenChannel Protocol (OCP) is published as `@openchannelprotocol/sdk` on crates.io.
+Rust imports use the identifier `@openchannelprotocol/sdk`. It provides one event envelope, one protocol version
 (`PROTOCOL_VERSION`, `2.0`), an agent host with A2A-like agent cards, and the `OpenChannel` application.
 
 ```bash
-cargo add ocp-sdk
+cargo add @openchannelprotocol/sdk
 ```
 
 ## Build an application
 
 ```rust
-use ocp-sdk::{AgentCard, AgentDefinition, Hooks, MemoryEventStore, OpenChannel,
+use openchannel_sdk::{AgentCard, AgentDefinition, Hooks, MemoryEventStore, OpenChannel,
     OpenChannelOptions};
 
 let app = OpenChannel::new(OpenChannelOptions {
@@ -51,7 +51,7 @@ app.stop()?;
 There is one envelope. Its payload is the event kind, and `event_type()` derives the dot-separated name:
 
 ```rust
-use ocp-sdk::{approval_decided, message_received, ApprovalOutcome, EventEnvelope};
+use openchannel_sdk::{approval_decided, message_received, ApprovalOutcome, EventEnvelope};
 
 let event = message_received("hello");
 assert_eq!(event.event_type(), "message.received");

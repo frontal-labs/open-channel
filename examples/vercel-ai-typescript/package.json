@@ -1,18 +1,1 @@
-{
-  "name": "ocp-example-vercel-ai-typescript",
-  "version": "2.0.0",
-  "private": true,
-  "description": "Vercel AI SDK text generation behind an OCP message boundary",
-  "type": "module",
-  "scripts": {
-    "start": "tsx src/main.ts"
-  },
-  "dependencies": {
-    "@ai-sdk/openai": "^4.0.99",
-    "ai": "^7.0.148",
-    "ocp-sdk": "^2.0.0"
-  },
-  "devDependencies": {
-    "tsx": "^4.23.15"
-  }
-}
+{"name": "ocp-example-vercel-ai-typescript", "version": "2.0.0", "private": true, "description": "Vercel AI SDK text generation behind an OCP message boundary", "type": "module", "scripts": {"start": "tsx src/main.ts"}, "dependencies": {"@ai-sdk/openai": "^4.0.99", "ai": "^7.0.148", "@openchannelprotocol/sdk": "^2.0.0"}, "devDependencies": {"tsx": "^4.23.15"}}

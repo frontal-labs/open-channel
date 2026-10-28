@@ -65,14 +65,14 @@ wire bindings, not a substitute for a coherent SDK API.
 
 Test the observable flow: inbound message, agent selection, reply or action
 request, policy/approval result, and outbound dispatch. Use deterministic
-fixtures from [`ocp-testing`](../ocp-testing/SKILL.md), not real provider
+fixtures from [`ocp-testing`](../@openchannelprotocol/testing/SKILL.md), not real provider
 credentials or wall-clock sleeps. Add agent-card discovery tests when the
 card shape changes, and test duplicate registration as a conflict.
 
 Relevant commands:
 
 ```bash
-pnpm --filter ocp-sdk test
-pnpm --filter ocp-sdk typecheck
+pnpm --filter @openchannelprotocol/sdk test
+pnpm --filter @openchannelprotocol/sdk typecheck
 pnpm test
 ```

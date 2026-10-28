@@ -1,9 +1,9 @@
-import { toJson } from "ocp-protocol";
-import { createBufferedTestIO, createTestEvent } from "ocp-testing";
+import { toJson } from "@openchannelprotocol/protocol";
+import { createBufferedTestIO, createTestEvent } from "@openchannelprotocol/testing";
 import { describe, expect, it } from "vitest";
 import { runCommand } from "../src/index.js";
 
-describe("ocp-cli", () => {
+describe("@openchannelprotocol/cli", () => {
   it("validates buffered ProtoJSON input", async () => {
     const { io, stdout } = createBufferedTestIO(
       JSON.stringify(toJson(createTestEvent({ eventType: "message.received" }))),

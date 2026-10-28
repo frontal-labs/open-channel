@@ -1,4 +1,4 @@
-# ocp-sdk/directory
+# @openchannelprotocol/sdk/directory
 
 Cached directory lookups for OCP agents. Channels and policy often need to turn an external user
 ID into an OCP actor, or ask which groups a person belongs to. This package wraps a provider
@@ -18,13 +18,13 @@ the real directory (Google Workspace, Microsoft Entra/Graph, or anything else).
 ## Install
 
 ```sh
-pnpm add ocp-sdk
+pnpm add @openchannelprotocol/sdk
 ```
 
 ## Quickstart
 
 ```ts
-import { googleDirectory } from "ocp-sdk/directory";
+import { googleDirectory } from "@openchannelprotocol/sdk/directory";
 
 const directory = googleDirectory({
   cacheTtlMs: 5 * 60_000,
@@ -68,7 +68,7 @@ a service account for Google or an app registration for Microsoft).
 ## Tests
 
 ```sh
-pnpm --filter ocp-sdk test
+pnpm --filter @openchannelprotocol/sdk test
 ```
 
 The tests use an in-memory transport and do not need credentials.

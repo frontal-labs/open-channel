@@ -1,9 +1,9 @@
 import { create } from "@bufbuild/protobuf";
-import { ActorRefSchema, ActorType } from "ocp-protocol";
+import { ActorRefSchema, ActorType } from "@openchannelprotocol/protocol";
 import { describe, expect, it } from "vitest";
 import { googleChatSource } from "../../src/google-chat/index.js";
 
-describe("ocp-sdk/google-chat routing", () => {
+describe("@openchannelprotocol/sdk/google-chat routing", () => {
   it("sets the configured recipient so AgentHost can route the message", async () => {
     const route = create(ActorRefSchema, { id: "agent:google-chat-helper", type: ActorType.AGENT });
     const source = googleChatSource({ recipient: route });

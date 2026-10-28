@@ -1,5 +1,5 @@
 import { create } from "@bufbuild/protobuf";
-import { ValidationError } from "ocp-core";
+import { ValidationError } from "@openchannelprotocol/core";
 import { describe, expect, it } from "vitest";
 import {
   ActionRequestSchema,
@@ -21,7 +21,7 @@ import {
 
 const message = create(MessageReceivedSchema, { text: "hello" });
 
-describe("ocp-protocol", () => {
+describe("@openchannelprotocol/protocol", () => {
   it("round-trips an event through ProtoJSON and binary protobuf", () => {
     const event = newEvent({
       actor: create(ActorRefSchema, { id: "human:test", type: ActorType.HUMAN }),

@@ -14,10 +14,10 @@ Code layout:
 
 - Node.js 22.18 or later, with `npx` on the PATH. The default server is fetched
   from npm on first run, so the first run needs network access.
-- The `ocp-sdk` SDK. **It is not on the npm registry yet**, so `npm install`
+- The `@openchannelprotocol/sdk` SDK. **It is not on the npm registry yet**, so `npm install`
   does not install it. The SDK also depends on other workspace packages, so it
   cannot be installed from `sdks/typescript` by npm alone. To run this example
-  you must make `ocp-sdk` resolvable (for example, from a local build of
+  you must make `@openchannelprotocol/sdk` resolvable (for example, from a local build of
   `sdks/typescript`). The bridge typechecks against the SDK source; a
   standalone one-command install is not verified.
 
@@ -53,7 +53,7 @@ The tool receives `{ "message": "<input text>" }` as its arguments.
 | Variable             | Required | Default                                                  | Purpose                                                                             |
 | -------------------- | -------- | -------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | `MCP_SERVER_COMMAND` | No       | `npx`                                                    | Command that starts the MCP server over stdio.                                      |
-| `MCP_SERVER_ARGS`    | No       | `["-y", "@modelcontextprotocol/server-everything@2.0.0"]` | JSON array of strings passed to the command. Invalid JSON fails with the expected format. |
+| `MCP_SERVER_ARGS`    | No       | `["-y", "@modelcontextprotocol/server-everything@0.1.0"]` | JSON array of strings passed to the command. Invalid JSON fails with the expected format. |
 | `MCP_TOOL_NAME`      | No       | `echo`                                                   | Tool to call. The policy target becomes `mcp:<MCP_TOOL_NAME>`.                      |
 
 ## Expected output

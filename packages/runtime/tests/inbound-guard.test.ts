@@ -1,5 +1,5 @@
-import { RuleBasedPolicyEngine } from "ocp-policy";
-import { createTestEvent, createTestEventStore } from "ocp-testing";
+import { RuleBasedPolicyEngine } from "@openchannelprotocol/policy";
+import { createTestEvent, createTestEventStore } from "@openchannelprotocol/testing";
 import { describe, expect, it } from "vitest";
 import { OpenChannelRuntime, SYSTEM_ACTOR } from "../src/index.js";
 

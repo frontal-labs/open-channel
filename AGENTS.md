@@ -101,7 +101,7 @@ the example's own manifest or requirements file.
 
 ## Protocol changes
 
-Read `docs/SPEC.md` and `skills/ocp-protocol/SKILL.md`, edit only canonical
+Read `docs/SPEC.md` and `skills/@openchannelprotocol/protocol/SKILL.md`, edit only canonical
 schemas and hand-written helpers, update all language bindings, run
 `pnpm generate`, inspect the generated diff, and then run Buf, typecheck, and
 test verification. Do not claim a schema change is complete while generated

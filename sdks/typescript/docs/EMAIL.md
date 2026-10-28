@@ -1,4 +1,4 @@
-# ocp-sdk/email
+# @openchannelprotocol/sdk/email
 
 An email channel for OCP. Inbound mail becomes OCP `message.received` events, and outbound
 `message.sent` events are delivered as replies through an SMTP or API transport you supply. Threads
@@ -14,16 +14,16 @@ inbound mail (IMAP poll or webhook) -> normalize -> OCP message.received
 ## Install
 
 ```sh
-pnpm add ocp-sdk
+pnpm add @openchannelprotocol/sdk
 ```
 
 ## Quickstart
 
 ```ts
-import { emailChannel } from "ocp-sdk/email";
-import { RuleBasedPolicyEngine } from "ocp-sdk";
-import { postgresStore } from "ocp-sdk/postgres";
-import { openChannel } from "ocp-sdk";
+import { emailChannel } from "@openchannelprotocol/sdk/email";
+import { RuleBasedPolicyEngine } from "@openchannelprotocol/sdk";
+import { postgresStore } from "@openchannelprotocol/sdk/postgres";
+import { openChannel } from "@openchannelprotocol/sdk";
 
 const app = openChannel({
   channels: [
@@ -88,7 +88,7 @@ None in the package. Your transport and poller supply SMTP, IMAP, or API credent
 ## Tests
 
 ```sh
-pnpm --filter ocp-sdk test
+pnpm --filter @openchannelprotocol/sdk test
 ```
 
 The tests use fake transports and pollers and need no mail server.

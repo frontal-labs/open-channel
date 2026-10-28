@@ -2,7 +2,7 @@
 
 Runs a one-task CrewAI crew for each OCP message and maps the crew's result to a
 `message.sent` event. The bridge is self-contained in `main.py`: it imports only the public
-`ocp-sdk` API and `crewai`.
+`@openchannelprotocol/sdk` API and `crewai`.
 
 Each message gets a fresh crew, so task inputs stay scoped to that message. A reusable crew can
 suit a controlled workload, but its task inputs and mutable tools must be scoped to the OCP

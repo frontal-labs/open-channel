@@ -1,4 +1,4 @@
-import { ValidationError } from "ocp-core";
+import { ValidationError } from "@openchannelprotocol/core";
 
 /** A plain JSON object taken from an untrusted email payload. */
 export type EmailRecord = Record<string, unknown>;

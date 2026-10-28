@@ -1,4 +1,4 @@
-import type { EventEnvelope } from "ocp-protocol";
+import type { EventEnvelope } from "@openchannelprotocol/protocol";
 
 /** Metadata supplied by a provider when normalizing inbound input. */
 export interface ReceiveMetadata {

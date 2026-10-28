@@ -1,6 +1,6 @@
 import { create } from "@bufbuild/protobuf";
 import { timestampFromDate } from "@bufbuild/protobuf/wkt";
-import { RuleBasedPolicyEngine } from "ocp-policy";
+import { RuleBasedPolicyEngine } from "@openchannelprotocol/policy";
 import {
   ActionRequestSchema,
   type ActorRef,
@@ -9,14 +9,14 @@ import {
   ApprovalRequestedSchema,
   eventType,
   newEvent,
-} from "ocp-protocol";
-import { ManualClock, SYSTEM_ACTOR } from "ocp-runtime";
+} from "@openchannelprotocol/protocol";
+import { ManualClock, SYSTEM_ACTOR } from "@openchannelprotocol/runtime";
 import {
   createTestAgent,
   createTestEvent,
   createTestEventStore,
   createTestHuman,
-} from "ocp-testing";
+} from "@openchannelprotocol/testing";
 import { describe, expect, it } from "vitest";
 import { action, openChannel } from "../src/index.js";
 

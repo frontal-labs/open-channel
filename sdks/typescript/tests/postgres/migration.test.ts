@@ -1,5 +1,5 @@
-import { ValidationError } from "ocp-core";
-import { createTestEvent } from "ocp-testing";
+import { ValidationError } from "@openchannelprotocol/core";
+import { createTestEvent } from "@openchannelprotocol/testing";
 import { describe, expect, it } from "vitest";
 import {
   migratePostgresStore,
@@ -20,7 +20,7 @@ function recordingClient() {
   };
 }
 
-describe("ocp-sdk/postgres migration", () => {
+describe("@openchannelprotocol/sdk/postgres migration", () => {
   it("creates the table the store writes to when a custom table name is configured", async () => {
     const { client, statements } = recordingClient();
     await migratePostgresStore(client, { tableName: "orders_events" });

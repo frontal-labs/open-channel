@@ -1,9 +1,9 @@
-import type { EventEnvelope } from "ocp-protocol";
-import { eventType } from "ocp-protocol";
+import type { EventEnvelope } from "@openchannelprotocol/protocol";
+import { eventType } from "@openchannelprotocol/protocol";
 import { describe, expect, it } from "vitest";
 import { teamsSource } from "../../src/teams/index.js";
 
-describe("ocp-sdk/teams", () => {
+describe("@openchannelprotocol/sdk/teams", () => {
   it("normalizes a Teams message", async () => {
     const source = teamsSource();
     const event = await source.normalize({

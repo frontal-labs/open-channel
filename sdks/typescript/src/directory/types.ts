@@ -1,4 +1,4 @@
-import type { ActorRef } from "ocp-protocol";
+import type { ActorRef } from "@openchannelprotocol/protocol";
 
 /** Provider-neutral directory lookup port. */
 export interface DirectoryProvider {

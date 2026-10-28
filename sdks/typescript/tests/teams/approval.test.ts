@@ -1,5 +1,5 @@
-import type { EventEnvelope } from "ocp-protocol";
-import { ApprovalOutcome } from "ocp-protocol";
+import type { EventEnvelope } from "@openchannelprotocol/protocol";
+import { ApprovalOutcome } from "@openchannelprotocol/protocol";
 import { describe, expect, it } from "vitest";
 import { normalizeTeamsEvent } from "../../src/teams/index.js";
 
@@ -11,7 +11,7 @@ const approval = (from: Record<string, unknown> | undefined, value: Record<strin
   value: { action: "approve", approvalId: "approval-1", ...value },
 });
 
-describe("ocp-sdk/teams approval attribution", () => {
+describe("@openchannelprotocol/sdk/teams approval attribution", () => {
   it("attributes the decision to the activity sender, not a spoofed actorId in the card", async () => {
     const event = (await normalizeTeamsEvent(
       approval(

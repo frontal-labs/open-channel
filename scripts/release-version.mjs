@@ -70,7 +70,7 @@ const updateLockVersion = (file, packageName) => {
   }
 };
 
-updateLockVersion("sdks/rust/Cargo.lock", "ocp-sdk");
-updateLockVersion("examples/native-rust/Cargo.lock", "ocp-sdk");
+updateLockVersion("sdks/rust/Cargo.lock", "@openchannelprotocol/sdk");
+updateLockVersion("examples/native-rust/Cargo.lock", "@openchannelprotocol/sdk");
 
 console.log(`Synchronized SDK versions to ${releaseVersion}.`);

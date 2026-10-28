@@ -1,4 +1,4 @@
-import { ValidationError } from "ocp-core";
+import { ValidationError } from "@openchannelprotocol/core";
 
 import type { TeamsWebhookRequest } from "./types.js";
 

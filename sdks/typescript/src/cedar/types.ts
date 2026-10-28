@@ -1,4 +1,4 @@
-import type { PolicyContext, PolicyDecision } from "ocp-policy";
+import type { PolicyContext, PolicyDecision } from "@openchannelprotocol/policy";
 
 /**
  * Synchronous Cedar policy evaluator port; implementations wrap the Cedar engine. The host owns

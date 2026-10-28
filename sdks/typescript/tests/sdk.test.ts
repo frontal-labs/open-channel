@@ -1,6 +1,6 @@
 import { create } from "@bufbuild/protobuf";
-import type { OpenChannelError } from "ocp-core";
-import { ActorType, ChannelRefSchema, eventType } from "ocp-protocol";
+import type { OpenChannelError } from "@openchannelprotocol/core";
+import { ActorType, ChannelRefSchema, eventType } from "@openchannelprotocol/protocol";
 import {
   createTestAgent,
   createTestChannelAdapter,
@@ -9,7 +9,7 @@ import {
   createTestEventStore,
   createTestHuman,
   type TestEventStore,
-} from "ocp-testing";
+} from "@openchannelprotocol/testing";
 import { describe, expect, it } from "vitest";
 import { RuleBasedPolicyEngine } from "../../../packages/policy/src/index.js";
 import { ChannelGateway, OpenChannelRuntime } from "../../../packages/runtime/src/index.js";
@@ -44,7 +44,7 @@ function createSlowEventStore(): TestEventStore {
   };
 }
 
-describe("ocp-sdk", () => {
+describe("@openchannelprotocol/sdk", () => {
   it("routes a message to an agent and dispatches its reply", async () => {
     const adapter = createTestChannelAdapter();
     const runtime = new OpenChannelRuntime({

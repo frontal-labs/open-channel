@@ -1,9 +1,9 @@
-import { ActorType } from "ocp-protocol";
-import { createTestAgent, createTestHuman } from "ocp-testing";
+import { ActorType } from "@openchannelprotocol/protocol";
+import { createTestAgent, createTestHuman } from "@openchannelprotocol/testing";
 import { describe, expect, it } from "vitest";
 import { RuleBasedPolicyEngine } from "../src/index.js";
 
-describe("ocp-policy", () => {
+describe("@openchannelprotocol/policy", () => {
   it("evaluates the first matching rule and supports recipient constraints", () => {
     const manager = createTestHuman("human:manager");
     const engine = new RuleBasedPolicyEngine({

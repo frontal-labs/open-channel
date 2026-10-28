@@ -60,10 +60,10 @@ run("npm", [
   `@types/node@${nodeTypesVersion}`,
 ]);
 
-const sdkDir = join(project, "node_modules", "ocp-sdk");
+const sdkDir = join(project, "node_modules", "@openchannelprotocol/sdk");
 const sdkManifest = JSON.parse(readFileSync(join(sdkDir, "package.json"), "utf8"));
 const specifiers = Object.keys(sdkManifest.exports).map((key) =>
-  key === "." ? "ocp-sdk" : `ocp-sdk/${key.slice(2)}`,
+  key === "." ? "@openchannelprotocol/sdk" : `@openchannelprotocol/sdk/${key.slice(2)}`,
 );
 
 // Import every public subpath so a missing or unresolvable declaration fails the type check.
@@ -81,8 +81,8 @@ writeFileSync(
 // A few typed APIs that consumers actually call, so the check covers real signatures too.
 writeFileSync(
   join(project, "src", "usage.ts"),
-  `import { openChannel, type OpenChannel, type OpenChannelOptions } from "ocp-sdk";
-import { slackChannel } from "ocp-sdk/slack";
+  `import { openChannel, type OpenChannel, type OpenChannelOptions } from "@openchannelprotocol/sdk";
+import { slackChannel } from "@openchannelprotocol/sdk/slack";
 
 export type Runtime = OpenChannel;
 export type Options = OpenChannelOptions;

@@ -59,17 +59,17 @@ const jsonFiles = [
   "skills.sh.json",
 ];
 const metadataTextChecks = {
-  "proto/buf.yaml": ["name: buf.build/frontal-labs/open-channel"],
+  "proto/buf.yaml": ["name: buf.build/openchannelprotocol/open-channel"],
   "sdks/python/pyproject.toml": [
-    'name = "ocp-sdk"',
+    'name = "@openchannelprotocol/sdk"',
     'readme = "README.md"',
     "[project.urls]",
-    'Repository = "https://github.com/frontal-labs/open-channel"',
+    'Repository = "https://github.com/openchannelprotocol/open-channel"',
   ],
   "sdks/rust/Cargo.toml": [
-    'name = "ocp-sdk"',
+    'name = "@openchannelprotocol/sdk"',
     'readme = "README.md"',
-    'repository = "https://github.com/frontal-labs/open-channel"',
+    'repository = "https://github.com/openchannelprotocol/open-channel"',
     'documentation = "https://docs.rs/ocp-sdk"',
   ],
 };
@@ -118,10 +118,10 @@ for (const [file, metadata] of packageMetadata) {
   }
   if (
     typeof metadata.repository !== "object" ||
-    !metadata.repository.url?.includes("github.com/frontal-labs/open-channel")
+    !metadata.repository.url?.includes("github.com/openchannelprotocol/open-channel")
   ) {
     packageMetadataFailures.push(
-      `${file}: repository must point to github.com/frontal-labs/open-channel`,
+      `${file}: repository must point to github.com/openchannelprotocol/open-channel`,
     );
   }
   if (typeof metadata.bugs !== "object" || !metadata.bugs.url?.endsWith("/issues")) {

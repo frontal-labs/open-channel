@@ -1,4 +1,4 @@
-import { ValidationError } from "ocp-core";
+import { ValidationError } from "@openchannelprotocol/core";
 
 /** A plain JSON object taken from an untrusted Google Chat payload. */
 export type GoogleChatRecord = Record<string, unknown>;

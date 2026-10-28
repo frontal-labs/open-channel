@@ -1,4 +1,4 @@
-import type { EventEnvelope } from "ocp-protocol";
+import type { EventEnvelope } from "@openchannelprotocol/protocol";
 
 /** Delivery options accepted by a test channel, matching the adapter contract. */
 export interface TestDeliveryOptions {

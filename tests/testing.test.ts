@@ -8,7 +8,7 @@ import {
   findEvent,
   requireEvent,
   waitFor,
-} from "ocp-testing";
+} from "@openchannelprotocol/testing";
 import { describe, expect, it } from "vitest";
 
 describe("OCP testing toolkit", () => {

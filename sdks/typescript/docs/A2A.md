@@ -1,4 +1,4 @@
-# ocp-sdk/a2a
+# @openchannelprotocol/sdk/a2a
 
 An A2A (agent-to-agent) channel for OCP. Inbound messages from a peer agent become OCP
 `message.received` events, and outbound `message.sent` events go back to the peer through a transport
@@ -14,16 +14,16 @@ peer agent request -> receive() -> OCP message.received (actor type AGENT)
 ## Install
 
 ```sh
-pnpm add ocp-sdk
+pnpm add @openchannelprotocol/sdk
 ```
 
 ## Quickstart
 
 ```ts
-import { a2aChannel } from "ocp-sdk/a2a";
-import { RuleBasedPolicyEngine } from "ocp-sdk";
-import { postgresStore } from "ocp-sdk/postgres";
-import { openChannel } from "ocp-sdk";
+import { a2aChannel } from "@openchannelprotocol/sdk/a2a";
+import { RuleBasedPolicyEngine } from "@openchannelprotocol/sdk";
+import { postgresStore } from "@openchannelprotocol/sdk/postgres";
+import { openChannel } from "@openchannelprotocol/sdk";
 
 const app = openChannel({
   channels: [
@@ -83,7 +83,7 @@ None in the package. Your transport supplies endpoints and credentials.
 ## Tests
 
 ```sh
-pnpm --filter ocp-sdk test
+pnpm --filter @openchannelprotocol/sdk test
 ```
 
 The tests use fake transports and need no network access.

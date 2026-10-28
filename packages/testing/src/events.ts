@@ -1,4 +1,4 @@
-import { type EventEnvelope, type EventType, eventType } from "ocp-protocol";
+import { type EventEnvelope, type EventType, eventType } from "@openchannelprotocol/protocol";
 
 /** Returns event types in their original order. */
 export function eventTypes(events: readonly EventEnvelope[]): EventType[] {

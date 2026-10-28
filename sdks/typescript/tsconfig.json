@@ -4,12 +4,12 @@
     "rootDir": "../..",
     "outDir": "dist",
     "paths": {
-      "ocp-adapter": ["packages/adapter/src/index.ts"],
-      "ocp-core": ["packages/core/src/index.ts"],
-      "ocp-policy": ["packages/policy/src/index.ts"],
-      "ocp-protocol": ["packages/protocol/src/index.ts"],
-      "ocp-runtime": ["packages/runtime/src/index.ts"],
-      "ocp-testing": ["packages/testing/src/index.ts"]
+      "@openchannelprotocol/adapter": ["packages/adapter/src/index.ts"],
+      "@openchannelprotocol/core": ["packages/core/src/index.ts"],
+      "@openchannelprotocol/policy": ["packages/policy/src/index.ts"],
+      "@openchannelprotocol/protocol": ["packages/protocol/src/index.ts"],
+      "@openchannelprotocol/runtime": ["packages/runtime/src/index.ts"],
+      "@openchannelprotocol/testing": ["packages/testing/src/index.ts"]
     },
     "types": ["node"],
     "declaration": true,

@@ -1,4 +1,4 @@
-import { ValidationError } from "ocp-core";
+import { ValidationError } from "@openchannelprotocol/core";
 
 /** A plain JSON object taken from an untrusted A2A payload. */
 export type A2ARecord = Record<string, unknown>;

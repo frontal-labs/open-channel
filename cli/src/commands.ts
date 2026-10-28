@@ -1,6 +1,6 @@
 import { readFile } from "node:fs/promises";
 import type { JsonValue } from "@bufbuild/protobuf";
-import { eventType, fromJson, PROTOCOL_VERSION } from "ocp-protocol";
+import { eventType, fromJson, PROTOCOL_VERSION } from "@openchannelprotocol/protocol";
 
 /** I/O operations required by the OCP CLI commands. */
 export interface CliIO {

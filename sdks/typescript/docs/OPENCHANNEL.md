@@ -1,4 +1,4 @@
-# ocp-sdk/openchannel
+# @openchannelprotocol/sdk/openchannel
 
 An Open Policy Agent (OPA) decision adapter for OCP. It turns the raw result of an OPA evaluation
 into an OCP `PolicyDecision`, so an action only runs when your Rego policy allows it.
@@ -13,7 +13,7 @@ agent requests action -> OCP policy context -> OPA evaluation (this adapter)
 ## Install
 
 ```sh
-pnpm add ocp-sdk
+pnpm add @openchannelprotocol/sdk
 ```
 
 ## Quickstart
@@ -24,9 +24,9 @@ decision cache that a background job refreshes from an OPA server. The stub belo
 response to show the shape.
 
 ```ts
-import { openchannelPolicy } from "ocp-sdk/openchannel";
-import { postgresStore } from "ocp-sdk/postgres";
-import { openChannel } from "ocp-sdk";
+import { openchannelPolicy } from "@openchannelprotocol/sdk/openchannel";
+import { postgresStore } from "@openchannelprotocol/sdk/postgres";
+import { openChannel } from "@openchannelprotocol/sdk";
 
 const policy = openchannelPolicy({
   transport: {
@@ -72,7 +72,7 @@ any credentials that OPA requires.
 ## Tests
 
 ```sh
-pnpm --filter ocp-sdk test
+pnpm --filter @openchannelprotocol/sdk test
 ```
 
 The tests use fake transports and need no OPA server.

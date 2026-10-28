@@ -1,6 +1,6 @@
 import { randomUUID } from "node:crypto";
-import { type EventEnvelope, eventType } from "ocp-protocol";
-import { createTestEvent } from "ocp-testing";
+import { type EventEnvelope, eventType } from "@openchannelprotocol/protocol";
+import { createTestEvent } from "@openchannelprotocol/testing";
 import pg from "pg";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import {
@@ -11,12 +11,12 @@ import {
 
 /**
  * Runs the store against a real PostgreSQL server. Set OCP_POSTGRES_URL to enable it, for example
- * `OCP_POSTGRES_URL=postgres://ocp@127.0.0.1:5432/postgres pnpm --filter ocp-sdk/postgres test`.
+ * `OCP_POSTGRES_URL=postgres://ocp@127.0.0.1:5432/postgres pnpm --filter @openchannelprotocol/sdk/postgres test`.
  * Each run creates its own schema and drops it afterwards, so existing tables are never touched.
  */
 const url = process.env.OCP_POSTGRES_URL;
 
-describe.skipIf(!url)("ocp-sdk/postgres against a live PostgreSQL server", () => {
+describe.skipIf(!url)("@openchannelprotocol/sdk/postgres against a live PostgreSQL server", () => {
   const schema = `ocp_test_${randomUUID().replaceAll("-", "")}`;
   let pool: pg.Pool;
   let client: PostgresClient;

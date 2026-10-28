@@ -1,4 +1,4 @@
-import type { EventEnvelope } from "ocp-protocol";
+import type { EventEnvelope } from "@openchannelprotocol/protocol";
 import { describe, expect, it } from "vitest";
 import { type EmailMessage, type EmailPoller, emailSource } from "../../src/email/index.js";
 
@@ -35,7 +35,7 @@ function textOf(event: EventEnvelope): string | undefined {
   return event.payload.case === "messageReceived" ? event.payload.value.text : undefined;
 }
 
-describe("ocp-sdk/email lifecycle", () => {
+describe("@openchannelprotocol/sdk/email lifecycle", () => {
   it("emits polled messages in order and skips messages with no body", async () => {
     const poller = new FixturePoller([
       { from: "a@example.com", text: "first", to: ["agent@example.com"] },
