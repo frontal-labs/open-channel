@@ -3,7 +3,7 @@
   "changelog": [
     "@changesets/changelog-github",
     {
-      "repo": "openchannelprotocol/open-channel"
+      "repo": "frontal-labs/open-channel"
     }
   ],
   "commit": false,

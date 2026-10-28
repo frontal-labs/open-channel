@@ -10,20 +10,20 @@
     "events",
     "approvals"
   ],
-  "homepage": "https://github.com/openchannelprotocol/open-channel#readme",
+  "homepage": "https://github.com/frontal-labs/open-channel#readme",
   "bugs": {
-    "url": "https://github.com/openchannelprotocol/open-channel/issues"
+    "url": "https://github.com/frontal-labs/open-channel/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/openchannelprotocol/open-channel.git",
+    "url": "https://github.com/frontal-labs/open-channel.git",
     "directory": "packages/runtime"
   },
   "license": "Apache-2.0",
   "author": {
     "name": "Frontal Labs",
     "email": "support@frontal.dev",
-    "url": "https://github.com/openchannelprotocol"
+    "url": "https://github.com/frontal-labs"
   },
   "sideEffects": false,
   "type": "module",

@@ -64,12 +64,12 @@ const metadataTextChecks = {
     'name = "@openchannelprotocol/sdk"',
     'readme = "README.md"',
     "[project.urls]",
-    'Repository = "https://github.com/openchannelprotocol/open-channel"',
+    'Repository = "https://github.com/frontal-labs/open-channel"',
   ],
   "sdks/rust/Cargo.toml": [
     'name = "@openchannelprotocol/sdk"',
     'readme = "README.md"',
-    'repository = "https://github.com/openchannelprotocol/open-channel"',
+    'repository = "https://github.com/frontal-labs/open-channel"',
     'documentation = "https://docs.rs/ocp-sdk"',
   ],
 };
@@ -118,10 +118,10 @@ for (const [file, metadata] of packageMetadata) {
   }
   if (
     typeof metadata.repository !== "object" ||
-    !metadata.repository.url?.includes("github.com/openchannelprotocol/open-channel")
+    !metadata.repository.url?.includes("github.com/frontal-labs/open-channel")
   ) {
     packageMetadataFailures.push(
-      `${file}: repository must point to github.com/openchannelprotocol/open-channel`,
+      `${file}: repository must point to github.com/frontal-labs/open-channel`,
     );
   }
   if (typeof metadata.bugs !== "object" || !metadata.bugs.url?.endsWith("/issues")) {

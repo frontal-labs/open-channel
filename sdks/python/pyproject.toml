@@ -31,11 +31,11 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-Homepage = "https://github.com/openchannelprotocol/open-channel#readme"
-Repository = "https://github.com/openchannelprotocol/open-channel"
-Issues = "https://github.com/openchannelprotocol/open-channel/issues"
-Documentation = "https://github.com/openchannelprotocol/open-channel/tree/main/sdks/python"
-Changelog = "https://github.com/openchannelprotocol/open-channel/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/frontal-labs/open-channel#readme"
+Repository = "https://github.com/frontal-labs/open-channel"
+Issues = "https://github.com/frontal-labs/open-channel/issues"
+Documentation = "https://github.com/frontal-labs/open-channel/tree/main/sdks/python"
+Changelog = "https://github.com/frontal-labs/open-channel/blob/main/CHANGELOG.md"
 
 [tool.setuptools]
 package-dir = { "" = "src" }

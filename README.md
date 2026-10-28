@@ -15,7 +15,7 @@ typed event builders, config-first TypeScript/Python/
 Rust application facades, policy-controlled actions, source/sink channel
 contracts, and at-least-once in-process processing.
 
-Project links: [repository](https://github.com/openchannelprotocol/open-channel), [issues](https://github.com/openchannelprotocol/open-channel/issues), and [release notes](./CHANGELOG.md).
+Project links: [repository](https://github.com/frontal-labs/open-channel), [issues](https://github.com/frontal-labs/open-channel/issues), and [release notes](./CHANGELOG.md).
 
 ## Quickstart
 
