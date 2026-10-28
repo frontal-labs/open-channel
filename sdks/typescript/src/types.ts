@@ -1,4 +1,9 @@
-import type { ChannelSink, ChannelSource, DeliveryReceipt, ReceiveMetadata } from "@openchannelprotocol/adapter";
+import type {
+  ChannelSink,
+  ChannelSource,
+  DeliveryReceipt,
+  ReceiveMetadata,
+} from "@openchannelprotocol/adapter";
 import type { ActionError, OpenChannelError } from "@openchannelprotocol/core";
 import type { PolicyEngine } from "@openchannelprotocol/policy";
 import type {

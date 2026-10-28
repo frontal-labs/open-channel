@@ -1,6 +1,11 @@
 import type { ChannelAdapter } from "@openchannelprotocol/adapter";
 import type { PolicyDecision, PolicyEngine } from "@openchannelprotocol/policy";
-import type { ActionRequest, ActorRef, ApprovalOutcome, EventEnvelope } from "@openchannelprotocol/protocol";
+import type {
+  ActionRequest,
+  ActorRef,
+  ApprovalOutcome,
+  EventEnvelope,
+} from "@openchannelprotocol/protocol";
 
 /** Append-only event store contract used by the runtime. */
 export interface EventStore {

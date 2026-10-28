@@ -17,8 +17,17 @@ import { createHmac } from "node:crypto";
 import { createServer, type IncomingMessage, type ServerResponse } from "node:http";
 import type { AddressInfo } from "node:net";
 import { create } from "@bufbuild/protobuf";
-import { ActorRefSchema, ActorType, openChannel, RuleBasedPolicyEngine } from "@openchannelprotocol/sdk";
-import { type SlackTransport, slackChannel, verifySlackWebhook } from "@openchannelprotocol/sdk/slack";
+import {
+  ActorRefSchema,
+  ActorType,
+  openChannel,
+  RuleBasedPolicyEngine,
+} from "@openchannelprotocol/sdk";
+import {
+  type SlackTransport,
+  slackChannel,
+  verifySlackWebhook,
+} from "@openchannelprotocol/sdk/slack";
 
 import { createDemoEventStore } from "./demo-store.js";
 

@@ -1,1 +1,11 @@
-{"name": "ocp-example-slack-typescript", "version": "2.0.0", "private": true, "description": "Slack OCP agent: signed webhooks in, chat.postMessage out", "type": "module", "dependencies": {"@bufbuild/protobuf": "^2.2.5", "@openchannelprotocol/sdk": "^2.0.0"}}
+{
+  "name": "ocp-example-slack-typescript",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Slack OCP agent: signed webhooks in, chat.postMessage out",
+  "type": "module",
+  "dependencies": {
+    "@bufbuild/protobuf": "^2.2.5",
+    "@openchannelprotocol/sdk": "^2.0.0"
+  }
+}

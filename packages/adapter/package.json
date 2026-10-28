@@ -1,1 +1,59 @@
-{"name": "@openchannelprotocol/adapter", "version": "0.1.0", "private": true, "description": "Channel transport contracts and provider adapters for OpenChannel Protocol", "keywords": ["openchannel-protocol", "ocp", "adapter", "channel", "transport"], "homepage": "https://github.com/openchannelprotocol/open-channel#readme", "bugs": {"url": "https://github.com/openchannelprotocol/open-channel/issues"}, "repository": {"type": "git", "url": "https://github.com/openchannelprotocol/open-channel.git", "directory": "packages/adapter"}, "license": "Apache-2.0", "author": {"name": "Frontal Labs", "email": "support@frontal.dev", "url": "https://github.com/openchannelprotocol"}, "sideEffects": false, "type": "module", "exports": {".": {"types": "./dist/index.d.ts", "import": "./dist/index.js"}}, "files": ["dist"], "scripts": {"build": "tsc -p tsconfig.json", "format": "ultracite fix src", "lint": "ultracite check src", "test": "vitest run --root ../.. packages/adapter/tests", "typecheck": "tsc -p tsconfig.json --noEmit"}, "dependencies": {"@openchannelprotocol/protocol": "workspace:*"}, "devDependencies": {"vitest": "^4.1.12", "@openchannelprotocol/testing": "workspace:*"}, "engines": {"node": ">=22.18.0"}, "publishConfig": {"access": "public"}}
+{
+  "name": "@openchannelprotocol/adapter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Channel transport contracts and provider adapters for OpenChannel Protocol",
+  "keywords": [
+    "openchannel-protocol",
+    "ocp",
+    "adapter",
+    "channel",
+    "transport"
+  ],
+  "homepage": "https://github.com/openchannelprotocol/open-channel#readme",
+  "bugs": {
+    "url": "https://github.com/openchannelprotocol/open-channel/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openchannelprotocol/open-channel.git",
+    "directory": "packages/adapter"
+  },
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Frontal Labs",
+    "email": "support@frontal.dev",
+    "url": "https://github.com/openchannelprotocol"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "format": "ultracite fix src",
+    "lint": "ultracite check src",
+    "test": "vitest run --root ../.. packages/adapter/tests",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@openchannelprotocol/protocol": "workspace:*"
+  },
+  "devDependencies": {
+    "@openchannelprotocol/testing": "workspace:*",
+    "vitest": "^4.1.12"
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

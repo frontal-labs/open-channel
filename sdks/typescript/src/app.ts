@@ -19,7 +19,12 @@ import {
   eventType,
   newEvent,
 } from "@openchannelprotocol/protocol";
-import { ChannelGateway, type EventStore, OpenChannelRuntime, SYSTEM_ACTOR } from "@openchannelprotocol/runtime";
+import {
+  ChannelGateway,
+  type EventStore,
+  OpenChannelRuntime,
+  SYSTEM_ACTOR,
+} from "@openchannelprotocol/runtime";
 import { AgentHost } from "./agent-host.js";
 import type {
   ActionDefinition,

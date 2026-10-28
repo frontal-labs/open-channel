@@ -1,1 +1,11 @@
-{"name": "ocp-example-native-typescript", "version": "2.0.0", "private": true, "description": "Native TypeScript OCP agent and approval examples", "type": "module", "dependencies": {"@bufbuild/protobuf": "^2.2.5", "@openchannelprotocol/sdk": "^2.0.0"}}
+{
+  "name": "ocp-example-native-typescript",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Native TypeScript OCP agent and approval examples",
+  "type": "module",
+  "dependencies": {
+    "@bufbuild/protobuf": "^2.2.5",
+    "@openchannelprotocol/sdk": "^2.0.0"
+  }
+}

@@ -1,1 +1,24 @@
-{"compilerOptions": {"target": "ES2022", "module": "NodeNext", "moduleResolution": "NodeNext", "strict": true, "declaration": true, "esModuleInterop": true, "forceConsistentCasingInFileNames": true, "skipLibCheck": true, "baseUrl": ".", "paths": {"@openchannelprotocol/adapter": ["packages/adapter/src/index.ts"], "@openchannelprotocol/cli": ["cli/src/index.ts"], "@openchannelprotocol/core": ["packages/core/src/index.ts"], "@openchannelprotocol/policy": ["packages/policy/src/index.ts"], "@openchannelprotocol/protocol": ["packages/protocol/src/index.ts"], "@openchannelprotocol/runtime": ["packages/runtime/src/index.ts"], "@openchannelprotocol/sdk": ["sdks/typescript/src/index.ts"], "@openchannelprotocol/testing": ["packages/testing/src/index.ts"], "@openchannelprotocol/sdk/*": ["sdks/typescript/src/*/index.ts"]}}}
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@openchannelprotocol/adapter": ["packages/adapter/src/index.ts"],
+      "@openchannelprotocol/cli": ["cli/src/index.ts"],
+      "@openchannelprotocol/core": ["packages/core/src/index.ts"],
+      "@openchannelprotocol/policy": ["packages/policy/src/index.ts"],
+      "@openchannelprotocol/protocol": ["packages/protocol/src/index.ts"],
+      "@openchannelprotocol/runtime": ["packages/runtime/src/index.ts"],
+      "@openchannelprotocol/sdk": ["sdks/typescript/src/index.ts"],
+      "@openchannelprotocol/testing": ["packages/testing/src/index.ts"],
+      "@openchannelprotocol/sdk/*": ["sdks/typescript/src/*/index.ts"]
+    }
+  }
+}
