@@ -4,24 +4,31 @@ import { tmpdir } from "node:os";
 import { join, relative, resolve } from "node:path";
 
 // Packs a publishable package, unpacks the tarball, and fails if the published files or manifest
-// reference the internal workspace packages or the @openchannelprotocol scope. Consumers must be able to
-// install the package without any registry scope configuration.
+// import the internal workspace packages or the old `@openchannel`/`@frontal-labs` scopes.
+// Consumers must be able to install the package without any registry scope configuration.
 //
 // Usage: node scripts/check-package.mjs [packageDir] [--pack-destination <dir>]
 // The tarball is left in the pack destination (default: <tmpdir>/ocp-pack) for smoke-consumer.mjs.
 
+// The published package itself is `@openchannelprotocol/sdk`, so references to
+// `@openchannelprotocol/sdk` (its own name) and `@openchannelprotocol/sdk/*` (its own
+// subpaths) are self-references and are allowed. What must be absent are imports of the
+// internal workspace packages (`@openchannelprotocol/{core,protocol,adapter,policy,runtime,testing,cli}`)
+// and anything under the old `@openchannel/` or `@frontal-labs/` scopes, since consumers
+// must be able to install the package without any registry scope configuration.
 const forbiddenText = [
-  "@openchannelprotocol/",
-  "@openchannel/",
   "@openchannelprotocol/core",
-  "@openchannelprotocol/policy",
+  "@openchannelprotocol/protocol",
   "@openchannelprotocol/adapter",
+  "@openchannelprotocol/policy",
   "@openchannelprotocol/runtime",
   "@openchannelprotocol/testing",
-  "@openchannelprotocol/protocol",
+  "@openchannelprotocol/cli",
+  "@openchannel/",
+  "@frontal-labs/",
 ];
 const forbiddenDependency =
-  /^(@openchannelprotocol\/|@openchannel\/|ocp-(core|policy|adapter|runtime|testing|protocol)$)/;
+  /^(@openchannelprotocol\/(core|protocol|adapter|policy|runtime|testing|cli)$|@openchannel\/|@frontal-labs\/|ocp-(core|policy|adapter|runtime|testing|protocol)$)/;
 const dependencyFields = [
   "dependencies",
   "peerDependencies",
