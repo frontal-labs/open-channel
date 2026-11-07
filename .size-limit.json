@@ -1,0 +1,7 @@
+[
+  { "name": "protocol", "path": "packages/protocol/dist/packages/protocol/src/index.js", "limit": "500 B", "gzip": true },
+  { "name": "runtime", "path": "packages/runtime/dist/packages/runtime/src/index.js", "limit": "250 B", "gzip": true },
+  { "name": "adapter", "path": "packages/adapter/dist/packages/adapter/src/index.js", "limit": "100 B", "gzip": true },
+  { "name": "core", "path": "packages/core/dist/index.js", "limit": "250 B", "gzip": true },
+  { "name": "policy", "path": "packages/policy/dist/packages/policy/src/index.js", "limit": "150 B", "gzip": true }
+]
