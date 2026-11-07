@@ -39,9 +39,11 @@ Biome is configured in `biome.json`; it extends the Ultracite presets and the sh
 
 The shared `ocp-testing` package provides deterministic OCP fixtures, event inspection, async coordination, buffered CLI I/O, and in-memory state doubles. Package-local tests and the root integration suite use the same Vitest configuration and aliases.
 
-The published SDK distributions are all named `@openchannelprotocol/sdk` in their registries:
-install with `pnpm add @openchannelprotocol/sdk`, `python -m pip install @openchannelprotocol/sdk`, or
-`cargo add @openchannelprotocol/sdk`. The Rust and Python import identifier is `@openchannelprotocol/sdk`.
+The published SDK distributions are `@openchannelprotocol/sdk` on npm
+(`pnpm add @openchannelprotocol/sdk`), `ocp-sdk` on PyPI
+(`python -m pip install ocp-sdk`, imported as `ocp_sdk`), and
+`openchannelprotocol-sdk` on crates.io (`cargo add openchannelprotocol-sdk`,
+imported as `ocp_sdk`).
 
 Public TypeScript entrypoints use explicit named exports, and shared failures are represented by `ocp-core` error classes. Validate untrusted event JSON with `fromJson()` or the exported Zod schemas before handing it to an agent or runtime.
 

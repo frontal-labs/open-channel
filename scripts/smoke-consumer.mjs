@@ -16,10 +16,10 @@ import { join, resolve } from "node:path";
 // The project has no .npmrc and npm ignores the user config, so no registry scope mapping applies.
 //
 // Usage: node scripts/smoke-consumer.mjs [path-to-tarball] [typescriptVersion]
-// Without a tarball path, uses the newest ocp-sdk-*.tgz that check-package.mjs left in <tmpdir>/ocp-pack.
+// Without a tarball path, uses the newest `openchannelprotocol-sdk-*.tgz` that check-package.mjs left in <tmpdir>/ocp-pack.
 
 const packDir = join(tmpdir(), "ocp-pack");
-const tarballName = /^ocp-sdk-.*\.tgz$/;
+const tarballName = /^openchannelprotocol-sdk-.*\.tgz$/;
 const [tarballArg, typescriptVersion = "5.9.3", nodeTypesVersion = "22"] = process.argv.slice(2);
 // Self-contained examples that compile against the published SDK. Examples that need third-party
 // agent frameworks are not installed here, so they are not part of this check.
@@ -33,7 +33,9 @@ function newestTarball(dir) {
     .map((name) => join(dir, name))
     .sort((a, b) => statSync(b).mtimeMs - statSync(a).mtimeMs);
   if (candidates.length === 0) {
-    console.error(`No ocp-sdk tarball in ${dir}. Run scripts/check-package.mjs first.`);
+    console.error(
+      `No openchannelprotocol-sdk tarball in ${dir}. Run scripts/check-package.mjs first.`,
+    );
     process.exit(1);
   }
   return candidates[0];

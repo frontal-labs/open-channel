@@ -2,7 +2,7 @@
 
 ## Supported versions
 
-The 1.0 release line is supported. Security fixes are applied to the latest 1.0.x release. Earlier commits and unreleased branches are not supported. The most recent code-level review, its fixes, and its open items are in [`docs/SECURITY_REVIEW.md`](./docs/SECURITY_REVIEW.md).
+The 2.2 release line is supported. Security fixes are applied to the latest 2.2.x release. The 2.0 release line receives critical fixes only. Earlier commits and unreleased branches are not supported. The most recent code-level review, its fixes, and its open items are in [`docs/SECURITY_REVIEW.md`](./docs/SECURITY_REVIEW.md).
 
 ## Reporting a vulnerability
 
