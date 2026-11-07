@@ -111,7 +111,7 @@
     "tsx": "^4.19.2",
     "turbo": "^2.11.9",
     "typescript": "^5.7.2",
-    "ultracite": "^8.1.1",
+    "ultracite": "^8.0.1",
     "vitest": "^4.1.12"
   },
   "packageManager": "pnpm@10.28.0",
