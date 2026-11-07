@@ -236,7 +236,7 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm generate:typescript
-      - run: pnpm --filter ocp-sdk build
+      - run: pnpm --filter @openchannelprotocol/sdk build
       - name: Check packed contents and consumer smoke test
         run: pnpm check:package
 

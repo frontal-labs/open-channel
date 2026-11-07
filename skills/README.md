@@ -16,11 +16,11 @@ matches the work:
 
 | Skill                                         | Use it for                                                                   |
 | --------------------------------------------- | ---------------------------------------------------------------------------- |
-| [`ocp-protocol`](./@openchannelprotocol/protocol/SKILL.md)     | Protobuf schemas, event mappings, generated bindings, and wire compatibility |
+| [`ocp-protocol`](./ocp-protocol/SKILL.md)     | Protobuf schemas, event mappings, generated bindings, and wire compatibility |
 | [`ocp-agent`](./ocp-agent/SKILL.md)           | Agent definitions, cards, message handling, and SDK behavior                 |
-| [`ocp-policy`](./@openchannelprotocol/policy/SKILL.md)         | Policy decisions, approvals, escalation, and runtime safety semantics        |
-| [`ocp-adapter`](./@openchannelprotocol/adapter/SKILL.md)       | Provider adapters, channel gateways, inbound normalization, and dispatch     |
-| [`ocp-testing`](./@openchannelprotocol/testing/SKILL.md)       | Vitest tests, deterministic fixtures, test doubles, and validation           |
+| [`ocp-policy`](./ocp-policy/SKILL.md)         | Policy decisions, approvals, escalation, and runtime safety semantics        |
+| [`ocp-adapter`](./ocp-adapter/SKILL.md)       | Provider adapters, channel gateways, inbound normalization, and dispatch     |
+| [`ocp-testing`](./ocp-testing/SKILL.md)       | Vitest tests, deterministic fixtures, test doubles, and validation           |
 | [`ocp-examples`](./ocp-examples/SKILL.md)     | Framework bridges, harness integrations, tool boundaries, and example DX     |
 | [`ocp-governance`](./ocp-governance/SKILL.md) | Repository docs, security, releases, Renovate, and agent tooling             |
 
