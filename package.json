@@ -35,6 +35,7 @@
   "type": "module",
   "scripts": {
     "build": "turbo run build",
+    "build:libs": "pnpm generate && pnpm --filter @openchannelprotocol/protocol build && pnpm --filter @openchannelprotocol/runtime build && pnpm --filter @openchannelprotocol/adapter build && pnpm --filter @openchannelprotocol/core build && pnpm --filter @openchannelprotocol/policy build",
     "changeset": "changeset",
     "changeset:publish": "changeset publish",
     "changeset:status": "changeset status",
@@ -76,13 +77,12 @@
     "sdk:python:test": "PYTHONPATH=sdks/python/src python3 -m unittest discover -s sdks/python/tests -p 'test_*.py'",
     "sdk:rust:test": "cargo test --manifest-path sdks/rust/Cargo.toml",
     "sdk:test": "pnpm sdk:python:test && pnpm sdk:rust:test",
+    "size": "pnpm build && size-limit",
+    "size:why": "size-limit --why",
     "test": "turbo run test && turbo run //#test:root",
     "test:root": "vitest run",
     "typecheck": "turbo run typecheck && pnpm typecheck:root",
-    "typecheck:root": "tsc -p tsconfig.json --noEmit",
-    "size": "pnpm build && size-limit",
-    "size:why": "size-limit --why",
-    "build:libs": "pnpm --filter @openchannelprotocol/protocol build && pnpm --filter @openchannelprotocol/runtime build && pnpm --filter @openchannelprotocol/adapter build && pnpm --filter @openchannelprotocol/core build && pnpm --filter @openchannelprotocol/policy build"
+    "typecheck:root": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
     "@bufbuild/protobuf": "^2.2.5"
