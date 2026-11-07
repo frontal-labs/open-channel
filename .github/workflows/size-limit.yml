@@ -3,20 +3,28 @@ name: Size Limit
 on:
   pull_request:
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   size:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
         with:
-          node-version: 22
+          version: 10.28.0
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm build:libs
-      - uses: andresz1/size-limit-action@v1
+      - run: pnpm generate:typescript
+      - run: pnpm --filter @openchannelprotocol/protocol --filter @openchannelprotocol/runtime --filter @openchannelprotocol/adapter --filter @openchannelprotocol/core --filter @openchannelprotocol/policy build
+      - uses: andresz1/size-limit-action@94bc357df29c36c8f8d50ea497c3e225c3c95d1d # v1.8.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           package_manager: pnpm
-          build_script: build:libs
+          skip_step: build
