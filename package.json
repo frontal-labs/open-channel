@@ -35,7 +35,7 @@
   "type": "module",
   "scripts": {
     "build": "turbo run build",
-    "build:libs": "pnpm --filter @openchannelprotocol/protocol build && pnpm --filter @openchannelprotocol/runtime build && pnpm --filter @openchannelprotocol/adapter build && pnpm --filter @openchannelprotocol/core build && pnpm --filter @openchannelprotocol/policy build",
+    "build:libs": "pnpm generate && pnpm --filter @openchannelprotocol/protocol build && pnpm --filter @openchannelprotocol/runtime build && pnpm --filter @openchannelprotocol/adapter build && pnpm --filter @openchannelprotocol/core build && pnpm --filter @openchannelprotocol/policy build",
     "changeset": "changeset",
     "changeset:publish": "changeset publish",
     "changeset:status": "changeset status",
