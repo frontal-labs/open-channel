@@ -3,17 +3,19 @@
 OCP uses Changesets for JavaScript package versioning and release orchestration. The public release surface is:
 
 - npm: `@openchannelprotocol/sdk` (TypeScript SDK, including the `@openchannelprotocol/sdk/<provider>` subpaths);
-- crates.io: `@openchannelprotocol/sdk`;
-- PyPI: `@openchannelprotocol/sdk`.
+- crates.io: `openchannelprotocol-sdk`;
+- PyPI: `ocp-sdk`.
 
 GitHub Packages is not used. Rust and Python are published to crates.io and PyPI only.
 
-The SDK distribution name is `@openchannelprotocol/sdk` on npm, PyPI, and crates.io. The
-import identifier is `@openchannelprotocol/sdk` in TypeScript, Python, and Rust.
+The SDK distribution name is `@openchannelprotocol/sdk` on npm, `ocp-sdk` on PyPI,
+and `openchannelprotocol-sdk` on crates.io. The import identifier is
+`@openchannelprotocol/sdk` in TypeScript and `ocp_sdk` in Python and Rust.
 
 Release image/container identifiers retain ecosystem suffixes (`open-channel-ts`,
-`open-channel-py`, and `open-channel-rs`) even though the published SDK package names are
-unified as `@openchannelprotocol/sdk`.
+`open-channel-py`, and `open-channel-rs`) even though the published SDK package names
+differ per registry (`@openchannelprotocol/sdk` on npm, `ocp-sdk` on PyPI,
+`openchannelprotocol-sdk` on crates.io).
 
 ## Prepare a release
 

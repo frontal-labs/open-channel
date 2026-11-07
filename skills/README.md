@@ -7,7 +7,7 @@ the skills.sh repository page; each skill remains independently installable.
 Install the collection from the GitHub repository with:
 
 ```bash
-npx skills add openchannelprotocol/open-channel
+npx skills add frontal-labs/open-channel
 ```
 
 These project-local skills give agents focused guidance for changing the OCP
