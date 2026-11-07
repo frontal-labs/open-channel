@@ -81,7 +81,8 @@
     "typecheck": "turbo run typecheck && pnpm typecheck:root",
     "typecheck:root": "tsc -p tsconfig.json --noEmit",
     "size": "pnpm build && size-limit",
-    "size:why": "size-limit --why"
+    "size:why": "size-limit --why",
+    "build:libs": "pnpm --filter @openchannelprotocol/protocol build && pnpm --filter @openchannelprotocol/runtime build && pnpm --filter @openchannelprotocol/adapter build && pnpm --filter @openchannelprotocol/core build && pnpm --filter @openchannelprotocol/policy build"
   },
   "dependencies": {
     "@bufbuild/protobuf": "^2.2.5"
