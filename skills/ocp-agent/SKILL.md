@@ -61,7 +61,8 @@ arbitrary actions.
   `toChannelText(err)` instead, which returns the approved `public` message or a fixed
   per-code text.
 - When a host returns a failed tool call to an agent, build the result with
-  `toToolFailure(err)`. The SDK does not return tool results itself, so the integration that
+  `toToolFailure(err)` in TypeScript, `to_tool_failure(error)` in Python, or
+  `ocp_sdk::to_tool_failure(&error)` in Rust. The SDK does not return tool results itself, so the integration that
   exposes an action as a tool must do this. The result contains only `success`, `error.scope`,
   `error.code` and public text:
 

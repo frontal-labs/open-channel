@@ -2,6 +2,7 @@ use std::collections::BTreeMap;
 use std::ops::Deref;
 
 use serde::{Deserialize, Serialize};
+use serde_json::{json, Value};
 use thiserror::Error;
 use uuid::Uuid;
 
@@ -244,6 +245,29 @@ impl ActionError {
             action_id: action_id.into(),
             retryable: false,
         }
+    }
+}
+
+/// The tool result an agent receives for a failed action. It contains only `success`, the scope,
+/// the code and fixed public text. The developer message is never included.
+pub fn to_tool_failure(error: &ActionError) -> Value {
+    json!({
+        "success": false,
+        "error": {
+            "scope": "ocp",
+            "code": error.code,
+            "message": channel_text(&error.code),
+        },
+    })
+}
+
+/// Fixed public text per code. Matches the TypeScript and Python SDKs.
+fn channel_text(code: &str) -> &'static str {
+    match code {
+        "OCP_ACTION" => "The action couldn't be completed.",
+        "OCP_AUTHORIZATION" => "You're not allowed to do that.",
+        "OCP_TRANSPORT" => "The message couldn't be delivered.",
+        _ => "Something went wrong.",
     }
 }
 
@@ -628,5 +652,45 @@ impl Logger for StderrLogger {
 
     fn error(&self, message: &str) {
         eprintln!("[open-channel error] {message}");
+    }
+}
+
+#[cfg(test)]
+mod tool_failure_tests {
+    use super::*;
+
+    fn failure(code: &str, message: &str) -> ActionError {
+        ActionError {
+            code: code.to_owned(),
+            message: message.to_owned(),
+            action_id: "action:1".to_owned(),
+            retryable: false,
+        }
+    }
+
+    #[test]
+    fn tool_failure_has_only_scope_code_and_fixed_text() {
+        let value = to_tool_failure(&failure("OCP_AUTHORIZATION", "rule secret-7 blocks send"));
+
+        assert_eq!(
+            value,
+            json!({
+                "success": false,
+                "error": {
+                    "scope": "ocp",
+                    "code": "OCP_AUTHORIZATION",
+                    "message": "You're not allowed to do that.",
+                },
+            })
+        );
+        assert!(!value.to_string().contains("secret-7"));
+    }
+
+    #[test]
+    fn unknown_codes_get_the_generic_text() {
+        let value = to_tool_failure(&failure("OCP_VALIDATION", "agent:hidden-42 is invalid"));
+
+        assert_eq!(value["error"]["message"], "Something went wrong.");
+        assert!(!value.to_string().contains("hidden-42"));
     }
 }

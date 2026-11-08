@@ -20,10 +20,10 @@ pub use events::{
     PROTOCOL_VERSION,
 };
 pub use models::{
-    ActionDefinition, ActionError, ActionExecutionContext, ActionInvocation, ActionPolicy,
-    ActionResult, ActorRef, ActorType, AgentCapabilities, AgentCard, AgentContext, AgentDefinition,
-    AgentError, AgentHost, AgentSkill, ArtifactRef, ChannelDefinition, ChannelRef, ChannelSink,
-    ChannelSource, ConversationRef, DeliveryReceipt, HandleResult, JsonObject, Logger,
+    to_tool_failure, ActionDefinition, ActionError, ActionExecutionContext, ActionInvocation,
+    ActionPolicy, ActionResult, ActorRef, ActorType, AgentCapabilities, AgentCard, AgentContext,
+    AgentDefinition, AgentError, AgentHost, AgentSkill, ArtifactRef, ChannelDefinition, ChannelRef,
+    ChannelSink, ChannelSource, ConversationRef, DeliveryReceipt, HandleResult, JsonObject, Logger,
     MessageReceived, MessageSent, PolicyDecision, ReceiveMetadata, StderrLogger,
 };
 pub use payloads::{
