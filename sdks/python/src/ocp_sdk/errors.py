@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from typing import Any
+
 
 class OpenChannelError(Exception):
     """Classified, vendor-neutral OCP failure."""
@@ -64,3 +66,29 @@ def as_ocp_error(
         provider=provider,
         cause=error,
     )
+
+
+GENERIC_CHANNEL_TEXT = "Something went wrong."
+
+# Fixed text per code. Developer messages are never shown to a person in a channel or an agent.
+_CHANNEL_TEXT_BY_CODE = {
+    "OCP_ACTION": "The action couldn't be completed.",
+    "OCP_AUTHORIZATION": "You're not allowed to do that.",
+    "OCP_TRANSPORT": "The message couldn't be delivered.",
+}
+
+
+def to_tool_failure(error: BaseException) -> dict[str, Any]:
+    """Return the tool result an agent receives for a failed action.
+
+    The result contains only `success`, `error.scope`, `error.code` and fixed public text. Non-OCP
+    errors are reported as `OCP_ACTION`, matching the TypeScript SDK.
+    """
+
+    if isinstance(error, OpenChannelError):
+        code = error.code
+        message = _CHANNEL_TEXT_BY_CODE.get(code, GENERIC_CHANNEL_TEXT)
+    else:
+        code = ActionError.code
+        message = GENERIC_CHANNEL_TEXT
+    return {"success": False, "error": {"scope": "ocp", "code": code, "message": message}}

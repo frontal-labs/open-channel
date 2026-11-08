@@ -14,7 +14,13 @@ from .app import (
     action,
     open_channel,
 )
-from .errors import ActionError, AuthorizationError, DeliveryError, OpenChannelError
+from .errors import (
+    ActionError,
+    AuthorizationError,
+    DeliveryError,
+    OpenChannelError,
+    to_tool_failure,
+)
 from .host import AgentContext, AgentDefinition, ReplyOptions
 from .logger import Logger, NullLogger, StderrLogger
 from .models import (
@@ -46,6 +52,7 @@ __all__ = [
     "PROTOCOL_VERSION",
     "ActionDefinition",
     "ActionError",
+    "to_tool_failure",
     "ActionExecutionContext",
     "ActionResult",
     "ActorRef",
