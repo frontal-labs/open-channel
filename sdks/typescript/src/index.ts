@@ -1,4 +1,29 @@
 export type {
+  OpenChannelErrorCode,
+  OpenChannelErrorDetails,
+  OpenChannelErrorOptions,
+  OpenChannelErrorStage,
+  OpenChannelFailureRecord,
+  OpenChannelToolFailure,
+  PublicErrorDetails,
+} from "@openchannelprotocol/core";
+export {
+  ActionError,
+  AuthorizationError,
+  ConflictError,
+  getRootCause,
+  hasCode,
+  isFrontalError,
+  NotFoundError,
+  OpenChannelError,
+  ProtocolError,
+  TransportError,
+  toChannelText,
+  toFailureRecord,
+  toToolFailure,
+  ValidationError,
+} from "@openchannelprotocol/core";
+export type {
   PolicyContext,
   PolicyDecision,
   PolicyEngine,

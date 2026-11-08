@@ -46,6 +46,13 @@
         "prost-build"
       ],
       "groupName": "Protocol toolchain"
+    },
+    {
+      "matchPackageNames": ["@frontal-labs/error"],
+      "groupName": "Frontal Labs error library",
+      "labels": ["dependencies", "manual-review"],
+      "automerge": false,
+      "description": "Pinned exactly in packages/core; review each release before merging."
     }
   ]
 }

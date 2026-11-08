@@ -22,6 +22,17 @@ pnpm check:docs
 pnpm check:examples
 ```
 
+## Errors
+
+The reference implementation's TypeScript error classes are built on `@frontal-labs/error`; the protocol itself does not depend on it.
+
+Two rules for code that talks to people:
+
+- Branch on `err.code` (`OCP_*`), never on `err.message`.
+- Anything posted to a channel uses `toChannelText(err)`. Never post `err.message`, `details`, resource identifiers or policy text to Slack, Teams, email or any other channel. Developer text goes to logs and the event store only.
+
+Agent tool results use `toToolFailure(err)`, which returns only `scope`, `code` and public text.
+
 ## Tooling commands
 
 ```bash

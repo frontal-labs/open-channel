@@ -25,3 +25,9 @@ examples/native-rust/target/
 # Generated protobuf bindings. Regenerate with `pnpm generate`; only the README is tracked.
 /proto/gen/*
 !/proto/gen/README.md
+
+# Compiled output must never sit beside TypeScript sources: it shadows them in tests.
+**/src/**/*.js
+**/src/**/*.js.map
+**/src/**/*.d.ts
+**/src/**/*.d.ts.map

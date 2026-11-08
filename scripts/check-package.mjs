@@ -25,10 +25,12 @@ const forbiddenText = [
   "@openchannelprotocol/testing",
   "@openchannelprotocol/cli",
   "@openchannel/",
-  "@frontal-labs/",
 ];
+// The public library `@frontal-labs/error` is a declared dependency and its path appears in bundle
+// comments, so it is allowed. Any other `@frontal-labs/` package is still forbidden.
+const forbiddenFrontalScope = /@frontal-labs\/(?!error(?:[/"'\s]|$))/;
 const forbiddenDependency =
-  /^(@openchannelprotocol\/(core|protocol|adapter|policy|runtime|testing|cli)$|@openchannel\/|@frontal-labs\/|ocp-(core|policy|adapter|runtime|testing|protocol)$)/;
+  /^(@openchannelprotocol\/(core|protocol|adapter|policy|runtime|testing|cli)$|@openchannel\/|@frontal-labs\/(?!error$)|ocp-(core|policy|adapter|runtime|testing|protocol)$)/;
 const dependencyFields = [
   "dependencies",
   "peerDependencies",
@@ -66,12 +68,19 @@ function listFiles(dir) {
   });
 }
 
+// `@frontal-labs/error` is bundled into the SDK, and its runtime tags errors with this symbol key.
+// The key is a string value, not an import, so it is the one `@frontal-labs/` reference allowed.
+const allowedBundledText = 'Symbol.for("@frontal-labs/error")';
+
 for (const file of listFiles(root)) {
-  const contents = readFileSync(file);
+  const contents = readFileSync(file, "utf8").split(allowedBundledText).join("");
   for (const needle of forbiddenText) {
     if (contents.includes(needle)) {
       failures.push(`${relative(root, file)} contains "${needle}"`);
     }
+  }
+  if (forbiddenFrontalScope.test(contents)) {
+    failures.push(`${relative(root, file)} contains a non-allowed "@frontal-labs/" package`);
   }
 }
 
