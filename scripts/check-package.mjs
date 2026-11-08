@@ -4,7 +4,8 @@ import { tmpdir } from "node:os";
 import { join, relative, resolve } from "node:path";
 
 // Packs a publishable package, unpacks the tarball, and fails if the published files or manifest
-// import the internal workspace packages or the old `@openchannel`/`@frontal-labs` scopes.
+// import the internal workspace packages or the old `@openchannel` scope, or any `@frontal-labs`
+// package other than the public `@frontal-labs/error`.
 // Consumers must be able to install the package without any registry scope configuration.
 //
 // Usage: node scripts/check-package.mjs [packageDir] [--pack-destination <dir>]
@@ -14,8 +15,8 @@ import { join, relative, resolve } from "node:path";
 // `@openchannelprotocol/sdk` (its own name) and `@openchannelprotocol/sdk/*` (its own
 // subpaths) are self-references and are allowed. What must be absent are imports of the
 // internal workspace packages (`@openchannelprotocol/{core,protocol,adapter,policy,runtime,testing,cli}`)
-// and anything under the old `@openchannel/` or `@frontal-labs/` scopes, since consumers
-// must be able to install the package without any registry scope configuration.
+// and anything under the old `@openchannel/` scope, since consumers must be able to install the
+// package without any registry scope configuration.
 const forbiddenText = [
   "@openchannelprotocol/core",
   "@openchannelprotocol/protocol",

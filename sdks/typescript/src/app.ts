@@ -665,18 +665,10 @@ class OpenChannelApp implements OpenChannel {
     if (error instanceof ActionError) {
       return error;
     }
-    // A stored failure record (see `toFailureRecord`) comes back as a plain object with a message.
-    if (isStoredFailure(error)) {
-      return new ActionError(error.message, {
-        actionId,
-        cause: error,
-        retryable: error.retryable === true,
-      });
-    }
-    return new ActionError(error instanceof Error ? error.message : String(error), {
+    return new ActionError(failureMessage(error), {
       actionId,
       cause: error,
-      retryable: false,
+      retryable: isStoredFailure(error) && error.retryable === true,
     });
   }
 
@@ -721,4 +713,21 @@ function isStoredFailure(value: unknown): value is { message: string; retryable?
     !(value instanceof Error) &&
     typeof (value as { message?: unknown }).message === "string"
   );
+}
+
+/**
+ * The developer message for a failure of any shape. Stored rows can be an Error, a failure record, a
+ * string, or a legacy JSON object without a message; the last one gets a fixed message, never "[object Object]".
+ */
+function failureMessage(error: unknown): string {
+  if (error instanceof Error) {
+    return error.message;
+  }
+  if (isStoredFailure(error)) {
+    return error.message;
+  }
+  if (typeof error === "string") {
+    return error;
+  }
+  return typeof error === "object" && error !== null ? "The action failed." : String(error);
 }
