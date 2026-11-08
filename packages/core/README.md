@@ -12,7 +12,7 @@ Small provider-neutral primitives shared by OCP runtimes and integrations.
 - `toFailureRecord(err)`: a JSON-safe record for logs and the event store. It keeps the developer message, so it must never reach a channel or an agent.
 - `hasCode`, `isFrontalError`, and `getRootCause` from `@frontal-labs/error`.
 
-Errors do not cross process boundaries as instances, because `isFrontalError` does not survive JSON, structured clone or `postMessage`. Persist `toFailureRecord(err)` and read it back as a plain object.
+`metadata` holds only the `details` values that survive JSON; a value that does not (a function, a cycle, a `BigInt`) stays in `details` alone. Errors do not cross process boundaries as instances, because `isFrontalError` does not survive JSON, structured clone or `postMessage`. Persist `toFailureRecord(err)` and read it back as a plain object.
 
 The core package intentionally does not own provider transport, persistence, policy decisions, or agent orchestration. Its event bus is generic so protocol packages can depend on the shared errors without a dependency cycle. `@frontal-labs/error` is pinned exactly (`0.7.0`) and has no transitive dependencies.
 

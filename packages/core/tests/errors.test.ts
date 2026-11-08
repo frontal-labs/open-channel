@@ -113,6 +113,16 @@ describe("OpenChannelError on @frontal-labs/error", () => {
     expect(error.metadata).toEqual({ count: 2, nested: { ok: true } });
     expect(() => JSON.stringify(error.metadata)).not.toThrow();
   });
+
+  it("keeps a cyclic value in details only, so metadata still serialises", () => {
+    const cyclic: Record<string, unknown> = { name: "loop" };
+    cyclic.self = cyclic;
+    const error = new ValidationError("invalid", { details: { cyclic, kept: 1 } });
+
+    expect(error.details.cyclic).toBe(cyclic);
+    expect(error.metadata).toEqual({ kept: 1 });
+    expect(() => JSON.stringify(toFailureRecord(error))).not.toThrow();
+  });
 });
 
 describe("toChannelText", () => {

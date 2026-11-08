@@ -28,5 +28,11 @@
     "path": "packages/policy/dist/packages/policy/src/index.js",
     "limit": "115 B",
     "gzip": true
+  },
+  {
+    "name": "sdk",
+    "path": "sdks/typescript/dist/index.js",
+    "limit": "64 kB",
+    "gzip": true
   }
 ]

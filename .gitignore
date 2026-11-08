@@ -27,7 +27,15 @@ examples/native-rust/target/
 !/proto/gen/README.md
 
 # Compiled output must never sit beside TypeScript sources: it shadows them in tests.
-**/src/**/*.js
-**/src/**/*.js.map
-**/src/**/*.d.ts
-**/src/**/*.d.ts.map
+packages/*/src/**/*.js
+packages/*/src/**/*.js.map
+packages/*/src/**/*.d.ts
+packages/*/src/**/*.d.ts.map
+sdks/*/src/**/*.js
+sdks/*/src/**/*.js.map
+sdks/*/src/**/*.d.ts
+sdks/*/src/**/*.d.ts.map
+cli/src/**/*.js
+cli/src/**/*.js.map
+cli/src/**/*.d.ts
+cli/src/**/*.d.ts.map
