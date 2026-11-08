@@ -26,7 +26,8 @@ function setup() {
   return { signer, verify };
 }
 
-describe("Teams reference token verifier", () => {
+// RSA-2048 key generation is CPU-bound; parallel test workers can exceed the default 5s.
+describe("Teams reference token verifier", { timeout: 30_000 }, () => {
   it("accepts a correctly signed Bot Framework token for this app", async () => {
     const { signer, verify } = setup();
     expect(await verify(signer.sign(validClaims()))).toBe(true);
