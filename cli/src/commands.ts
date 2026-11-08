@@ -1,5 +1,6 @@
 import { readFile } from "node:fs/promises";
 import type { JsonValue } from "@bufbuild/protobuf";
+import { formatError } from "@frontal-labs/error/format";
 import { eventType, fromJson, PROTOCOL_VERSION } from "@openchannelprotocol/protocol";
 
 /** I/O operations required by the OCP CLI commands. */
@@ -7,6 +8,11 @@ export interface CliIO {
   readStdin: () => Promise<string>;
   stderr: (message: string) => void;
   stdout: (message: string) => void;
+}
+
+/** Renders a failure for a developer at the terminal. Never used for channel or agent output. */
+function formatFailure(error: unknown): string {
+  return error instanceof Error ? formatError(error, { format: "auto" }) : String(error);
 }
 
 /** Human-readable CLI usage text. */
@@ -44,7 +50,7 @@ export async function runCommand(args: string[], io: CliIO): Promise<number> {
       io.stdout(`valid OCP event: ${eventType(event)}`);
       return 0;
     } catch (error) {
-      io.stderr(`invalid OCP event: ${error instanceof Error ? error.message : String(error)}`);
+      io.stderr(`invalid OCP event:\n${formatFailure(error)}`);
       return 1;
     }
   }

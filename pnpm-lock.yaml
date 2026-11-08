@@ -97,6 +97,9 @@ importers:
       '@bufbuild/protobuf':
         specifier: ^2.2.5
         version: 2.16.0
+      '@frontal-labs/error':
+        specifier: 0.7.0
+        version: 0.7.0
       '@openchannelprotocol/protocol':
         specifier: workspace:*
         version: link:../packages/protocol
@@ -122,6 +125,10 @@ importers:
         version: 4.1.12(@types/node@22.20.5)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
 
   packages/core:
+    dependencies:
+      '@frontal-labs/error':
+        specifier: 0.7.0
+        version: 0.7.0
     devDependencies:
       vitest:
         specifier: ^4.1.12
@@ -199,6 +206,9 @@ importers:
       '@bufbuild/protobuf':
         specifier: ^2.2.5
         version: 2.16.0
+      '@frontal-labs/error':
+        specifier: 0.7.0
+        version: 0.7.0
     devDependencies:
       '@types/pg':
         specifier: ^8.23.1
@@ -682,6 +692,10 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
+
+  '@frontal-labs/error@0.7.0':
+    resolution: {integrity: sha512-46mjctRgI7Arlcw8DzTRKhG1taE7OqCJSsbnMnrXQhJJHil1KX4M7XhgzB5EXVKZHytrfsP/YsIVedkBuRASkg==}
+    engines: {node: '>=22'}
 
   '@inquirer/external-editor@1.0.3':
     resolution: {integrity: sha512-RWbSrDiYmO4LbejWY7ttpxczuwQyZLBUyygsA9Nsv95hpzUWwnNTVQmAq3xuh7vNwCp07UTmE5i11XAEExx4RA==}
@@ -2629,6 +2643,8 @@ snapshots:
 
   '@esbuild/win32-x64@0.28.2':
     optional: true
+
+  '@frontal-labs/error@0.7.0': {}
 
   '@inquirer/external-editor@1.0.3(@types/node@22.20.5)':
     dependencies:

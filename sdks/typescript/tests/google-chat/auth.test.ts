@@ -19,7 +19,8 @@ function bearer(token: string) {
   return { headers: { authorization: `Bearer ${token}` } };
 }
 
-describe("Google Chat reference token verifier", () => {
+// RSA-2048 key generation is CPU-bound; parallel test workers can exceed the default 5s.
+describe("Google Chat reference token verifier", { timeout: 30_000 }, () => {
   it("accepts a correctly signed Chat token for this project", async () => {
     const signer = createTestSigner("chat-key-1");
     const verify = googleChatTokenVerifier({

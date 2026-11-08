@@ -43,7 +43,9 @@
     "test": "vitest run --root ../.. packages/core/tests",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@frontal-labs/error": "0.7.0"
+  },
   "devDependencies": {
     "vitest": "^4.1.12"
   },

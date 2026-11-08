@@ -4,7 +4,8 @@ import { tmpdir } from "node:os";
 import { join, relative, resolve } from "node:path";
 
 // Packs a publishable package, unpacks the tarball, and fails if the published files or manifest
-// import the internal workspace packages or the old `@openchannel`/`@frontal-labs` scopes.
+// import the internal workspace packages or the old `@openchannel` scope, or any `@frontal-labs`
+// package other than the public `@frontal-labs/error`.
 // Consumers must be able to install the package without any registry scope configuration.
 //
 // Usage: node scripts/check-package.mjs [packageDir] [--pack-destination <dir>]
@@ -14,8 +15,8 @@ import { join, relative, resolve } from "node:path";
 // `@openchannelprotocol/sdk` (its own name) and `@openchannelprotocol/sdk/*` (its own
 // subpaths) are self-references and are allowed. What must be absent are imports of the
 // internal workspace packages (`@openchannelprotocol/{core,protocol,adapter,policy,runtime,testing,cli}`)
-// and anything under the old `@openchannel/` or `@frontal-labs/` scopes, since consumers
-// must be able to install the package without any registry scope configuration.
+// and anything under the old `@openchannel/` scope, since consumers must be able to install the
+// package without any registry scope configuration.
 const forbiddenText = [
   "@openchannelprotocol/core",
   "@openchannelprotocol/protocol",
@@ -25,10 +26,12 @@ const forbiddenText = [
   "@openchannelprotocol/testing",
   "@openchannelprotocol/cli",
   "@openchannel/",
-  "@frontal-labs/",
 ];
+// The public library `@frontal-labs/error` is a declared dependency and its path appears in bundle
+// comments, so it is allowed. Any other `@frontal-labs/` package is still forbidden.
+const forbiddenFrontalScope = /@frontal-labs\/(?!error(?:[/"'\s]|$))/;
 const forbiddenDependency =
-  /^(@openchannelprotocol\/(core|protocol|adapter|policy|runtime|testing|cli)$|@openchannel\/|@frontal-labs\/|ocp-(core|policy|adapter|runtime|testing|protocol)$)/;
+  /^(@openchannelprotocol\/(core|protocol|adapter|policy|runtime|testing|cli)$|@openchannel\/|@frontal-labs\/(?!error$)|ocp-(core|policy|adapter|runtime|testing|protocol)$)/;
 const dependencyFields = [
   "dependencies",
   "peerDependencies",
@@ -66,12 +69,19 @@ function listFiles(dir) {
   });
 }
 
+// `@frontal-labs/error` is bundled into the SDK, and its runtime tags errors with this symbol key.
+// The key is a string value, not an import, so it is the one `@frontal-labs/` reference allowed.
+const allowedBundledText = 'Symbol.for("@frontal-labs/error")';
+
 for (const file of listFiles(root)) {
-  const contents = readFileSync(file);
+  const contents = readFileSync(file, "utf8").split(allowedBundledText).join("");
   for (const needle of forbiddenText) {
     if (contents.includes(needle)) {
       failures.push(`${relative(root, file)} contains "${needle}"`);
     }
+  }
+  if (forbiddenFrontalScope.test(contents)) {
+    failures.push(`${relative(root, file)} contains a non-allowed "@frontal-labs/" package`);
   }
 }
 

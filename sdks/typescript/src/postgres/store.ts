@@ -1,4 +1,4 @@
-import { ValidationError } from "@openchannelprotocol/core";
+import { toFailureRecord, ValidationError } from "@openchannelprotocol/core";
 import { type EventEnvelope, eventType, fromJson, toJson } from "@openchannelprotocol/protocol";
 import type { ActionExecutionRecord, EventStore } from "@openchannelprotocol/runtime";
 
@@ -203,12 +203,16 @@ export class PostgresEventStore implements EventStore {
     );
   }
 
-  /** Marks the action failed and stores the error. Does not check the owner or the current status. */
+  /**
+   * Marks the action failed and stores a JSON record of the error (see `toFailureRecord`). The record
+   * keeps the developer message for internal use; it must not be posted to a channel.
+   * Does not check the owner or the current status.
+   */
   async failAction(actionId: string, error: unknown): Promise<void> {
     await this.client.query(
       `UPDATE ocp_actions SET status = 'failed', error_json = $2::jsonb, updated_at = NOW()
        WHERE action_id = $1`,
-      [actionId, JSON.stringify(error)],
+      [actionId, JSON.stringify(toFailureRecord(error))],
     );
   }
 

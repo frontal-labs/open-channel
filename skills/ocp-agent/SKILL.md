@@ -54,6 +54,26 @@ arbitrary actions.
 - Use stable `agent:` identifiers and advertise only capabilities the agent
   actually implements.
 
+## Errors and channel text
+
+- Branch on `err.code`, the stable `OCP_*` value. Never branch on `err.message`.
+- Never post `err.message`, `err.details` or resource identifiers to a channel. Post
+  `toChannelText(err)` instead, which returns the approved `public` message or a fixed
+  per-code text.
+- When a host returns a failed tool call to an agent, build the result with
+  `toToolFailure(err)`. The SDK does not return tool results itself, so the integration that
+  exposes an action as a tool must do this. The result contains only `success`, `error.scope`,
+  `error.code` and public text:
+
+  ```ts
+  try {
+    return { success: true, result: await execute(input) };
+  } catch (error) {
+    return toToolFailure(error);
+  }
+  ```
+- Store a failure with `toFailureRecord(err)`. It is for logs and the event store, never a channel.
+
 ## Cross-SDK changes
 
 When a behavior is part of the developer-facing contract, check the native

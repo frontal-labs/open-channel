@@ -97,7 +97,8 @@
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@bufbuild/protobuf": "^2.2.5"
+    "@bufbuild/protobuf": "^2.2.5",
+    "@frontal-labs/error": "0.7.0"
   },
   "devDependencies": {
     "@types/pg": "^8.23.1",
